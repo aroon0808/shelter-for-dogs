@@ -69,7 +69,7 @@ function combineJs() {
 // Combine CSS files
 function combineCss() {
     return gulp.src([
-        //'path/to/file.css',
+        'assets/vendors/css/normalize.min.css',
     ])
     .pipe(concat('vendors.min.css'))
     .pipe(gulp.dest(config.distCSS));
@@ -93,5 +93,8 @@ function watchHtml() {
 // Main task
 gulp.task('default', gulp.parallel(server, watchSass, watchJs, watchHtml));
 
-// Combine files
-gulp.task('concat', gulp.parallel(combineCss, combineJs));
+// Combine CSS files
+gulp.task('concat-css', gulp.parallel(combineCss));
+
+// Combine JS files
+gulp.task('concat-js', gulp.parallel(combineJs));

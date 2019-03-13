@@ -5,9 +5,11 @@ Startup gulp configuration for projects.
 
 1. `npm install` - Install all the modules 
 
-2. `gulp` - Start the developer server. Distribution files will be located in the **dist** folder
+2. `gulp` - Start the developer server.
 
-2. `gulp concat` - Combine Javascript and CSS files.
+3. `gulp concat-css` - Combine CSS files.
+
+4. `gulp concat-js` - Combine Javascript files.
 
 ## Dependencies
 

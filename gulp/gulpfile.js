@@ -7,20 +7,21 @@ const browserSync  = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const rename       = require('gulp-rename');
 const concat       = require('gulp-concat');
+const assetsPath   = '../assets/';
 
 // Config
 const config = {
-    srcCSS: 'assets/scss/**/*.scss',
-    distCSS: 'assets/css',
-    srcJS: 'assets/js/src/**/*.js',
-    distJS: 'assets/js'
+    srcCSS: assetsPath + 'scss/**/*.scss',
+    distCSS: assetsPath + 'css',
+    srcJS: assetsPath + 'js/src/**/*.js',
+    distJS: assetsPath + 'js'
 };
 
 // Server
 function server() {
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: '../'
         }
     });
 }
@@ -34,7 +35,9 @@ function reload(done) {
 // Javascript
 function compileJs() {
     return gulp.src(config.srcJS)
-        .pipe(babel())
+        .pipe(babel({
+            presets: ['@babel/preset-env']
+        }))
         .on('error', function (err) {
             console.log(err.toString());
             this.emit('end');
@@ -69,7 +72,7 @@ function combineJs() {
 // Combine CSS files
 function combineCss() {
     return gulp.src([
-        'assets/vendors/css/normalize.min.css',
+        assetsPath + 'vendors/css/normalize.min.css',
     ])
     .pipe(concat('vendors.min.css'))
     .pipe(gulp.dest(config.distCSS));
@@ -77,12 +80,12 @@ function combineCss() {
 
 // Watch Sass files
 function watchSass() {
-    gulp.watch(config.srcCSS, gulp.series(compileSass, reload));   
+    gulp.watch(config.srcCSS, gulp.series(compileSass, reload));
 }
 
 // Watch Javascript files
 function watchJs() {
-    gulp.watch(config.srcJS, gulp.series(compileJs, reload));   
+    gulp.watch(config.srcJS, gulp.series(compileJs, reload));
 }
 
 // Watch HTML files

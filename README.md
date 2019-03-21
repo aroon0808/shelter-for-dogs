@@ -1,5 +1,5 @@
-# Gulp Starter
-Startup gulp configuration for projects. 
+# Info
+Some basic informations about the project
 
 ## Commands
 

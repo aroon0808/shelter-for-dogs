@@ -1,20 +1,25 @@
-const gulp         = require('gulp');
-const sass         = require('gulp-sass');
-const babel        = require('gulp-babel');
-const cleanCSS     = require('gulp-clean-css');
-const uglify       = require('gulp-uglify');
-const browserSync  = require('browser-sync').create();
-const autoprefixer = require('gulp-autoprefixer');
-const rename       = require('gulp-rename');
-const concat       = require('gulp-concat');
-const assetsPath   = '../assets/';
+const gulp              = require('gulp');
+const sass              = require('gulp-sass');
+const babel             = require('gulp-babel');
+const cleanCSS          = require('gulp-clean-css');
+const uglify            = require('gulp-uglify');
+const browserSync       = require('browser-sync').create();
+const autoprefixer      = require('gulp-autoprefixer');
+const rename            = require('gulp-rename');
+const concat            = require('gulp-concat');
+const panini            = require('panini');
+const del               = require('del');
 
 // Config
 const config = {
-    srcCSS: assetsPath + 'scss/**/*.scss',
-    distCSS: assetsPath + 'css',
-    srcJS: assetsPath + 'js/src/**/*.js',
-    distJS: assetsPath + 'js'
+    srcCSS: '../assets/scss/**/*.scss',
+    srcJS: '../assets/js/**/*.js',
+    srcHTML: '../html/{layouts,pages,partials}/**/*.html',
+    srcHTMLPages: '../html/pages/**/*.html',
+
+    distCSS: '../dist/assets/css',
+    distJS: '../dist/assets/js',
+    dist: '../dist'
 };
 
 // Server
@@ -30,6 +35,24 @@ function server() {
 function reload(done) {
     browserSync.reload();
     done();
+}
+
+// Reload HTML files
+function reloadHtml(done) {
+    panini.refresh();
+    done();
+}
+
+// Sass
+function compileSass() {
+    return gulp.src(config.srcCSS)
+        .pipe(sass({outputStyle: 'expanded'})
+        .on('error', sass.logError))
+        .pipe(autoprefixer({cascade: false}))
+        .pipe(gulp.dest(config.distCSS))
+        .pipe(cleanCSS())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(config.distCSS));
 }
 
 // Javascript
@@ -48,34 +71,38 @@ function compileJs() {
         .pipe(gulp.dest(config.distJS));
 }
 
-// Sass
-function compileSass() {
-    return gulp.src(config.srcCSS)
-        .pipe(sass({outputStyle: 'expanded'})
-        .on('error', sass.logError))
-        .pipe(autoprefixer({cascade: false}))
-        .pipe(gulp.dest(config.distCSS))
-        .pipe(cleanCSS())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(config.distCSS));
+// HTML
+function compileHtml() {
+    return gulp.src(config.srcHTMLPages)
+        .pipe(panini({
+            root: '../html/pages/',
+            layouts: '../html/layouts/',
+            partials: '../html/partials/'
+        }))
+        .pipe(gulp.dest(config.dist));
 }
 
 // Combine Javascript files
 function combineJs() {
     return gulp.src([
-        //'path/to/file.js',
-    ])
-    .pipe(concat('vendors.min.js'))
-    .pipe(gulp.dest(config.distJS));
+            //'path/to/file.js',
+        ])
+        .pipe(concat('vendors.min.js'))
+        .pipe(gulp.dest(config.distJS));
 }
 
 // Combine CSS files
 function combineCss() {
     return gulp.src([
-        assetsPath + 'vendors/css/normalize.min.css',
-    ])
-    .pipe(concat('vendors.min.css'))
-    .pipe(gulp.dest(config.distCSS));
+            '../assets/vendors/css/normalize.min.css',
+        ])
+        .pipe(concat('vendors.min.css'))
+        .pipe(gulp.dest(config.distCSS));
+}
+
+// Remove dist folder
+function removeDist() {
+    return del(config.dist + '**', {force: true});
 }
 
 // Watch Sass files
@@ -90,11 +117,15 @@ function watchJs() {
 
 // Watch HTML files
 function watchHtml() {
-    gulp.watch('*.html', gulp.series(reload));
+    gulp.watch(config.srcHTML, gulp.series(reloadHtml, compileHtml, reload));
 }
 
+// Build dist folder
+const build = gulp.series(removeDist, gulp.parallel(compileHtml, compileSass, compileJs, combineCss));
+gulp.task('build', build);
+
 // Main task
-gulp.task('default', gulp.parallel(server, watchSass, watchJs, watchHtml));
+gulp.task('default', gulp.series(build, gulp.parallel(server, watchSass, watchJs, watchHtml)));
 
 // Combine CSS files
 gulp.task('concat-css', gulp.parallel(combineCss));

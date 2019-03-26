@@ -7,9 +7,11 @@ Some basic informations about the project
 
 2. `gulp` - Start the developer server.
 
-3. `gulp concat-css` - Combine CSS files.
+3. `gulp build` - Build distribution folder.
 
-4. `gulp concat-js` - Combine Javascript files.
+4. `gulp concat-css` - Combine CSS files.
+
+5. `gulp concat-js` - Combine Javascript files.
 
 ## Dependencies
 
@@ -21,3 +23,5 @@ Some basic informations about the project
 - **Uglify** - Minifying Javascript files
 - **Rename** - Rename files / Adding suffixes to files
 - **Concat** - Combines multiple files into one file
+- **Panini** - HTML files generator
+- **Del** - Removes files and folders

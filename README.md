@@ -9,9 +9,9 @@ Some basic informations about the project
 
 3. `gulp build` - Build distribution folder.
 
-4. `gulp concat-css` - Combine CSS files.
+4. `gulp combine-css` - Combine CSS files.
 
-5. `gulp concat-js` - Combine Javascript files.
+5. `gulp combine-js` - Combine Javascript files.
 
 ## Dependencies
 

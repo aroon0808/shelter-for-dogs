@@ -1,14 +1,14 @@
-const gulp              = require('gulp');
-const sass              = require('gulp-sass');
-const babel             = require('gulp-babel');
-const cleanCSS          = require('gulp-clean-css');
-const uglify            = require('gulp-uglify');
-const browserSync       = require('browser-sync').create();
-const autoprefixer      = require('gulp-autoprefixer');
-const rename            = require('gulp-rename');
-const concat            = require('gulp-concat');
-const panini            = require('panini');
-const del               = require('del');
+const gulp         = require('gulp');
+const sass         = require('gulp-sass');
+const babel        = require('gulp-babel');
+const cleanCSS     = require('gulp-clean-css');
+const uglify       = require('gulp-uglify');
+const browserSync  = require('browser-sync').create();
+const autoprefixer = require('gulp-autoprefixer');
+const rename       = require('gulp-rename');
+const concat       = require('gulp-concat');
+const panini       = require('panini');
+const del          = require('del');
 
 // Config
 const config = {
@@ -82,15 +82,6 @@ function compileHtml() {
         .pipe(gulp.dest(config.dist));
 }
 
-// Combine Javascript files
-function combineJs() {
-    return gulp.src([
-            //'path/to/file.js',
-        ])
-        .pipe(concat('vendors.min.js'))
-        .pipe(gulp.dest(config.distJS));
-}
-
 // Combine CSS files
 function combineCss() {
     return gulp.src([
@@ -98,6 +89,15 @@ function combineCss() {
         ])
         .pipe(concat('vendors.min.css'))
         .pipe(gulp.dest(config.distCSS));
+}
+
+// Combine Javascript files
+function combineJs() {
+    return gulp.src([
+            '../assets/vendors/js/example.min.js',
+        ])
+        .pipe(concat('vendors.min.js'))
+        .pipe(gulp.dest(config.distJS));
 }
 
 // Remove dist folder
@@ -121,14 +121,14 @@ function watchHtml() {
 }
 
 // Build dist folder
-const build = gulp.series(removeDist, gulp.parallel(compileHtml, compileSass, compileJs, combineCss));
+const build = gulp.series(removeDist, gulp.parallel(compileHtml, compileSass, compileJs, combineCss, combineJs));
 gulp.task('build', build);
 
 // Main task
 gulp.task('default', gulp.series(build, gulp.parallel(server, watchSass, watchJs, watchHtml)));
 
 // Combine CSS files
-gulp.task('concat-css', gulp.parallel(combineCss));
+gulp.task('combine-css', gulp.parallel(combineCss));
 
 // Combine JS files
-gulp.task('concat-js', gulp.parallel(combineJs));
+gulp.task('combine-js', gulp.parallel(combineJs));

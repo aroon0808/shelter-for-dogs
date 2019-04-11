@@ -278,7 +278,7 @@
 .section {
     // Skewed section
     &.is-skewed {
-        padding: 100px 0;
+        padding: 80px 0;
         position: relative;
 
         &::before,
@@ -292,14 +292,14 @@
 
         // Skew top
         &::before {
-            border-bottom: 100px solid $color-white;
+            border-bottom: 80px solid $color-white;
             border-left: 100vw solid transparent;
             top: 0;
         }
         
         // Skew bottom
         &::after {
-            border-top: 100px solid $color-white;
+            border-top: 80px solid $color-white;
             border-right: 100vw solid transparent;
             bottom: 0;
         }
@@ -374,7 +374,7 @@
 
         // Big input
         &.is-big {
-            height: 60px;
+            height: 56px;
         }
     }
 
@@ -395,7 +395,8 @@
 
         // Big button
         &.is-big {
-            height: 60px;
+            font-size: 15px;
+            height: 56px;
         }
 
         &:hover {

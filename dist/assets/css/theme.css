@@ -330,7 +330,7 @@ ul li {
 }
 
 .section.is-skewed {
-  padding: 100px 0;
+  padding: 80px 0;
   position: relative;
 }
 
@@ -343,13 +343,13 @@ ul li {
 }
 
 .section.is-skewed::before {
-  border-bottom: 100px solid #fff;
+  border-bottom: 80px solid #fff;
   border-left: 100vw solid transparent;
   top: 0;
 }
 
 .section.is-skewed::after {
-  border-top: 100px solid #fff;
+  border-top: 80px solid #fff;
   border-right: 100vw solid transparent;
   bottom: 0;
 }
@@ -415,7 +415,7 @@ ul li {
 }
 
 .form--input.is-big, .is-big.form--select {
-  height: 60px;
+  height: 56px;
 }
 
 .form--select {
@@ -433,7 +433,8 @@ ul li {
 }
 
 .form--btn.is-big {
-  height: 60px;
+  font-size: 15px;
+  height: 56px;
 }
 
 .form--btn:hover {
@@ -474,6 +475,15 @@ ul li {
     -webkit-transform: translateX(-30%);
     transform: translateX(-30%);
     opacity: 1;
+  }
+  .section.is-skewed {
+    padding: 100px 0;
+  }
+  .section.is-skewed::before {
+    border-bottom-width: 100px;
+  }
+  .section.is-skewed::after {
+    border-top-width: 100px;
   }
   .form {
     text-align: left;
@@ -572,5 +582,17 @@ ul li {
     left: auto;
     -webkit-transform: none;
     transform: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.is-skewed {
+    padding: 120px 0;
+  }
+  .section.is-skewed::before {
+    border-bottom-width: 120px;
+  }
+  .section.is-skewed::after {
+    border-top-width: 120px;
   }
 }

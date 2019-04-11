@@ -4,6 +4,7 @@
 // Min-width: 480px
 // Min-width: 768px
 // Min-width: 992px
+// Min-width: 1200px
 //
 // *************************
 
@@ -42,6 +43,23 @@
         &--image {
             transform: translateX(-30%);
             opacity: 1;
+        }
+    }
+
+    // Section
+    .section {
+        &.is-skewed {
+            padding: 100px 0;
+
+            // Skew top
+            &::before {
+                border-bottom-width: 100px;
+            }
+            
+            // Skew bottom
+            &::after {
+                border-top-width: 100px;
+            }
         }
     }
 
@@ -162,6 +180,26 @@
             right: 0;
             left: auto;
             transform: none;
+        }
+    }
+}
+
+// Min-width: 1200px
+@media (min-width: 1200px) {
+    // Section
+    .section {
+        &.is-skewed {
+            padding: 120px 0;
+
+            // Skew top
+            &::before {
+                border-bottom-width: 120px;
+            }
+            
+            // Skew bottom
+            &::after {
+                border-top-width: 120px;
+            }
         }
     }
 }

@@ -1,6 +1,49 @@
 ---
 layout: default
-title: Home
+title: Strona główna
 ---
 
-TEST PAGE
+<!-- Header -->
+<header class="l-header">
+    <h1 class="header--heading">Znajdź swojego <br>PSYjaciela</h1>
+    <span class="header--subheading">
+        Pies ze schroniska <span class="is-bold">kocha mocniej</span>
+    </span>
+
+    <div class="header--buttons">
+        <a href="#" class="btn header--btn is-transparent">Załóż konto</a>
+        <a href="#" class="btn header--btn"><span class="is-regular">Wyszukaj</span> PSYjaciela</a>
+    </div>
+
+    <img src="./assets/images/header-dog.png" class="header--image" alt="">
+</header>
+
+<!-- Search section -->
+<section class="l-section section is-skewed">
+    <div class="section--container">
+        <div class="section--header">
+            <h2 class="section--heading">Wyszukaj Psa</h2>
+            <span class="section--icon fas fa-search" aria-hidden="true"></span>
+        </div>
+
+        <form action="" method="get" class="form form--home-search">
+            <label class="form--label is-hidden" for="search_dog">Wyszukaj Psa</label>
+
+            <div class="form--container">
+                <select name="search_dog" id="search_dog" class="form--select is-big">
+                    <option disabled selected>Wybierz miejscowość</option>
+                    <option value="Warszawa">Warszawa</option>
+                    <option value="Kraków">Kraków</option>
+                    <option value="Wrocław">Wrocław</option>
+                    <option value="Gdańsk">Gdańsk</option>
+                </select>
+                
+                <button type="submit" class="btn form--btn is-big"">
+                    Szukaj <span class="btn--icon fas fa-search" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <p class="form--text">Przejdź na stronę wyszukiwarki i ustaw dodatkowe kryteria za pomocą specjalnych filtrów. </p>  
+        </form>
+    </div>
+</section>

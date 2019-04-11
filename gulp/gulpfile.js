@@ -16,9 +16,11 @@ const config = {
     srcJS: '../assets/js/**/*.js',
     srcHTML: '../html/{layouts,pages,partials}/**/*.html',
     srcHTMLPages: '../html/pages/**/*.html',
+    srcImages: '../assets/images/**/*.{gif,jpg,png,svg}',
 
     distCSS: '../dist/assets/css',
     distJS: '../dist/assets/js',
+    distImages: '../dist/assets/images',
     dist: '../dist'
 };
 
@@ -100,6 +102,12 @@ function combineJs() {
         .pipe(gulp.dest(config.distJS));
 }
 
+// Copy images
+function copyImages() {
+    return gulp.src(config.srcImages)
+        .pipe(gulp.dest(config.distImages));
+}
+
 // Remove dist folder
 function removeDist() {
     return del(config.dist + '**', {force: true});
@@ -120,12 +128,17 @@ function watchHtml() {
     gulp.watch(config.srcHTML, gulp.series(reloadHtml, compileHtml, reload));
 }
 
+// Watch images
+function watchImages() {
+    gulp.watch(config.srcImages, gulp.series(copyImages, reload));
+}
+
 // Build dist folder
-const build = gulp.series(removeDist, gulp.parallel(compileHtml, compileSass, compileJs, combineCss, combineJs));
+const build = gulp.series(removeDist, gulp.parallel(copyImages, compileHtml, compileSass, compileJs, combineCss, combineJs));
 gulp.task('build', build);
 
 // Main task
-gulp.task('default', gulp.series(build, gulp.parallel(server, watchSass, watchJs, watchHtml)));
+gulp.task('default', gulp.series(build, gulp.parallel(server, watchSass, watchJs, watchHtml, watchImages)));
 
 // Combine CSS files
 gulp.task('combine-css', gulp.parallel(combineCss));

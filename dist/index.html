@@ -7,13 +7,87 @@
 
     <link rel="stylesheet" href="./assets/css/vendors.min.css">
     <link rel="stylesheet" href="./assets/css/theme.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Strona główna</title>
 </head>
 <body>
 
-    
-    TEST PAGE
-    
+    <div class="l-wrapper">
+        <nav class="l-navbar">
+            <img src="./assets/images/logo.png" class="navbar--brand" alt="Psytulimy">
+        
+            <div class="navbar--sidebar">
+                <div class="navbar--header">
+                    <h2 class="navbar--heading">Menu</h2>
+                    <span class="navbar--btn sidebar--btn">
+                        <span class="btn--bar"></span>
+                        <span class="btn--bar"></span>
+                    </span>
+                </div>
+        
+                <ul class="navbar--nav">
+                    <li class="nav--item"><a href="#" class="nav--link"><span class="nav--icon fas fa-home"></span>Strona Główna</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link"><span class="nav--icon fas fa-dog"></span>Wyszukaj Psy</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link"><span class="nav--icon fas fa-paw"></span>Adopcje</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link"><span class="nav--icon fas fa-question"></span>FAQ</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link"><span class="nav--icon fas fa-sign-in-alt"></span>Zaloguj się</a></li>
+                    <li class="nav--register"><a href="#" class="btn nav--register-link"><span class="nav--register-icon fas fa-plus"></span>Rejestracja</a></li>
+                </ul>
+            </div>
+        
+            <span class="navbar--btn">
+                <span class="btn--bar"></span>
+                <span class="btn--bar"></span>
+                <span class="btn--bar"></span>
+            </span>
+        </nav>
+        
+        <!-- Header -->
+        <header class="l-header">
+            <h1 class="header--heading">Znajdź swojego <br>PSYjaciela</h1>
+            <span class="header--subheading">
+                Pies ze schroniska <span class="is-bold">kocha mocniej</span>
+            </span>
+        
+            <div class="header--buttons">
+                <a href="#" class="btn header--btn is-transparent">Załóż konto</a>
+                <a href="#" class="btn header--btn"><span class="is-regular">Wyszukaj</span> PSYjaciela</a>
+            </div>
+        
+            <img src="./assets/images/header-dog.png" class="header--image" alt="">
+        </header>
+        
+        <!-- Search section -->
+        <section class="l-section section is-skewed">
+            <div class="section--container">
+                <div class="section--header">
+                    <h2 class="section--heading">Wyszukaj Psa</h2>
+                    <span class="section--icon fas fa-search" aria-hidden="true"></span>
+                </div>
+        
+                <form action="" method="get" class="form form--home-search">
+                    <label class="form--label is-hidden" for="search_dog">Wyszukaj Psa</label>
+        
+                    <div class="form--container">
+                        <select name="search_dog" id="search_dog" class="form--select is-big">
+                            <option disabled selected>Wybierz miejscowość</option>
+                            <option value="Warszawa">Warszawa</option>
+                            <option value="Kraków">Kraków</option>
+                            <option value="Wrocław">Wrocław</option>
+                            <option value="Gdańsk">Gdańsk</option>
+                        </select>
+                        
+                        <button type="submit" class="btn form--btn is-big"">
+                            Szukaj <span class="btn--icon fas fa-search" aria-hidden="true"></span>
+                        </button>
+                    </div>
+        
+                    <p class="form--text">Przejdź na stronę wyszukiwarki i ustaw dodatkowe kryteria za pomocą specjalnych filtrów. </p>  
+                </form>
+            </div>
+        </section>
+    </div>
+
     <script src="./assets/js/scripts.js"></script>
     
 </body>

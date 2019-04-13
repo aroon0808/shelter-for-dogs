@@ -18,7 +18,7 @@
         
             <div class="navbar--sidebar">
                 <div class="navbar--header">
-                    <h2 class="navbar--heading">Menu</h2>
+                    <span class="navbar--heading">Menu</span>
                     <span class="navbar--btn sidebar--btn">
                         <span class="btn--bar"></span>
                         <span class="btn--bar"></span>
@@ -58,14 +58,14 @@
         </header>
         
         <!-- Search section -->
-        <section class="l-section section is-skewed">
+        <section class="l-section section--skewed-top">
             <div class="section--container">
                 <div class="section--header">
                     <h2 class="section--heading">Wyszukaj Psa</h2>
                     <span class="section--icon fas fa-search" aria-hidden="true"></span>
                 </div>
         
-                <form action="" method="get" class="form form--home-search">
+                <form action="#" method="get" class="form form--home-search">
                     <label class="form--label is-hidden" for="search_dog">Wyszukaj Psa</label>
         
                     <div class="form--container">
@@ -77,14 +77,226 @@
                             <option value="Gdańsk">Gdańsk</option>
                         </select>
                         
-                        <button type="submit" class="btn form--btn is-big"">
+                        <button type="submit" class="btn form--btn is-big">
                             Szukaj <span class="btn--icon fas fa-search" aria-hidden="true"></span>
                         </button>
                     </div>
         
-                    <p class="form--text">Przejdź na stronę wyszukiwarki i ustaw dodatkowe kryteria za pomocą specjalnych filtrów. </p>  
+                    <p class="form--text">Przejdź na stronę wyszukiwarki i ustaw dodatkowe kryteria za pomocą specjalnych filtrów.</p>  
                 </form>
             </div>
+        </section>
+        
+        <!-- Gallery section -->
+        <section class="l-section section--skewed-top section--skewed-bottom is-cyan">
+            <div class="section--container is-cyan">
+                <div class="section--header">
+                    <h2 class="section--heading">Ostatnio dodane psy</h2>
+                    <span class="section--icon is-white fas fa-dog" aria-hidden="true"></span>
+                </div>
+        
+                <div class="l-gallery gallery--container">
+                    <!-- Gallery Item -->
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=6')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Azor</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Warszawa</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=3')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-venus" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Kala</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Kraków</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=5')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Bruno</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Poznań</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=46')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-venus" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Kasja</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Warszawa</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=31')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Lotos</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Wrocław</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=29')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Jaszczomb</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Kraków</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=70')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Rexio</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Poznań</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=80')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Apart</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Lódź</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>    </div>
         </section>
     </div>
 

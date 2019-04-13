@@ -19,14 +19,14 @@ title: Strona główna
 </header>
 
 <!-- Search section -->
-<section class="l-section section is-skewed">
+<section class="l-section section--skewed-top">
     <div class="section--container">
         <div class="section--header">
             <h2 class="section--heading">Wyszukaj Psa</h2>
             <span class="section--icon fas fa-search" aria-hidden="true"></span>
         </div>
 
-        <form action="" method="get" class="form form--home-search">
+        <form action="#" method="get" class="form form--home-search">
             <label class="form--label is-hidden" for="search_dog">Wyszukaj Psa</label>
 
             <div class="form--container">
@@ -38,12 +38,24 @@ title: Strona główna
                     <option value="Gdańsk">Gdańsk</option>
                 </select>
                 
-                <button type="submit" class="btn form--btn is-big"">
+                <button type="submit" class="btn form--btn is-big">
                     Szukaj <span class="btn--icon fas fa-search" aria-hidden="true"></span>
                 </button>
             </div>
 
-            <p class="form--text">Przejdź na stronę wyszukiwarki i ustaw dodatkowe kryteria za pomocą specjalnych filtrów. </p>  
+            <p class="form--text">Przejdź na stronę wyszukiwarki i ustaw dodatkowe kryteria za pomocą specjalnych filtrów.</p>  
         </form>
+    </div>
+</section>
+
+<!-- Gallery section -->
+<section class="l-section section--skewed-top section--skewed-bottom is-cyan">
+    <div class="section--container is-cyan">
+        <div class="section--header">
+            <h2 class="section--heading">Ostatnio dodane psy</h2>
+            <span class="section--icon is-white fas fa-dog" aria-hidden="true"></span>
+        </div>
+
+        {{> gallery}}
     </div>
 </section>

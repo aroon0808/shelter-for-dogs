@@ -2,10 +2,11 @@
 // Table of Contents:
 // 
 // Container
-// Layout wrapper
 // Navbar
 // Header
 // Section
+// Gallery
+// Footer
 //
 // *************************
 
@@ -17,16 +18,11 @@
     padding-right: 15px;
 }
 
-// Layout wrapper
-.l-wrapper {
-    height: 100%;
-}
-
 // Navbar
 .l-navbar {
     @extend .l-container;
 
-    max-width: 1100px;
+    max-width: $l-mobile;
     height: 100px;
     display: flex;
     align-items: center;
@@ -39,7 +35,7 @@
 
     padding-top: 100px;
     padding-bottom: 100px;
-    max-width: 1100px;
+    max-width: $l-mobile;
     position: relative;
 }
 
@@ -50,10 +46,24 @@
     padding: 0;
 }
 
-// Gallery layout
+// Gallery
 .l-gallery {
     @extend .l-container;
 
-    max-width: 1100px;
+    max-width: $l-mobile;
     padding: 0;
+}
+
+// Footer
+.l-footer {
+    @extend .l-container;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: $l-mobile;
+    border-top: 1px solid $color-white-dark-2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }

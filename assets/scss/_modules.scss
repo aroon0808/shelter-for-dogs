@@ -56,7 +56,7 @@
     // Brand
     &--brand {
         display: block;
-        margin-right: 80px;
+        margin-right: 60px;
         flex-shrink: 0;
     }
 
@@ -97,7 +97,7 @@
         text-transform: uppercase;
     }
 
-    // Menu
+    // Navigation
     &--nav {
         width: 100%;
 
@@ -333,9 +333,9 @@
 
     // Header
     &--header {
-        padding: 20px 15px;
+        padding: 0 15px;
         position: relative;
-        margin-bottom: 60px;
+        margin-bottom: 70px;
     }
 
     // Heading
@@ -364,10 +364,10 @@
 
     // Text
     &--text {
-        font: $font-weight-regular 15px/25px $font-primary;
+        font: $font-weight-regular 14px/25px $font-primary;
         text-align: center;
         width: 75%;
-        max-width: 950px;
+        max-width: 740px;
         padding-left: 15px;
         padding-right: 15px;
         margin: 0 auto;
@@ -499,7 +499,7 @@
 
     // Homepage form
     &--home-search {
-        max-width: 950px;
+        max-width: 740px;
         padding-left: 15px;
         padding-right: 15px;
         margin: 0 auto;
@@ -572,5 +572,50 @@
         font-size: 12px;
         width: 75%;
         display: inline-block;
+    }
+}
+
+// Footer
+.footer {
+    // Brand
+    &--brand {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    // Navigation
+    &--nav {
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+
+        .nav {
+            // Item
+            &--item {
+                height: 30px;
+                margin-bottom: 5px;
+                padding: 0 12px;
+                display: inline-block;
+            }
+        
+            // Link
+            &--link {
+                font: $font-weight-regular 12px/30px $font-primary;
+                color: $color-grey;
+                z-index: 1;
+                transition: all .3s ease;
+
+                &:hover,
+                &:focus {
+                    color: $color-green;
+                }
+            }
+        }
+    }
+
+    // Icon
+    &--icon {
+        font-size: 30px;
+        color: $color-green;
     }
 }

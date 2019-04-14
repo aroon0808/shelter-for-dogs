@@ -3,7 +3,7 @@
 // 
 // Fonts
 // All
-// Body, Html
+// Html
 // Body
 // Headinga
 // Link
@@ -19,10 +19,8 @@
     box-sizing: border-box;
 }
 
-// Body, Html
-html,
-body {
-    height: 100%;
+// Html
+html {
     overflow-x: hidden;
 }
 
@@ -32,6 +30,7 @@ body {
     font-weight: $font-weight-regular;
     color: $color-grey;
     background-color: $color-white;
+    overflow: hidden;
 }
 
 // Headings

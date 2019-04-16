@@ -28,6 +28,7 @@
         // Buttons
         &--buttons {
             text-align: left;
+            width: 100%;
         }
         
         // Button
@@ -69,7 +70,14 @@
         // Text
         &--text {
             line-height: 30px;
-            width: 100%;
+        }
+    }
+
+    // Register section
+    .register {
+        // Text
+        &--text {
+            line-height: 25px;
         }
     }
 
@@ -93,14 +101,13 @@
         // Input
         &--input {
             margin-right: 10px;
-            width: auto;
             flex-grow: 1;
         }
 
         // Button
         &--btn {
-            width: auto;
             margin: 0;
+            max-width: 170px;
         }
     }
 }
@@ -223,9 +230,37 @@
 
     // Section
     .section {
+        // Content
+        &--content {
+            max-width: $l-tablet - 70px;
+        }
+
+        // Columns container
+        &--columns {
+            display: flex;
+        }
+    }
+
+    // Register section
+    .register {
+        // Column
+        &--column {
+            width: 50%;
+        }
+
+        // Heading
+        &--heading {
+            text-align: left;
+        }
+
         // Text
         &--text {
-            max-width: $l-tablet - 70px;
+            text-align: left;
+        }
+
+        // Image
+        &--image {
+            margin-left: 0;
         }
     }
     
@@ -237,19 +272,8 @@
         }
     }
 
-    // Form
-    .form {
-        // Homepage form
-        &--home-search {
-            max-width: $l-tablet - 70px;
-        }
-    }
-
     // Layouts
-    .l-navbar,
-    .l-header,
-    .l-gallery,
-    .l-footer {
+    .l-container {
         max-width: $l-tablet;
     }
 }
@@ -278,10 +302,7 @@
     }
 
     // Layouts
-    .l-navbar,
-    .l-header,
-    .l-gallery,
-    .l-footer {
+    .l-container {
         max-width: $l-desktop;
     }
 }

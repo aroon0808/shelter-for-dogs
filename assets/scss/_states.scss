@@ -141,6 +141,58 @@
             margin-right: 60px;
         }
     }
+
+    // Register section
+    .register {
+        // Container
+        &--container {
+            display: flex;
+        }
+
+        // Column
+        &--column {
+            width: 50%;
+
+            &:first-child {
+                margin-right: 40px;
+            }
+        }
+
+        // Heading
+        &--heading {
+            text-align: left;
+        }
+
+        // Text
+        &--text {
+            text-align: left;
+        }
+
+        // Image
+        &--image {
+            margin-left: 0;
+        }
+
+        // Select button
+        &--select {
+            max-width: none;
+        }
+            
+        // Buttons container
+        &--buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        // Select button
+        &--btn {
+            margin: 30px 0;
+
+            &:first-child {
+                margin-right: 15px;
+            }
+        }
+    }
 }
 
 // Min-width: 992px
@@ -233,34 +285,6 @@
         // Content
         &--content {
             max-width: $l-tablet - 70px;
-        }
-
-        // Columns container
-        &--columns {
-            display: flex;
-        }
-    }
-
-    // Register section
-    .register {
-        // Column
-        &--column {
-            width: 50%;
-        }
-
-        // Heading
-        &--heading {
-            text-align: left;
-        }
-
-        // Text
-        &--text {
-            text-align: left;
-        }
-
-        // Image
-        &--image {
-            margin-left: 0;
         }
     }
     

@@ -420,10 +420,6 @@ ul li {
   background-color: #f2f7f9;
 }
 
-.section--column {
-  width: 100%;
-}
-
 .section--header {
   padding: 0 15px;
   position: relative;
@@ -484,6 +480,56 @@ ul li {
 
 .register--container {
   padding: 120px 0;
+}
+
+.register--column {
+  width: 100%;
+}
+
+.register--btn {
+  font: 500 16px "Work Sans", Arial, Verdana, sans-serif;
+  color: #111;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  padding: 30px 10px;
+  margin: 30px auto;
+  z-index: 1;
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  position: relative;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.register--btn.is-company .btn--icon {
+  color: #5dbee5;
+}
+
+.register--btn.is-company:hover, .register--btn.is-company:focus {
+  border-color: #5dbee5;
+  background-color: #5dbee5;
+}
+
+.register--btn .btn--icon {
+  color: #8cde4a;
+  font-size: 50px;
+  margin-bottom: 20px;
+  display: block;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.register--btn:hover, .register--btn:focus {
+  border-color: #8cde4a;
+  background-color: #8cde4a;
+  color: #fff;
+}
+
+.register--btn:hover .btn--icon, .register--btn:focus .btn--icon {
+  color: #fff;
 }
 
 .gallery--container {
@@ -776,6 +822,46 @@ ul li {
     margin-left: 60px;
     margin-right: 60px;
   }
+  .register--container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .register--column {
+    width: 50%;
+  }
+  .register--column:first-child {
+    margin-right: 40px;
+  }
+  .register--heading {
+    text-align: left;
+  }
+  .register--text {
+    text-align: left;
+  }
+  .register--image {
+    margin-left: 0;
+  }
+  .register--select {
+    max-width: none;
+  }
+  .register--buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .register--btn {
+    margin: 30px 0;
+  }
+  .register--btn:first-child {
+    margin-right: 15px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -849,24 +935,6 @@ ul li {
   }
   .section--content {
     max-width: 900px;
-  }
-  .section--columns {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .register--column {
-    width: 50%;
-  }
-  .register--heading {
-    text-align: left;
-  }
-  .register--text {
-    text-align: left;
-  }
-  .register--image {
-    margin-left: 0;
   }
   .gallery--col {
     width: 25%;

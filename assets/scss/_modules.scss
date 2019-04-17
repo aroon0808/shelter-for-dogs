@@ -333,11 +333,6 @@
         }
     }
 
-    // Column
-    &--column {
-        width: 100%;
-    }
-
     // Header
     &--header {
         padding: 0 15px;
@@ -409,6 +404,67 @@
     // Container
     &--container {
         padding: 120px 0;
+    }
+
+    // Column
+    &--column {
+        width: 100%;
+    }
+
+    // Select button
+    &--btn {
+        font: $font-weight-medium 16px $font-primary;
+        color: $color-black;
+        text-align: center;
+        background-color: $color-white;
+        border-radius: 6px;
+        border: 1px solid $color-white-dark;
+        padding: 30px 10px;
+        margin: 30px auto;
+        z-index: 1;
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        position: relative;
+        transition: all .3s ease;
+
+        // Company button
+        &.is-company {
+            .btn--icon {
+                color: $color-blue;
+            }
+
+            &:hover,
+            &:focus {
+                border-color: $color-blue;
+                background-color: $color-blue;
+            }
+        }
+
+        .btn {
+            // Icon
+            &--icon {
+                color: $color-green;
+                font-size: 50px;
+                margin-bottom: 20px;
+                display: block;
+                transition: color .3s ease;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $color-green;
+            background-color: $color-green;
+            color: $color-white;
+
+            .btn {
+                // Icon
+                &--icon {
+                    color: $color-white;
+                }
+            }
+        }
     }
 }
 

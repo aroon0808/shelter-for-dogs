@@ -197,11 +197,11 @@
                 &--bar {
                     margin: 0;
 
-                    &:first-child {
+                    &:nth-child(1) {
                         transform: translateY(1px) rotate(45deg);
                     }
 
-                    &:last-child {
+                    &:nth-child(2) {
                         transform: translateY(-1px) rotate(-45deg);
                     }
                 }
@@ -421,7 +421,6 @@
         border: 1px solid $color-white-dark;
         padding: 30px 10px;
         margin: 30px auto;
-        z-index: 1;
         width: 100%;
         max-width: 300px;
         display: block;

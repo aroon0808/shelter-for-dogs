@@ -302,12 +302,12 @@ ul li {
   margin: 0;
 }
 
-.navbar--btn.sidebar--btn .btn--bar:first-child {
+.navbar--btn.sidebar--btn .btn--bar:nth-child(1) {
   -webkit-transform: translateY(1px) rotate(45deg);
   transform: translateY(1px) rotate(45deg);
 }
 
-.navbar--btn.sidebar--btn .btn--bar:last-child {
+.navbar--btn.sidebar--btn .btn--bar:nth-child(2) {
   -webkit-transform: translateY(-1px) rotate(-45deg);
   transform: translateY(-1px) rotate(-45deg);
 }
@@ -495,7 +495,6 @@ ul li {
   border: 1px solid #eee;
   padding: 30px 10px;
   margin: 30px auto;
-  z-index: 1;
   width: 100%;
   max-width: 300px;
   display: block;

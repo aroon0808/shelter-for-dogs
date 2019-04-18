@@ -45,7 +45,7 @@
         </span>
     </nav>
     
-    <section class="l-container">
+    <section class="l-container is-smaller">
         <div class="register--container">
     
             <div class="register--column">
@@ -64,8 +64,60 @@
                 <h2 class="section--heading register--heading">Rejestracja</h2>
     
                 <div class="register--tabs">
+                    <p class="section--text tabs--text">Załóż konto w serwisie jako:</p>
+    
+                    <ul class="tabs--nav" role="tablist">
+                        <li class="nav--item">
+                            <a href="#user" id="user-tab" class="nav--link is-active" role="tab" aria-controls="user">
+                                <span class="nav--icon fas fa-users" aria-hidden="true"></span>Użytkownik
+                            </a>
+                        </li>
+    
+                        <li class="nav--item">
+                            <a href="#company" id="company-tab" class="nav--link nav--link-company" role="tab" aria-controls="company">
+                                <span class="nav--icon fas fa-hotel" aria-hidden="true"></span>Schronisko
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <hr class="line">
+    
+                    <div class="tabs--content">
+                        <div class="tabs--panel is-active" id="user" role="tabpanel" aria-labelledby="user-tab">
+                            
+                            <form action="#" method="POST" class="form">
+                                <div class="form--group">
+                                    <label for="login" class="form--label">Nazwa użytkownika</label>
+                                    <input type="text" name="login" id="login" class="form--input is-small" required>
+                                </div>
+    
+                                <div class="form--group">
+                                    <label for="mail" class="form--label">Adres E-mail</label>
+                                    <input type="email" name="mail" id="mail" class="form--input is-small" required>
+                                </div>
+    
+                                <div class="form--group">
+                                    <label for="passwd" class="form--label">Hasło</label>
+                                    <input type="password" name="passwd" id="passwd" class="form--input is-small" required>
+                                </div>
+    
+                                <div class="form--group">
+                                    <label for="passwdConfirm" class="form--label">Potwierdź hasło</label>
+                                    <input type="password" name="passwdConfirm" id="passwdConfirm" class="form--input is-small" required>
+                                </div>
+    
+                                <button type="submit" class="btn form--btn">Załóż konto</button>
+                            </form>
+                        </div>
+    
+                        <div class="tabs--panel" id="company" role="tabpanel" aria-labelledby="company-tab">
+        b
+                        </div>
+                    </div>
+                </div>
+    <!--
+                <div class="register--tabs">
                     <div class="register--tab is-active">
-                        <p class="section--text register--text">Wybierz typ konta:</p>
     
                         <div class="register--buttons">
                             <a href="#" class="register--btn">
@@ -85,7 +137,7 @@
                     <div class="register--tab">
     
                     </div>
-                </div>
+                </div>-->
             </div>
          
         </div>

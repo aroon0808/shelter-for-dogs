@@ -3,6 +3,7 @@
 // 
 // Screen reader
 // Images
+// Line
 //
 // *************************
 
@@ -22,4 +23,13 @@
 .image {
     display: block;
     max-width: 100%;
+}
+
+// Line
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-grey-bright;
+    margin: 20px 0;
+    border: 0;
 }

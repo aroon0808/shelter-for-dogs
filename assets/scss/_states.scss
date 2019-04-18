@@ -2,6 +2,7 @@
 // Table of Contents
 // 
 // Min-width: 480px
+// Min-width: 600px
 // Min-width: 768px
 // Min-width: 992px
 // Min-width: 1200px
@@ -88,26 +89,25 @@
             width: 50%;
         }
     }
+}
 
+@media (min-width: 600px) {
     // Form
     .form {
-        text-align: left;
-        
         // Container
         &--container {
             display: flex;
-        }
-
-        // Input
-        &--input {
-            margin-right: 10px;
-            flex-grow: 1;
         }
 
         // Button
         &--btn {
             margin: 0;
             max-width: 170px;
+        }
+
+        // Homepage search select
+        &--select-search {
+            margin-right: 15px;
         }
     }
 }
@@ -154,8 +154,14 @@
             width: 50%;
 
             &:first-child {
-                margin-right: 40px;
+                margin-right: 30px;
             }
+        }
+
+        // Tabs 
+        &--tabs {
+            margin: 0;
+            max-width: none;
         }
 
         // Heading
@@ -186,10 +192,28 @@
 
         // Select button
         &--btn {
-            margin: 30px 0;
+            margin: 0;
 
             &:first-child {
                 margin-right: 15px;
+            }
+        }
+    }
+
+    // Tabs
+    .tabs {
+        &--nav {
+            display: flex;
+
+            .nav {
+                &--item {
+                    flex-grow: 1;
+                    display: inline-block;
+
+                    &:first-child {
+                        margin-right: 15px;
+                    }
+                }
             }
         }
     }
@@ -328,5 +352,9 @@
     // Layouts
     .l-container {
         max-width: $l-desktop;
+
+        &.is-smaller {
+            max-width: $l-desktop - 150;
+        }
     }
 }

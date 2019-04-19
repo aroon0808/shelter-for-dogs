@@ -142,20 +142,25 @@
         }
     }
 
-    // Register section
-    .register {
-        // Container
-        &--container {
+    // Section
+    .section {
+        // Columns container
+        &--columns {
             display: flex;
         }
 
         // Column
         &--column {
-            width: 50%;
+            flex-grow: 1;
+            width: 100%;
+        }
+    }
 
-            &:first-child {
-                margin-right: 30px;
-            }
+    // Register section
+    .register {
+        // Column
+        &--column {
+            margin-right: 30px;
         }
 
         // Tabs 
@@ -177,26 +182,6 @@
         // Image
         &--image {
             margin-left: 0;
-        }
-
-        // Select button
-        &--select {
-            max-width: none;
-        }
-            
-        // Buttons container
-        &--buttons {
-            display: flex;
-            justify-content: center;
-        }
-
-        // Select button
-        &--btn {
-            margin: 0;
-
-            &:first-child {
-                margin-right: 15px;
-            }
         }
     }
 

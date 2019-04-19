@@ -71,7 +71,7 @@
         overflow: auto;
         z-index: 5;
         position: fixed;
-        transition: all .3s ease;   
+        transition: transform .3s ease;   
         left: -300px;
         top: 0; 
         
@@ -417,61 +417,6 @@
     &--image {
         margin: 50px auto;
     }
-    
-    // Select button
-    &--btn {
-        font: $font-weight-medium 16px $font-primary;
-        color: $color-black;
-        text-align: center;
-        background-color: $color-white;
-        border-radius: 6px;
-        border: 1px solid $color-white-dark;
-        padding: 30px 10px;
-        margin: 0 auto 30px auto;
-        width: 100%;
-        max-width: 300px;
-        display: block;
-        position: relative;
-        transition: all .3s ease;
-
-        // Company button
-        &.is-company {
-            .btn--icon {
-                color: $color-blue;
-            }
-
-            &:hover,
-            &:focus {
-                border-color: $color-blue;
-                background-color: $color-blue;
-            }
-        }
-
-        .btn {
-            // Icon
-            &--icon {
-                color: $color-green;
-                font-size: 50px;
-                margin-bottom: 20px;
-                display: block;
-                transition: color .3s ease;
-            }
-        }
-
-        &:hover,
-        &:focus {
-            border-color: $color-green;
-            background-color: $color-green;
-            color: $color-white;
-
-            .btn {
-                // Icon
-                &--icon {
-                    color: $color-white;
-                }
-            }
-        }
-    }
 }
 
 // Tabs 
@@ -488,14 +433,12 @@
 
             // Link
             &--link {
-                font: $font-weight-medium 14px/40px $font-primary;
+                font: $font-weight-medium 14px/24px $font-primary;
                 color: $color-black;
                 text-align: center;
                 width: 100%;
-                height: 40px;
-                border-radius: 6px;
                 background-color: $color-white;
-                border: 1px solid $color-white-dark;
+                border-left: 4px solid $color-white-dark;
                 display: block;
                 margin-bottom: 10px;
                 transition: all .3s ease;
@@ -503,9 +446,12 @@
                 &.is-active,
                 &:hover,
                 &:focus {
-                    color: $color-white;
-                    border-color: $color-green;
-                    background-color: $color-green;
+                    border-left-color: $color-green;
+
+                    // ICon
+                    .nav--icon {
+                        color: $color-green;
+                    }
                 }
                 
                 // Company button
@@ -513,16 +459,29 @@
                     &.is-active,
                     &:hover,
                     &:focus {
-                        border-color: $color-blue;
-                        background-color: $color-blue;
+                        border-left-color: $color-blue;
+
+                        // Icon
+                        .nav--icon {
+                            color: $color-blue;
+                        }
                     }
                 }
+            }
+
+            // Description
+            &--desc {
+                font-weight: $font-weight-regular; 
+                font-size: 10px;
+                color: $color-grey;
+                display: block;
             }
 
             // Icon
             &--icon {
                 width: 30px;
                 text-align: left;
+                transition: all .3s ease;
             }
         }
     }
@@ -535,7 +494,7 @@
 
     // Container
     &--content {
-        height: 200px;
+        min-height: 300px;
         margin-top: 30px;
         position: relative;
     }

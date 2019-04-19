@@ -4,9 +4,9 @@ title: Rejestracja
 ---
 
 <section class="l-container is-smaller">
-    <div class="register--container">
+    <div class="section--columns register--container">
 
-        <div class="register--column">
+        <div class="section--column register--column">
             <h1 class="section--heading register--heading">Załóż darmowe konto</h1>
 
             <p class="section--text register--text">
@@ -18,30 +18,32 @@ title: Rejestracja
             <img src="./assets/images/register-dog.png" class="image register--image" alt="">
         </div>
 
-        <div class="register--column">
+        <div class="section--column">
             <h2 class="section--heading register--heading">Rejestracja</h2>
 
             <div class="register--tabs">
-                <p class="section--text tabs--text">Załóż konto w serwisie jako:</p>
-
+                <!-- Tabs nav-->
                 <ul class="tabs--nav" role="tablist">
                     <li class="nav--item">
                         <a href="#user" id="user-tab" class="nav--link is-active" role="tab" aria-controls="user">
-                            <span class="nav--icon fas fa-users" aria-hidden="true"></span>Użytkownik
+                            <span class="nav--desc">Rejestracja jako</span>
+                            <span class="nav--icon fas fa-users" aria-hidden="true"></span>
+                            Użytkownik
                         </a>
                     </li>
 
                     <li class="nav--item">
                         <a href="#company" id="company-tab" class="nav--link nav--link-company" role="tab" aria-controls="company">
-                            <span class="nav--icon fas fa-hotel" aria-hidden="true"></span>Schronisko
+                            <span class="nav--desc">Rejestracja jako</span>
+                            <span class="nav--icon fas fa-hotel" aria-hidden="true"></span>
+                            Schronisko
                         </a>
                     </li>
                 </ul>
 
-
+                <!-- Tabs content-->
                 <div class="tabs--content">
                     <div class="tabs--panel is-active" id="user" role="tabpanel" aria-labelledby="user-tab">
-                        
                         <form action="#" method="POST" class="form">
                             <div class="form--group">
                                 <label for="login" class="form--label">Nazwa użytkownika</label>
@@ -73,34 +75,10 @@ title: Rejestracja
                     </div>
 
                     <div class="tabs--panel" id="company" role="tabpanel" aria-labelledby="company-tab">
-    b
+                            B
                     </div>
                 </div>
             </div>
-<!--
-            <div class="register--tabs">
-                <div class="register--tab is-active">
-
-                    <div class="register--buttons">
-                        <a href="#" class="register--btn">
-                            <span class="btn--icon fas fa-users" aria-hidden="true"></span>Osoba prywatna
-                        </a>
-
-                        <a href="#" class="register--btn is-company">
-                            <span class="btn--icon fas fa-hotel" aria-hidden="true"></span>Schronisko
-                        </a>
-                    </div>
-                </div>
-
-                <div class="register--tab">
-
-                </div>
-
-                <div class="register--tab">
-
-                </div>
-            </div>-->
         </div>
-     
     </div>
 </section>

@@ -4,9 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
   /*
    * Tabs
    */
-  if (document.querySelector('.tabs--nav')) {
-    var tabsNav = document.querySelector('.tabs--nav');
-    var tabsNavElements = tabsNav.querySelectorAll('.nav--link');
+  var tabsNav = document.querySelector('.tabs--nav');
+
+  if (tabsNav) {
+    var _tabsNav = document.querySelector('.tabs--nav');
+
+    var tabsNavElements = _tabsNav.querySelectorAll('.nav--link');
+
     var tabsContainer = document.querySelector('.tabs--content');
     var tabsPanels = tabsContainer.querySelectorAll('.tabs--panel'); // Set container height
 
@@ -33,17 +37,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
   /*
-   * Form labels
+   * Forms
    */
 
 
-  if (document.querySelector('.form')) {
-    var forms = document.querySelectorAll('.form');
+  var forms = document.querySelectorAll('.form');
+
+  if (forms) {
     forms.forEach(function (form) {
       var formGroups = form.querySelectorAll('.form--group');
+      var formCheckBoxes = form.querySelectorAll('.form--checkbox');
+      var formSubmitBtn = form.querySelector('.form--submit'); // Labels
+
       formGroups.forEach(function (formGroup) {
         var formLabel = formGroup.querySelector('.form--label');
-        var formInput = formGroup.querySelector('.form--input'); // On init
+        var formInput = formGroup.querySelector('.form--input');
+        if (!formInput) return; // On init
 
         if (formInput.value) {
           formLabel.classList.add('is-active');
@@ -59,6 +68,38 @@ document.addEventListener('DOMContentLoaded', function () {
             formLabel.classList.remove('is-active');
           }
         });
+      }); // Checkboxes
+
+      formCheckBoxes.forEach(function (checkbox) {
+        var checkboxLabel = checkbox.parentElement.querySelector('.form--checkbox-label'); // On toggle checkbox
+
+        checkbox.addEventListener('change', function () {
+          toggleCheckboxClass();
+        }); // On keypress on the checkbox label
+
+        checkboxLabel.addEventListener('keypress', function (e) {
+          if (e.keyCode == '13') {
+            if (checkbox.checked) {
+              checkbox.checked = false;
+            } else {
+              checkbox.checked = true;
+            }
+
+            toggleCheckboxClass();
+          }
+        }); // On click form submit button
+
+        formSubmitBtn.addEventListener('click', function () {
+          toggleCheckboxClass();
+        }); // Toggle checkbox class
+
+        function toggleCheckboxClass() {
+          if (checkbox.checked) {
+            checkboxLabel.classList.remove('is-required');
+          } else {
+            checkboxLabel.classList.add('is-required');
+          }
+        }
       });
     });
   }

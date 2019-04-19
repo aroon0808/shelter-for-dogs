@@ -80,7 +80,6 @@
                         </li>
                     </ul>
     
-                    <hr class="line">
     
                     <div class="tabs--content">
                         <div class="tabs--panel is-active" id="user" role="tabpanel" aria-labelledby="user-tab">
@@ -106,7 +105,12 @@
                                     <input type="password" name="passwdConfirm" id="passwdConfirm" class="form--input is-small" required>
                                 </div>
     
-                                <button type="submit" class="btn form--btn">Załóż konto</button>
+                                <div class="form--group">
+                                    <input type="checkbox" id="tos" name="tos" class="form--checkbox" required>
+                                    <label class="form--checkbox-label" id="checkbox-label" for="tos" tabindex="0">Akceptuję regulamin serwisu.</label>
+                                </div>
+    
+                                <button type="submit" class="btn form--btn form--submit">Załóż konto</button>
                             </form>
                         </div>
     

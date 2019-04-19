@@ -182,10 +182,8 @@ ul li {
   overflow: auto;
   z-index: 5;
   position: fixed;
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
-  transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
   left: -300px;
   top: 0;
 }
@@ -798,6 +796,50 @@ ul li {
   font-weight: 400;
   font-size: 12px;
   display: inline-block;
+}
+
+.form--checkbox {
+  display: none;
+}
+
+.form--checkbox:checked ~ .form--checkbox-label::after {
+  visibility: visible;
+}
+
+.form--checkbox-label {
+  font: 400 12px "Work Sans", Arial, Verdana, sans-serif;
+  color: #111;
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.form--checkbox-label.is-required::before {
+  border-color: #ff3636;
+}
+
+.form--checkbox-label::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 2px solid #e4ebef;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+}
+
+.form--checkbox-label:after {
+  content: '\f00c';
+  font: 900 12px 'Font Awesome 5 Free';
+  color: #8cde4a;
+  position: absolute;
+  visibility: hidden;
+  left: 4px;
+  top: 0;
 }
 
 .footer--brand {

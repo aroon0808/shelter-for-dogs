@@ -71,7 +71,7 @@
         overflow: auto;
         z-index: 5;
         position: fixed;
-        transition: transform .3s ease;   
+        transition: all .3s ease;   
         left: -300px;
         top: 0; 
         
@@ -768,6 +768,59 @@
         font-weight: $font-weight-regular;
         font-size: 12px;
         display: inline-block;
+    }
+
+    // Checkbox
+    &--checkbox {
+        display: none;
+
+        // Checked
+        &:checked {
+            & ~ .form--checkbox-label::after {
+                visibility: visible;
+            }
+        }
+    }
+
+    // Checkbox label
+    &--checkbox-label {
+        font: $font-weight-regular 12px $font-primary;
+        color: $color-black;
+        padding-left: 30px;
+        cursor: pointer;
+        position: relative;
+
+        // Required class
+        &.is-required {
+            &::before {
+                border-color: $color-red;
+            }
+        }
+
+        // Checkbox background
+        &::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            background-color: $color-white;
+            border: 2px solid $color-cyan-bright-2;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 0;
+        }
+
+        // Check icon
+        &:after {
+            content: '\f00c';
+            font: 900 12px 'Font Awesome 5 Free';
+            color: $color-green;
+            position: absolute;
+            visibility: hidden;
+            left: 4px;
+            top: 0;
+        }
     }
 }
 

@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     /*
      * Tabs
      */
-    if (document.querySelector('.tabs--nav')) {
+    const tabsNav = document.querySelector('.tabs--nav');
 
+    if (tabsNav) {
         const tabsNav = document.querySelector('.tabs--nav');
         const tabsNavElements = tabsNav.querySelectorAll('.nav--link');
         const tabsContainer = document.querySelector('.tabs--content');
@@ -43,17 +44,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /*
-     * Form labels
+     * Forms
      */
-    if (document.querySelector('.form')) {
-        const forms = document.querySelectorAll('.form');
-        
+    const forms = document.querySelectorAll('.form');
+
+    if (forms) {
         forms.forEach((form) => {
             const formGroups = form.querySelectorAll('.form--group');
+            const formCheckBoxes = form.querySelectorAll('.form--checkbox');
+            const formSubmitBtn = form.querySelector('.form--submit');
 
+            // Labels
             formGroups.forEach((formGroup) => {
                 const formLabel = formGroup.querySelector('.form--label');
                 const formInput = formGroup.querySelector('.form--input');
+
+                if (!formInput) return;
 
                 // On init
                 if (formInput.value) {
@@ -61,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
     
                 // On focus
-                formInput.addEventListener('focus', function() {
+                formInput.addEventListener('focus', () => {
                     formLabel.classList.add('is-active');
                 });
     
@@ -71,6 +77,43 @@ document.addEventListener('DOMContentLoaded', function() {
                         formLabel.classList.remove('is-active');
                     }
                 });
+            });
+
+            // Checkboxes
+            formCheckBoxes.forEach((checkbox) => {
+                const checkboxLabel = checkbox.parentElement.querySelector('.form--checkbox-label');
+
+                // On toggle checkbox
+                checkbox.addEventListener('change', () => {
+                    toggleCheckboxClass();
+                });
+
+                // On keypress on the checkbox label
+                checkboxLabel.addEventListener('keypress', (e) => {
+                    if (e.keyCode == '13') {
+                        if (checkbox.checked) {
+                            checkbox.checked = false;
+                        } else {
+                            checkbox.checked = true;
+                        }
+
+                        toggleCheckboxClass();
+                    }
+                });
+
+                // On click form submit button
+                formSubmitBtn.addEventListener('click', () => {
+                    toggleCheckboxClass();
+                });
+
+                // Toggle checkbox class
+                function toggleCheckboxClass() {
+                    if (checkbox.checked) {
+                        checkboxLabel.classList.remove('is-required');
+                    } else {
+                        checkboxLabel.classList.add('is-required');
+                    }
+                }
             });
         });
     }

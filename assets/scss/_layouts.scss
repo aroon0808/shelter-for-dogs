@@ -16,13 +16,13 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    max-width: $l-mobile;
 }
 
 // Navbar
 .l-navbar {
     @extend .l-container;
 
-    max-width: $l-mobile;
     height: 100px;
     display: flex;
     align-items: center;
@@ -35,7 +35,6 @@
 
     padding-top: 100px;
     padding-bottom: 100px;
-    max-width: $l-mobile;
     position: relative;
 }
 
@@ -43,6 +42,7 @@
 .l-section {
     @extend .l-container;
 
+    max-width: none !important;
     padding: 0;
 }
 
@@ -50,7 +50,6 @@
 .l-gallery {
     @extend .l-container;
 
-    max-width: $l-mobile;
     padding: 0;
 }
 
@@ -60,8 +59,7 @@
 
     padding-top: 30px;
     padding-bottom: 30px;
-    max-width: $l-mobile;
-    border-top: 1px solid $color-white-dark-2;
+    border-top: 1px solid $color-grey-bright;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -2,6 +2,7 @@
 // Table of Contents
 // 
 // Min-width: 480px
+// Min-width: 600px
 // Min-width: 768px
 // Min-width: 992px
 // Min-width: 1200px
@@ -28,6 +29,7 @@
         // Buttons
         &--buttons {
             text-align: left;
+            width: 100%;
         }
         
         // Button
@@ -69,7 +71,14 @@
         // Text
         &--text {
             line-height: 30px;
-            width: 100%;
+        }
+    }
+
+    // Register section
+    .register {
+        // Text
+        &--text {
+            line-height: 25px;
         }
     }
 
@@ -80,27 +89,25 @@
             width: 50%;
         }
     }
+}
 
+@media (min-width: 600px) {
     // Form
     .form {
-        text-align: left;
-        
         // Container
         &--container {
             display: flex;
         }
 
-        // Input
-        &--input {
-            margin-right: 10px;
-            width: auto;
-            flex-grow: 1;
-        }
-
         // Button
         &--btn {
-            width: auto;
             margin: 0;
+            max-width: 170px;
+        }
+
+        // Homepage search select
+        &--select-search {
+            margin-right: 15px;
         }
     }
 }
@@ -132,6 +139,67 @@
             text-align: left;
             margin-left: 60px;
             margin-right: 60px;
+        }
+    }
+
+    // Section
+    .section {
+        // Columns container
+        &--columns {
+            display: flex;
+        }
+
+        // Column
+        &--column {
+            flex-grow: 1;
+            width: 100%;
+        }
+    }
+
+    // Register section
+    .register {
+        // Column
+        &--column {
+            margin-right: 30px;
+        }
+
+        // Tabs 
+        &--tabs {
+            margin: 0;
+            max-width: none;
+        }
+
+        // Heading
+        &--heading {
+            text-align: left;
+        }
+
+        // Text
+        &--text {
+            text-align: left;
+        }
+
+        // Image
+        &--image {
+            margin-left: 0;
+        }
+    }
+
+    // Tabs
+    .tabs {
+        &--nav {
+            display: flex;
+
+            .nav {
+                &--item {
+                    flex-grow: 1;
+                    display: inline-block;
+
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+                }
+            }
         }
     }
 }
@@ -223,8 +291,8 @@
 
     // Section
     .section {
-        // Text
-        &--text {
+        // Content
+        &--content {
             max-width: $l-tablet - 70px;
         }
     }
@@ -237,19 +305,8 @@
         }
     }
 
-    // Form
-    .form {
-        // Homepage form
-        &--home-search {
-            max-width: $l-tablet - 70px;
-        }
-    }
-
     // Layouts
-    .l-navbar,
-    .l-header,
-    .l-gallery,
-    .l-footer {
+    .l-container {
         max-width: $l-tablet;
     }
 }
@@ -278,10 +335,17 @@
     }
 
     // Layouts
-    .l-navbar,
-    .l-header,
-    .l-gallery,
-    .l-footer {
+    .l-container {
         max-width: $l-desktop;
+
+        // Medium container
+        &.is-medium {
+            max-width: $l-desktop-medium;
+        }
+        
+        // Small container
+        &.is-small {
+            max-width: $l-desktop-small;
+        }
     }
 }

@@ -1,0 +1,35 @@
+// *************************
+// Table of Contents
+// 
+// Screen reader
+// Images
+// Line
+//
+// *************************
+
+// Screen reader
+.sr-only {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    position: absolute;
+}
+
+// Images
+.image {
+    display: block;
+    max-width: 100%;
+}
+
+// Line
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-grey-bright;
+    margin: 20px 0;
+    border: 0;
+}

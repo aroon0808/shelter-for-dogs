@@ -5,6 +5,7 @@
 // Navbar
 // Header
 // Section
+// Register section
 // Form
 // Footer
 //
@@ -197,11 +198,11 @@
                 &--bar {
                     margin: 0;
 
-                    &:first-child {
+                    &:nth-child(1) {
                         transform: translateY(1px) rotate(45deg);
                     }
 
-                    &:last-child {
+                    &:nth-child(2) {
                         transform: translateY(-1px) rotate(-45deg);
                     }
                 }
@@ -239,14 +240,15 @@
     // Buttons container
     &--buttons {
         text-align: center;
-        margin-top: 50px;
+        width: 75%;
+        margin: 50px auto 0 auto;
     }
 
     // Button
     &--btn {
         font: $font-weight-bold 15px/50px $font-primary;
+        width: 100%;
         height: 50px;
-        width: 75%;
         border: 2px solid $color-green;
         margin-top: 10px;
         display: inline-block;
@@ -349,6 +351,15 @@
         position: relative;
     }
 
+    // Content
+    &--content {
+        max-width: $l-mobile;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 75%;
+        margin: 0 auto;
+    }
+
     // Icon
     &--icon {
         font-size: 80px;
@@ -367,11 +378,7 @@
     &--text {
         font: $font-weight-regular 14px/25px $font-primary;
         text-align: center;
-        width: 75%;
-        max-width: 740px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin: 0 auto;
+        margin: 0;
     }
 
     // Button
@@ -379,6 +386,130 @@
         font-weight: $font-weight-regular;
         display: table;
         margin: 50px auto;
+    }
+}
+
+// Register section
+.register {
+    // Container
+    &--container {
+        padding: 120px 0;
+    }
+
+    // Column
+    &--column {
+        width: 100%;
+    }
+
+    // Tabs 
+    &--tabs {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    // Heading
+    &--heading {
+        font-size: 30px;
+        padding-bottom: 60px;
+    }
+
+    // Image
+    &--image {
+        margin: 50px auto;
+    }
+}
+
+// Tabs 
+.tabs {
+    // Navigation
+    &--nav {
+        margin-bottom: 40px;
+
+        .nav {
+            // Item
+            &--item {
+                display: block;
+            }
+
+            // Link
+            &--link {
+                font: $font-weight-medium 14px/24px $font-primary;
+                color: $color-black;
+                text-align: center;
+                width: 100%;
+                background-color: $color-white;
+                border-left: 4px solid $color-white-dark;
+                display: block;
+                margin-bottom: 10px;
+                transition: all .3s ease;
+
+                &.is-active,
+                &:hover,
+                &:focus {
+                    border-left-color: $color-green;
+
+                    // ICon
+                    .nav--icon {
+                        color: $color-green;
+                    }
+                }
+                
+                // Company button
+                &-company {
+                    &.is-active,
+                    &:hover,
+                    &:focus {
+                        border-left-color: $color-blue;
+
+                        // Icon
+                        .nav--icon {
+                            color: $color-blue;
+                        }
+                    }
+                }
+            }
+
+            // Description
+            &--desc {
+                font-weight: $font-weight-regular; 
+                font-size: 10px;
+                color: $color-grey;
+                display: block;
+            }
+
+            // Icon
+            &--icon {
+                width: 30px;
+                text-align: left;
+                transition: all .3s ease;
+            }
+        }
+    }
+
+    // Container
+    &--content {
+        min-height: 300px;
+        position: relative;
+    }
+
+    // Panel
+    &--panel {
+        width: 100%;
+        background-color: $color-white;
+        position: absolute;
+        transition: all .5s ease;
+        transform: translateX(150px);
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+
+        // Active class
+        &.is-active {
+            visibility: visible;
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 }
 
@@ -496,20 +627,45 @@
 
 // Form
 .form {
-    text-align: center;
+    // Inline container
+    &--inline {
+        display: flex;
+        justify-content: space-between;
+    }
 
-    // Homepage form
-    &--home-search {
-        max-width: 740px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin: 0 auto;
+    // Group
+    &--group {
+        flex-grow: 1;
+        margin-bottom: 35px;
+        position: relative;
+    }
+
+    // Heading
+    &--heading {
+        font: $font-weight-medium 16px $font-primary;
+        color: $color-black;
+        display: block;
+        margin-bottom: 30px;
     }
 
     // Label
     &--label {
-        color: $color-black;
+        font: $font-weight-medium 13px $font-primary;
+        color: $color-grey-3;
+        margin-bottom: 10px;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 12px;
+        left: 20px;
+        transition: all .3s ease;
         
+        // Active class
+        &.is-active {
+            font-size: 12px;
+            transform: translate(-20px, -30px);
+        }
+
         // Hidden class
         &.is-hidden {
             display: none;
@@ -520,9 +676,9 @@
     &--input {
         font-weight: $font-weight-regular;
         font-size: 14px;
-        color: $color-grey-3;
-        width: 75%;
-        height: 46px;
+        color: $color-black;
+        height: 40px;
+        width: 100%;
         padding: 0 20px;
         background-color: $color-cyan-bright;
         border: 2px solid $color-cyan-bright-2;
@@ -541,19 +697,34 @@
         appearance: none;
     }
 
+    // Post code form
+    &--post-code {
+        max-width: 140px;
+        margin-right: 10px;
+    }
+
     // Button
     &--btn {
         padding: 0 30px;
-        margin-top: 10px;
-        width: 75%;
+        width: 100%;
         display: inline-block;
         cursor: pointer;
+
+        // Homepage search button
+        &-search {
+            margin-top: 10px;
+        }
 
         // Big button
         &.is-big {
             font-weight: $font-weight-regular;
             font-size: 15px;
             height: 56px;
+        }
+
+        // Blue button
+        &.is-blue {
+            background-color: $color-blue;
         }
 
         &:hover {
@@ -571,8 +742,65 @@
     &--text {
         font-weight: $font-weight-regular;
         font-size: 12px;
-        width: 75%;
         display: inline-block;
+    }
+
+    // Checkbox
+    &--checkbox {
+        display: none;
+
+        // Checked
+        &:checked {
+            & ~ .form--checkbox-label::after {
+                visibility: visible;
+            }
+        }
+    }
+
+    // Checkbox label
+    &--checkbox-label {
+        font: $font-weight-regular 12px $font-primary;
+        color: $color-black;
+        padding-left: 30px;
+        cursor: pointer;
+        position: relative;
+
+        // Required class
+        &.is-required {
+            &::before {
+                border-color: $color-red;
+            }
+        }
+
+        // Checkbox background
+        &::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            background-color: $color-white;
+            border: 2px solid $color-cyan-bright-2;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 0;
+        }
+
+        // Check icon
+        &::after {
+            content: '\f00c';
+            font: 900 12px 'Font Awesome 5 Free';
+            color: $color-green;
+            position: absolute;
+            visibility: hidden;
+            left: 4px;
+            top: 0;
+        }
+
+        // Blue icon
+        &.is-blue::after {
+            color: $color-blue;
+        }
     }
 }
 

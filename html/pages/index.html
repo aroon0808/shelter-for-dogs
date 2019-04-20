@@ -26,25 +26,27 @@ title: Strona główna
             <span class="section--icon fas fa-search" aria-hidden="true"></span>
         </div>
 
-        <form action="#" method="get" class="form form--home-search">
-            <label class="form--label is-hidden" for="search_dog">Wyszukaj Psa</label>
-
-            <div class="form--container">
-                <select name="search_dog" id="search_dog" class="form--select is-big">
-                    <option disabled selected>Wybierz miejscowość</option>
-                    <option value="Warszawa">Warszawa</option>
-                    <option value="Kraków">Kraków</option>
-                    <option value="Wrocław">Wrocław</option>
-                    <option value="Gdańsk">Gdańsk</option>
-                </select>
-                
-                <button type="submit" class="btn form--btn is-big">
-                    Szukaj <span class="btn--icon fas fa-search" aria-hidden="true"></span>
-                </button>
-            </div>
-
-            <p class="form--text">Przejdź na stronę wyszukiwarki i ustaw dodatkowe kryteria za pomocą specjalnych filtrów.</p>  
-        </form>
+        <div class="section--content">
+            <form action="#" method="get" class="form">
+                <label class="form--label is-hidden" for="search_dog">Wyszukaj Psa</label>
+    
+                <div class="form--container">
+                    <select name="search_dog" id="search_dog" class="form--select form--select-search is-big">
+                        <option disabled selected>Wybierz miejscowość</option>
+                        <option value="Warszawa">Warszawa</option>
+                        <option value="Kraków">Kraków</option>
+                        <option value="Wrocław">Wrocław</option>
+                        <option value="Gdańsk">Gdańsk</option>
+                    </select>
+                    
+                    <button type="submit" class="btn form--btn form--btn-search is-big">
+                        Szukaj <span class="btn--icon fas fa-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+    
+                <p class="form--text">Przejdź na stronę wyszukiwarki i ustaw dodatkowe kryteria za pomocą specjalnych filtrów.</p>  
+            </form>
+        </div>
     </div>
 </section>
 
@@ -68,9 +70,11 @@ title: Strona główna
             <span class="section--icon fas fa-heart" aria-hidden="true"></span>
         </div>
 
-        <p class="section--text">
-            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
-        </p>
+        <div class="section--content">
+            <p class="section--text">
+                Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+            </p>
+        </div>
 
         <a href="#" class="btn section--btn">Dowiedz się więcej</a>
     </div>

@@ -195,7 +195,7 @@
                     flex-grow: 1;
                     display: inline-block;
 
-                    &:first-child {
+                    &:not(:last-child) {
                         margin-right: 15px;
                     }
                 }
@@ -338,9 +338,14 @@
     .l-container {
         max-width: $l-desktop;
 
+        // Medium container
+        &.is-medium {
+            max-width: $l-desktop-medium;
+        }
+        
         // Small container
         &.is-small {
-            max-width: $l-desktop - 150;
+            max-width: $l-desktop-small;
         }
     }
 }

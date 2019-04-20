@@ -500,7 +500,7 @@ ul li {
 }
 
 .tabs--nav {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .tabs--nav .nav--item {
@@ -552,7 +552,6 @@ ul li {
 
 .tabs--content {
   min-height: 300px;
-  margin-top: 30px;
   position: relative;
 }
 

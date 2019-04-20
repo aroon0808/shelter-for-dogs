@@ -550,11 +550,6 @@ ul li {
   transition: all .3s ease;
 }
 
-.tabs--text {
-  text-align: left;
-  margin-bottom: 10px;
-}
-
 .tabs--content {
   min-height: 300px;
   margin-top: 30px;
@@ -565,8 +560,10 @@ ul li {
   width: 100%;
   background-color: #fff;
   position: absolute;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-transform: translateX(150px);
+  transform: translateX(150px);
   visibility: hidden;
   opacity: 0;
   top: 0;
@@ -575,6 +572,8 @@ ul li {
 
 .tabs--panel.is-active {
   visibility: visible;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
   opacity: 1;
 }
 
@@ -681,9 +680,31 @@ ul li {
   width: 24px;
 }
 
+.form--inline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .form--group {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin-bottom: 35px;
   position: relative;
+}
+
+.form--heading {
+  font: 500 16px "Work Sans", Arial, Verdana, sans-serif;
+  color: #111;
+  display: block;
+  margin-bottom: 30px;
 }
 
 .form--label {
@@ -700,7 +721,6 @@ ul li {
 
 .form--label.is-active {
   font-size: 12px;
-  color: #111;
   -webkit-transform: translate(-20px, -30px);
   transform: translate(-20px, -30px);
 }
@@ -713,16 +733,12 @@ ul li {
   font-weight: 400;
   font-size: 14px;
   color: #111;
-  height: 46px;
+  height: 40px;
   width: 100%;
   padding: 0 20px;
   background-color: #f2f7f9;
   border: 2px solid #e4ebef;
   border-radius: 6px;
-}
-
-.form--input.is-small, .is-small.form--select {
-  height: 40px;
 }
 
 .form--input.is-big, .is-big.form--select {
@@ -733,6 +749,11 @@ ul li {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.form--post-code {
+  max-width: 140px;
+  margin-right: 10px;
 }
 
 .form--btn {
@@ -750,6 +771,10 @@ ul li {
   font-weight: 400;
   font-size: 15px;
   height: 56px;
+}
+
+.form--btn.is-blue {
+  background-color: #5dbee5;
 }
 
 .form--btn:hover {
@@ -801,7 +826,7 @@ ul li {
   left: 0;
 }
 
-.form--checkbox-label:after {
+.form--checkbox-label::after {
   content: '\f00c';
   font: 900 12px 'Font Awesome 5 Free';
   color: #8cde4a;
@@ -809,6 +834,10 @@ ul li {
   visibility: hidden;
   left: 4px;
   top: 0;
+}
+
+.form--checkbox-label.is-blue::after {
+  color: #5dbee5;
 }
 
 .footer--brand {
@@ -1074,7 +1103,7 @@ ul li {
   .l-container, .l-navbar, .l-header, .l-section, .l-gallery, .l-footer {
     max-width: 1100px;
   }
-  .l-container.is-smaller, .is-smaller.l-navbar, .is-smaller.l-header, .is-smaller.l-section, .is-smaller.l-gallery, .is-smaller.l-footer {
+  .l-container.is-small, .is-small.l-navbar, .is-small.l-header, .is-small.l-section, .is-small.l-gallery, .is-small.l-footer {
     max-width: 950px;
   }
 }

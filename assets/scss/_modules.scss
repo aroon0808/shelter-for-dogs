@@ -486,12 +486,6 @@
         }
     }
 
-    // Text
-    &--text {
-        text-align: left;
-        margin-bottom: 10px;
-    }
-
     // Container
     &--content {
         min-height: 300px;
@@ -504,7 +498,8 @@
         width: 100%;
         background-color: $color-white;
         position: absolute;
-        transition: all .3s ease;
+        transition: all .5s ease;
+        transform: translateX(150px);
         visibility: hidden;
         opacity: 0;
         top: 0;
@@ -513,6 +508,7 @@
         // Active class
         &.is-active {
             visibility: visible;
+            transform: translateX(0);
             opacity: 1;
         }
     }
@@ -632,10 +628,25 @@
 
 // Form
 .form {
+    // Inline container
+    &--inline {
+        display: flex;
+        justify-content: space-between;
+    }
+
     // Group
     &--group {
+        flex-grow: 1;
         margin-bottom: 35px;
         position: relative;
+    }
+
+    // Heading
+    &--heading {
+        font: $font-weight-medium 16px $font-primary;
+        color: $color-black;
+        display: block;
+        margin-bottom: 30px;
     }
 
     // Label
@@ -652,7 +663,6 @@
         // Active class
         &.is-active {
             font-size: 12px;
-            color: $color-black;
             transform: translate(-20px, -30px);
         }
 
@@ -667,17 +677,12 @@
         font-weight: $font-weight-regular;
         font-size: 14px;
         color: $color-black;
-        height: 46px;
+        height: 40px;
         width: 100%;
         padding: 0 20px;
         background-color: $color-cyan-bright;
         border: 2px solid $color-cyan-bright-2;
         border-radius: 6px;
-
-        // Small input
-        &.is-small {
-            height: 40px;
-        }
 
         // Big input
         &.is-big {
@@ -690,6 +695,12 @@
         @extend .form--input;
 
         appearance: none;
+    }
+
+    // Post code form
+    &--post-code {
+        max-width: 140px;
+        margin-right: 10px;
     }
 
     // Button
@@ -709,6 +720,11 @@
             font-weight: $font-weight-regular;
             font-size: 15px;
             height: 56px;
+        }
+
+        // Blue button
+        &.is-blue {
+            background-color: $color-blue;
         }
 
         &:hover {
@@ -771,7 +787,7 @@
         }
 
         // Check icon
-        &:after {
+        &::after {
             content: '\f00c';
             font: 900 12px 'Font Awesome 5 Free';
             color: $color-green;
@@ -779,6 +795,11 @@
             visibility: hidden;
             left: 4px;
             top: 0;
+        }
+
+        // Blue icon
+        &.is-blue::after {
+            color: $color-blue;
         }
     }
 }

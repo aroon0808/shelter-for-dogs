@@ -64,6 +64,10 @@ ul li {
   border: 0;
 }
 
+.no-padding {
+  padding: 0 !important;
+}
+
 .l-container, .l-navbar, .l-header, .l-section, .l-gallery, .l-footer {
   margin-left: auto;
   margin-right: auto;
@@ -106,7 +110,6 @@ ul li {
 .l-footer {
   padding-top: 30px;
   padding-bottom: 30px;
-  border-top: 1px solid #c7c7c7;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -139,6 +142,10 @@ ul li {
   position: relative;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
+}
+
+.btn.is-blue {
+  background-color: #5dbee5;
 }
 
 .btn::before {
@@ -428,6 +435,10 @@ ul li {
   background-color: #f2f7f9;
 }
 
+.section--container.has-big-spacing {
+  padding: 120px 0;
+}
+
 .section--header {
   padding: 0 15px;
   position: relative;
@@ -477,10 +488,6 @@ ul li {
   margin: 50px auto;
 }
 
-.register--container {
-  padding: 120px 0;
-}
-
 .register--column {
   width: 100%;
 }
@@ -497,6 +504,86 @@ ul li {
 
 .register--image {
   margin: 50px auto;
+}
+
+.company--container {
+  padding-bottom: 50px !important;
+}
+
+.company--heading {
+  font-size: 30px;
+}
+
+.company--subheading {
+  font-size: 18px;
+  color: #7a7a7a;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.company--thumbnail {
+  margin: 0 auto 30px auto;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.company--btn {
+  line-height: 40px;
+  height: 40px;
+  display: table;
+  margin: 30px auto 0 auto;
+  padding: 0 12px;
+}
+
+.company--btn .btn--icon {
+  margin-left: 10px;
+}
+
+.company--list {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.company--list .list--item {
+  font-size: 14px;
+  color: #111;
+  padding: 2px 0;
+  margin-bottom: 8px;
+}
+
+.company--list .list--icon {
+  font-size: 14px;
+  width: 25px;
+  display: inline-block;
+}
+
+.company--list .list--link {
+  color: #5dbee5;
+  position: relative;
+}
+
+.company--list .list--link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #5dbee5;
+  position: absolute;
+  -webkit-transition: width .2s ease;
+  transition: width .2s ease;
+  left: 0;
+  bottom: -2px;
+}
+
+.company--list .list--link:hover::before, .company--list .list--link:focus::before {
+  width: 100%;
+}
+
+.company--text {
+  font: 400 14px/24px "Work Sans", Arial, Verdana, sans-serif;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .tabs--nav {
@@ -773,10 +860,6 @@ ul li {
   height: 56px;
 }
 
-.form--btn.is-blue {
-  background-color: #5dbee5;
-}
-
 .form--btn:hover {
   color: #111;
   background-color: #fff;
@@ -989,6 +1072,31 @@ ul li {
   .register--image {
     margin-left: 0;
   }
+  .company--column {
+    max-width: 200px;
+  }
+  .company--thumbnail {
+    margin-left: 0;
+  }
+  .company--btn {
+    margin-left: 0;
+  }
+  .company--heading {
+    text-align: left;
+  }
+  .company--subheading {
+    text-align: left;
+  }
+  .company--text {
+    text-align: left;
+  }
+  .company--list {
+    text-align: left;
+  }
+  .company--list .list--item {
+    display: inline-block;
+    margin-right: 20px;
+  }
   .tabs--nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1081,6 +1189,9 @@ ul li {
   }
   .gallery--col {
     width: 25%;
+  }
+  .gallery--container.has-3-columns .gallery--col {
+    width: calc(100% / 3);
   }
   .l-container, .l-navbar, .l-header, .l-section, .l-gallery, .l-footer {
     max-width: 970px;

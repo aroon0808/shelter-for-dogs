@@ -74,7 +74,7 @@
         }
     }
 
-    // Register section
+    // Registration
     .register {
         // Text
         &--text {
@@ -91,6 +91,7 @@
     }
 }
 
+// Min-width: 600px
 @media (min-width: 600px) {
     // Form
     .form {
@@ -156,7 +157,7 @@
         }
     }
 
-    // Register section
+    // Registration
     .register {
         // Column
         &--column {
@@ -182,6 +183,51 @@
         // Image
         &--image {
             margin-left: 0;
+        }
+    }
+
+    // Company profile
+    .company {
+        // Column
+        &--column {
+            max-width: 200px;
+        }
+
+        // Thumbnail
+        &--thumbnail {
+            margin-left: 0;
+        }
+
+        // Button
+        &--btn {
+            margin-left: 0;
+        }
+
+        // Heading
+        &--heading {
+            text-align: left;
+        }
+    
+        // Subheading
+        &--subheading {
+            text-align: left;
+        }
+
+        // Text
+        &--text {
+            text-align: left;
+        }
+
+        // List
+        &--list {
+            text-align: left;
+
+            .list {
+                &--item {
+                    display: inline-block;
+                    margin-right: 20px;
+                }
+            }
         }
     }
 
@@ -302,6 +348,13 @@
         // Column
         &--col {
             width: 25%;
+        }
+
+        &--container.has-3-columns {
+            // Column
+            .gallery--col {
+                width: calc(100% / 3);
+            }
         }
     }
 

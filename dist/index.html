@@ -17,7 +17,7 @@
     <nav class="l-navbar">
         <img src="./assets/images/logo.png" class="navbar--brand" alt="Psytulimy">
     
-        <div class="navbar--sidebar">
+        <div class="navbar--sidebar is-active">
             <div class="navbar--header">
                 <span class="navbar--heading">Menu</span>
                 <span class="navbar--btn sidebar--btn">
@@ -32,17 +32,37 @@
                 <li class="nav--item"><a href="search.html" class="nav--link"><span class="nav--icon fas fa-dog" aria-hidden="true"></span>Wyszukaj Psy</a></li>
                 <li class="nav--item"><a href="adopt.html" class="nav--link"><span class="nav--icon fas fa-paw" aria-hidden="true"></span>Adopcje</a></li>
                 <li class="nav--item"><a href="faq.html" class="nav--link"><span class="nav--icon fas fa-question" aria-hidden="true"></span>FAQ</a></li>
-                <li class="nav--item"><a href="login.html" class="nav--link"><span class="nav--icon fas fa-sign-in-alt" aria-hidden="true"></span>Zaloguj się</a></li>
-                <li class="nav--register"><a href="register.html" class="btn nav--register-link"><span class="nav--register-icon fas fa-plus" aria-hidden="true"></span>Rejestracja</a></li>
             </ul>
         </div>
     
-        <span class="navbar--btn">
-            <span class="btn--bar"></span>
-            <span class="btn--bar"></span>
-            <span class="btn--bar"></span>
-            <span class="sr-only">[Menu]</span>
-        </span>
+        <div class="navbar--right">
+            <!-- User area -->
+            <div class="navbar--user">
+                <a href="#" class="user--link">
+                    <span class="fas fa-bell" aria-hidden="true"></span>
+                    <span class="sr-only">[Powiadomienia]</span>
+                </a>
+    
+                <a href="settings.html" class="user--link">
+                    <span class="fas fa-cog" aria-hidden="true"></span>
+                    <span class="sr-only">[Ustawienia]</span>
+                </a>
+    
+                <a href="#" class="user--link">
+                    <span class="fas fa-power-off" aria-hidden="true"></span>
+                    <span class="sr-only">[Wyloguj się]</span>
+                </a>
+                
+                <span class="user--msg">Witaj, Michał</span>
+            </div>
+    
+            <span class="navbar--btn">
+                <span class="btn--bar"></span>
+                <span class="btn--bar"></span>
+                <span class="btn--bar"></span>
+                <span class="sr-only">[Menu]</span>
+            </span>
+        </div>
     </nav>
     
     <!-- Header -->

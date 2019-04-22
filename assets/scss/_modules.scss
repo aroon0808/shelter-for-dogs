@@ -215,6 +215,47 @@
             }
         }
     }
+
+    // Right side
+    &--right {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    // User area
+    &--user {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+
+        .user {
+            &--item {
+                display: inline-block;
+            }
+
+            // Message
+            &--msg {
+                margin-left: 20px;
+                flex-shrink: 0;
+            }
+            
+            // Link
+            &--link {
+                font-size: 16px;
+                color: $color-black;
+                text-align: center;
+                padding: 10px;
+                margin-left: 6px;
+                transition: color .3s ease;
+
+                &:hover,
+                &:focus {
+                    color: $color-green;
+                }
+            }
+        }
+    }
 }
 
 // Header
@@ -222,7 +263,7 @@
     // Heading
     &--heading {
         font-weight: $font-weight-bold;
-        font-size: 36px;
+        font-size: 40px;
         color: $color-black;
         text-align: center;
         margin: 0 15px 50px 15px;
@@ -246,7 +287,7 @@
     // Buttons container
     &--buttons {
         text-align: center;
-        width: 75%;
+        width: 80%;
         margin: 50px auto 0 auto;
     }
 
@@ -368,7 +409,7 @@
         max-width: $l-mobile;
         padding-left: 15px;
         padding-right: 15px;
-        width: 75%;
+        width: 80%;
         margin: 0 auto;
     }
 

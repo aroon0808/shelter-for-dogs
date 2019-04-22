@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabsNav = document.querySelector('.tabs--nav');
 
     if (tabsNav) {
-        const tabsNav = document.querySelector('.tabs--nav');
         const tabsNavElements = tabsNav.querySelectorAll('.nav--link');
         const tabsContainer = document.querySelector('.tabs--content');
         const tabsPanels = tabsContainer.querySelectorAll('.tabs--panel');

@@ -132,7 +132,7 @@ ul li {
 }
 
 .btn {
-  font: 500 14px/46px "Work Sans", Arial, Verdana, sans-serif;
+  font: 500 1.4rem/46px "Work Sans", Arial, Verdana, sans-serif;
   color: #fff;
   height: 46px;
   border-radius: 6px;
@@ -240,7 +240,7 @@ ul li {
 }
 
 .navbar--nav .nav--link {
-  font: 500 14px/50px "Work Sans", Arial, Verdana, sans-serif;
+  font: 500 1.4rem/50px "Work Sans", Arial, Verdana, sans-serif;
   color: #111;
   display: block;
   z-index: 1;
@@ -408,7 +408,7 @@ ul li {
 }
 
 .header--btn {
-  font: 700 15px/50px "Work Sans", Arial, Verdana, sans-serif;
+  font: 700 1.5rem/50px "Work Sans", Arial, Verdana, sans-serif;
   width: 100%;
   height: 50px;
   border: 2px solid #8cde4a;
@@ -530,7 +530,7 @@ ul li {
 }
 
 .section--text {
-  font: 400 14px/25px "Work Sans", Arial, Verdana, sans-serif;
+  font: 400 1.4rem/25px "Work Sans", Arial, Verdana, sans-serif;
   text-align: center;
   margin: 0;
 }
@@ -551,7 +551,7 @@ ul li {
 }
 
 .register--heading {
-  font-size: 30px;
+  font-size: 3rem;
   padding-bottom: 60px;
 }
 
@@ -564,11 +564,11 @@ ul li {
 }
 
 .company--heading {
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 .company--subheading {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #7a7a7a;
   text-align: center;
   margin: 10px 0;
@@ -600,14 +600,14 @@ ul li {
 }
 
 .company--list .list--item {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #111;
   padding: 2px 0;
   margin-bottom: 8px;
 }
 
 .company--list .list--icon {
-  font-size: 14px;
+  font-size: 1.4rem;
   width: 25px;
   display: inline-block;
 }
@@ -634,7 +634,7 @@ ul li {
 }
 
 .company--text {
-  font: 400 14px/24px "Work Sans", Arial, Verdana, sans-serif;
+  font: 400 1.4rem/24px "Work Sans", Arial, Verdana, sans-serif;
   text-align: center;
   margin-top: 30px;
 }
@@ -648,7 +648,7 @@ ul li {
 }
 
 .tabs--nav .nav--link {
-  font: 500 14px/24px "Work Sans", Arial, Verdana, sans-serif;
+  font: 500 1.4rem/24px "Work Sans", Arial, Verdana, sans-serif;
   color: #111;
   text-align: center;
   width: 100%;
@@ -678,7 +678,7 @@ ul li {
 
 .tabs--nav .nav--desc {
   font-weight: 400;
-  font-size: 10px;
+  font-size: 1rem;
   color: #7a7a7a;
   display: block;
 }
@@ -784,7 +784,7 @@ ul li {
 }
 
 .gallery--item .item--icon {
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 30px;
   color: #111;
 }
@@ -803,14 +803,14 @@ ul li {
 
 .gallery--item .item--list .list--item {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1rem;
   color: #7a7a7a;
   margin: 5px 0;
 }
 
 .gallery--item .item--list .list--name {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #111;
 }
 
@@ -840,14 +840,14 @@ ul li {
 }
 
 .form--heading {
-  font: 500 16px "Work Sans", Arial, Verdana, sans-serif;
+  font: 500 1.6rem "Work Sans", Arial, Verdana, sans-serif;
   color: #111;
   display: block;
   margin-bottom: 30px;
 }
 
 .form--label {
-  font: 500 13px "Work Sans", Arial, Verdana, sans-serif;
+  font: 500 1.3rem "Work Sans", Arial, Verdana, sans-serif;
   color: #8599a5;
   margin-bottom: 10px;
   display: block;
@@ -860,7 +860,7 @@ ul li {
 }
 
 .form--label.is-active {
-  font-size: 12px;
+  font-size: 1.2rem;
   -webkit-transform: translate(-20px, -30px);
   transform: translate(-20px, -30px);
 }
@@ -871,7 +871,7 @@ ul li {
 
 .form--input, .form--select {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #111;
   height: 40px;
   width: 100%;
@@ -909,7 +909,7 @@ ul li {
 
 .form--btn.is-big {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1.5rem;
   height: 56px;
 }
 
@@ -924,7 +924,7 @@ ul li {
 
 .form--text {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 1.2rem;
   display: inline-block;
 }
 
@@ -937,7 +937,7 @@ ul li {
 }
 
 .form--checkbox-label {
-  font: 400 12px "Work Sans", Arial, Verdana, sans-serif;
+  font: 400 1.2rem "Work Sans", Arial, Verdana, sans-serif;
   color: #111;
   padding-left: 30px;
   cursor: pointer;
@@ -964,7 +964,7 @@ ul li {
 
 .form--checkbox-label::after {
   content: '\f00c';
-  font: 900 12px 'Font Awesome 5 Free';
+  font: 900 1.2rem 'Font Awesome 5 Free';
   color: #8cde4a;
   position: absolute;
   visibility: hidden;
@@ -997,7 +997,7 @@ ul li {
 }
 
 .footer--nav .nav--link {
-  font: 400 12px/30px "Work Sans", Arial, Verdana, sans-serif;
+  font: 400 1.2rem/30px "Work Sans", Arial, Verdana, sans-serif;
   color: #7a7a7a;
   z-index: 1;
   -webkit-transition: all .3s ease;
@@ -1009,7 +1009,7 @@ ul li {
 }
 
 .footer--icon {
-  font-size: 30px;
+  font-size: 3rem;
   color: #8cde4a;
 }
 
@@ -1081,7 +1081,7 @@ ul li {
 
 @media (min-width: 768px) {
   .header--heading {
-    font-size: 45px;
+    font-size: 4.5rem;
   }
   .gallery--col {
     width: calc(100% / 3);

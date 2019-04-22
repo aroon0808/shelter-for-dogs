@@ -21,6 +21,7 @@
 
 // Html
 html {
+    font-size: 62.5%;
     overflow-x: hidden;
 }
 
@@ -28,6 +29,7 @@ html {
 body {
     font-family: $font-primary;
     font-weight: $font-weight-regular;
+    font-size: 1.6rem;
     color: $color-grey;
     background-color: $color-white;
     overflow: hidden;

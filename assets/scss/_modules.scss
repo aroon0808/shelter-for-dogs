@@ -14,7 +14,7 @@
 
 // Button
 .btn {
-    font: $font-weight-medium 14px/46px $font-primary;
+    font: $font-weight-medium 1.4rem/46px $font-primary;
     color: $color-white;
     height: 46px;
     border-radius: 6px;
@@ -99,7 +99,7 @@
     // Sidebar heading
     &--heading {
         font-weight: $font-weight-bold;
-        font-size: 14px;
+        font-size: 1.4rem;
         color: $color-black;
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -119,7 +119,7 @@
         
             // Link
             &--link {
-                font: $font-weight-medium 14px/50px $font-primary;
+                font: $font-weight-medium 1.4rem/50px $font-primary;
                 color: $color-black;
                 display: block;
                 z-index: 1;
@@ -141,7 +141,7 @@
             // Icon
             &--icon {
                 color: $color-grey-bright;
-                font-size: 12px;
+                font-size: 1.2rem;
                 width: 20px;
                 margin-right: 10px;
                 transition: color .3s ease;
@@ -242,7 +242,7 @@
             
             // Link
             &--link {
-                font-size: 16px;
+                font-size: 1.6rem;
                 color: $color-black;
                 text-align: center;
                 padding: 10px;
@@ -263,7 +263,7 @@
     // Heading
     &--heading {
         font-weight: $font-weight-bold;
-        font-size: 40px;
+        font-size: 4rem;
         color: $color-black;
         text-align: center;
         margin: 0 15px 50px 15px;
@@ -272,7 +272,7 @@
     // Subheading
     &--subheading {
         font-weight: $font-weight-regular;
-        font-size: 18px;
+        font-size: 1.8rem;
         color: $color-grey-dark;
         text-align: center;
         display: block;
@@ -293,7 +293,7 @@
 
     // Button
     &--btn {
-        font: $font-weight-bold 15px/50px $font-primary;
+        font: $font-weight-bold 1.5rem/50px $font-primary;
         width: 100%;
         height: 50px;
         border: 2px solid $color-green;
@@ -397,7 +397,7 @@
     // Heading
     &--heading {
         font-weight: $font-weight-bold;
-        font-size: 25px;
+        font-size: 2.5rem;
         color: $color-black;
         text-align: center;
         z-index: 2;
@@ -415,7 +415,7 @@
 
     // Icon
     &--icon {
-        font-size: 80px;
+        font-size: 8rem;
         color: $color-cyan-bright;
         position: absolute;
         top: 50%;
@@ -429,7 +429,7 @@
 
     // Text
     &--text {
-        font: $font-weight-regular 14px/25px $font-primary;
+        font: $font-weight-regular 1.4rem/25px $font-primary;
         text-align: center;
         margin: 0;
     }
@@ -457,7 +457,7 @@
 
     // Heading
     &--heading {
-        font-size: 30px;
+        font-size: 3rem;
         padding-bottom: 60px;
     }
 
@@ -476,12 +476,12 @@
 
     // Header
     &--heading {
-        font-size: 30px;
+        font-size: 3rem;
     }
 
     // Subheading
     &--subheading {
-        font-size: 18px;
+        font-size: 1.8rem;
         color: $color-grey;
         text-align: center;
         margin: 10px 0;
@@ -519,7 +519,7 @@
         .list {
             // Item
             &--item {
-                font-size: 14px;
+                font-size: 1.4rem;
                 color: $color-black;
                 padding: 2px 0;
                 margin-bottom: 8px;
@@ -527,7 +527,7 @@
 
             // Icon
             &--icon {
-                font-size: 14px;
+                font-size: 1.4rem;
                 width: 25px;
                 display: inline-block;
             }
@@ -560,7 +560,7 @@
 
     // Text
     &--text {
-        font: $font-weight-regular 14px/24px $font-primary;
+        font: $font-weight-regular 1.4rem/24px $font-primary;
         text-align: center;
         margin-top: 30px;
     }
@@ -580,7 +580,7 @@
 
             // Link
             &--link {
-                font: $font-weight-medium 14px/24px $font-primary;
+                font: $font-weight-medium 1.4rem/24px $font-primary;
                 color: $color-black;
                 text-align: center;
                 width: 100%;
@@ -619,7 +619,7 @@
             // Description
             &--desc {
                 font-weight: $font-weight-regular; 
-                font-size: 10px;
+                font-size: 1rem;
                 color: $color-grey;
                 display: block;
             }
@@ -728,7 +728,7 @@
 
             // Icon
             &--icon {
-                font-size: 20px;
+                font-size: 2rem;
                 line-height: 30px;
                 color: $color-black;
 
@@ -749,7 +749,7 @@
                     // List item
                     &--item {
                         font-weight: $font-weight-regular;
-                        font-size: 14px;
+                        font-size: 1.rrem;
                         color: $color-grey;
                         margin: 5px 0;
                     }
@@ -757,7 +757,7 @@
                     // Name
                     &--name {
                         font-weight: $font-weight-bold;
-                        font-size: 18px;
+                        font-size: 1.8rem;
                         color: $color-black;
                     }
 
@@ -789,7 +789,7 @@
 
     // Heading
     &--heading {
-        font: $font-weight-medium 16px $font-primary;
+        font: $font-weight-medium 1.6rem $font-primary;
         color: $color-black;
         display: block;
         margin-bottom: 30px;
@@ -797,7 +797,7 @@
 
     // Label
     &--label {
-        font: $font-weight-medium 13px $font-primary;
+        font: $font-weight-medium 1.3rem $font-primary;
         color: $color-grey-3;
         margin-bottom: 10px;
         display: block;
@@ -809,7 +809,7 @@
         
         // Active class
         &.is-active {
-            font-size: 12px;
+            font-size: 1.2rem;
             transform: translate(-20px, -30px);
         }
 
@@ -822,7 +822,7 @@
     // Input
     &--input {
         font-weight: $font-weight-regular;
-        font-size: 14px;
+        font-size: 1.4rem;
         color: $color-black;
         height: 40px;
         width: 100%;
@@ -865,7 +865,7 @@
         // Big button
         &.is-big {
             font-weight: $font-weight-regular;
-            font-size: 15px;
+            font-size: 1.5rem;
             height: 56px;
         }
 
@@ -883,7 +883,7 @@
     // Form text
     &--text {
         font-weight: $font-weight-regular;
-        font-size: 12px;
+        font-size: 1.2rem;
         display: inline-block;
     }
 
@@ -901,7 +901,7 @@
 
     // Checkbox label
     &--checkbox-label {
-        font: $font-weight-regular 12px $font-primary;
+        font: $font-weight-regular 1.2rem $font-primary;
         color: $color-black;
         padding-left: 30px;
         cursor: pointer;
@@ -931,7 +931,7 @@
         // Check icon
         &::after {
             content: '\f00c';
-            font: 900 12px 'Font Awesome 5 Free';
+            font: 900 1.2rem 'Font Awesome 5 Free';
             color: $color-green;
             position: absolute;
             visibility: hidden;
@@ -971,7 +971,7 @@
         
             // Link
             &--link {
-                font: $font-weight-regular 12px/30px $font-primary;
+                font: $font-weight-regular 1.2rem/30px $font-primary;
                 color: $color-grey;
                 z-index: 1;
                 transition: all .3s ease;
@@ -986,7 +986,7 @@
 
     // Icon
     &--icon {
-        font-size: 30px;
+        font-size: 3rem;
         color: $color-green;
     }
 }

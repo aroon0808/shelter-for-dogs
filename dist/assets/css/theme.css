@@ -5,12 +5,14 @@
 }
 
 html {
+  font-size: 62.5%;
   overflow-x: hidden;
 }
 
 body {
   font-family: "Work Sans", Arial, Verdana, sans-serif;
   font-weight: 400;
+  font-size: 1.6rem;
   color: #7a7a7a;
   background-color: #fff;
   overflow: hidden;
@@ -221,7 +223,7 @@ ul li {
 
 .navbar--heading {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #111;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -260,7 +262,7 @@ ul li {
 
 .navbar--nav .nav--icon, .navbar--nav .nav--register-icon {
   color: #c7c7c7;
-  font-size: 12px;
+  font-size: 1.2rem;
   width: 20px;
   margin-right: 10px;
   -webkit-transition: color .3s ease;
@@ -365,7 +367,7 @@ ul li {
 }
 
 .navbar--user .user--link {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #111;
   text-align: center;
   padding: 10px;
@@ -380,7 +382,7 @@ ul li {
 
 .header--heading {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 4rem;
   color: #111;
   text-align: center;
   margin: 0 15px 50px 15px;
@@ -388,7 +390,7 @@ ul li {
 
 .header--subheading {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #4a4b4c;
   text-align: center;
   display: block;
@@ -498,7 +500,7 @@ ul li {
 
 .section--heading {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #111;
   text-align: center;
   z-index: 2;
@@ -514,7 +516,7 @@ ul li {
 }
 
 .section--icon {
-  font-size: 80px;
+  font-size: 8rem;
   color: #f2f7f9;
   position: absolute;
   top: 50%;

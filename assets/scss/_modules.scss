@@ -2,11 +2,14 @@
 // Table of Contents
 // 
 // Button
-// Navbar
+// Navigation
 // Header
 // Section
 // Registration
+// Company profile
 // Tabs
+// Dropdown
+// Gallery
 // Form
 // Footer
 //
@@ -14,7 +17,7 @@
 
 // Button
 .btn {
-    font: $font-weight-medium 14px/46px $font-primary;
+    font: $font-weight-medium 1.4rem/46px $font-primary;
     color: $color-white;
     height: 46px;
     border-radius: 6px;
@@ -64,7 +67,7 @@
     // Brand
     &--brand {
         display: block;
-        margin-right: 60px;
+        margin-right: 50px;
         flex-shrink: 0;
     }
 
@@ -99,7 +102,7 @@
     // Sidebar heading
     &--heading {
         font-weight: $font-weight-bold;
-        font-size: 14px;
+        font-size: 1.4rem;
         color: $color-black;
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -119,7 +122,7 @@
         
             // Link
             &--link {
-                font: $font-weight-medium 14px/50px $font-primary;
+                font: $font-weight-medium 1.4rem/50px $font-primary;
                 color: $color-black;
                 display: block;
                 z-index: 1;
@@ -131,20 +134,15 @@
                 &:focus {
                     color: $color-green;
                     transform: translateX(10px);
-
-                    .nav--icon {
-                        color: $color-green;
-                    }
                 }
             }
 
             // Icon
             &--icon {
-                color: $color-grey-bright;
-                font-size: 12px;
+                color: $color-green;
+                font-size: 1.2rem;
                 width: 20px;
                 margin-right: 10px;
-                transition: color .3s ease;
             }
 
             // Register button
@@ -181,6 +179,7 @@
     &--btn {
         width: 30px;
         height: 30px;
+        margin-left: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -215,6 +214,73 @@
             }
         }
     }
+
+    // Right side
+    &--right {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    // User area
+    &--user {
+        display: flex;
+        align-items: center;
+
+        .user {
+            // Image
+            &--image {
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            // Name
+            &--name {
+                margin-left: 10px;
+                display: none;
+            }
+
+            // Message
+            &--msg {
+                font: $font-weight-regular 1.4rem/36px $font-primary;
+                color: $color-black;
+                height: 36px;
+                margin-left: 20px;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    width: 1px;
+                    height: 100%;
+                    background-color: $color-white-dark;
+                    position: absolute;
+                    left: -20px;
+                    top: 0;
+                }
+            }
+            
+            // Link
+            &--link {
+                font-size: 1.6rem;
+                color: $color-black;
+                line-height: 36px;
+                width: 36px;
+                height: 36px;
+                text-align: center;
+                margin-right: 10px;
+                transition: color .3s ease;
+
+                &:hover,
+                &:focus {
+                    color: $color-green;
+                }
+            }
+        }
+    }
 }
 
 // Header
@@ -222,7 +288,7 @@
     // Heading
     &--heading {
         font-weight: $font-weight-bold;
-        font-size: 36px;
+        font-size: 4rem;
         color: $color-black;
         text-align: center;
         margin: 0 15px 50px 15px;
@@ -231,7 +297,7 @@
     // Subheading
     &--subheading {
         font-weight: $font-weight-regular;
-        font-size: 18px;
+        font-size: 1.8rem;
         color: $color-grey-dark;
         text-align: center;
         display: block;
@@ -246,13 +312,13 @@
     // Buttons container
     &--buttons {
         text-align: center;
-        width: 75%;
+        width: 80%;
         margin: 50px auto 0 auto;
     }
 
     // Button
     &--btn {
-        font: $font-weight-bold 15px/50px $font-primary;
+        font: $font-weight-bold 1.5rem/50px $font-primary;
         width: 100%;
         height: 50px;
         border: 2px solid $color-green;
@@ -356,7 +422,7 @@
     // Heading
     &--heading {
         font-weight: $font-weight-bold;
-        font-size: 25px;
+        font-size: 2.5rem;
         color: $color-black;
         text-align: center;
         z-index: 2;
@@ -368,13 +434,13 @@
         max-width: $l-mobile;
         padding-left: 15px;
         padding-right: 15px;
-        width: 75%;
+        width: 80%;
         margin: 0 auto;
     }
 
     // Icon
     &--icon {
-        font-size: 80px;
+        font-size: 8rem;
         color: $color-cyan-bright;
         position: absolute;
         top: 50%;
@@ -388,7 +454,7 @@
 
     // Text
     &--text {
-        font: $font-weight-regular 14px/25px $font-primary;
+        font: $font-weight-regular 1.4rem/25px $font-primary;
         text-align: center;
         margin: 0;
     }
@@ -416,7 +482,7 @@
 
     // Heading
     &--heading {
-        font-size: 30px;
+        font-size: 3rem;
         padding-bottom: 60px;
     }
 
@@ -435,12 +501,12 @@
 
     // Header
     &--heading {
-        font-size: 30px;
+        font-size: 3rem;
     }
 
     // Subheading
     &--subheading {
-        font-size: 18px;
+        font-size: 1.8rem;
         color: $color-grey;
         text-align: center;
         margin: 10px 0;
@@ -478,7 +544,7 @@
         .list {
             // Item
             &--item {
-                font-size: 14px;
+                font-size: 1.4rem;
                 color: $color-black;
                 padding: 2px 0;
                 margin-bottom: 8px;
@@ -486,7 +552,7 @@
 
             // Icon
             &--icon {
-                font-size: 14px;
+                font-size: 1.4rem;
                 width: 25px;
                 display: inline-block;
             }
@@ -519,7 +585,7 @@
 
     // Text
     &--text {
-        font: $font-weight-regular 14px/24px $font-primary;
+        font: $font-weight-regular 1.4rem/24px $font-primary;
         text-align: center;
         margin-top: 30px;
     }
@@ -539,7 +605,7 @@
 
             // Link
             &--link {
-                font: $font-weight-medium 14px/24px $font-primary;
+                font: $font-weight-medium 1.4rem/24px $font-primary;
                 color: $color-black;
                 text-align: center;
                 width: 100%;
@@ -578,7 +644,7 @@
             // Description
             &--desc {
                 font-weight: $font-weight-regular; 
-                font-size: 10px;
+                font-size: 1rem;
                 color: $color-grey;
                 display: block;
             }
@@ -615,6 +681,84 @@
             visibility: visible;
             transform: translateX(0);
             opacity: 1;
+        }
+    }
+}
+
+// Dropdown
+.dropdown {
+    background-color: $color-white;
+    min-width: 150px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba($color-grey-2, .25);
+    z-index: 4;
+    position: absolute;
+    transition: all .2s ease;
+    visibility: hidden;
+    top: 30px;
+    right: 0; 
+    opacity: 0;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+    }
+
+    // Arrow
+    &::before {
+        border-bottom: 15px solid $color-white;
+        border-right: 15px solid transparent;
+        box-shadow: -1px 1px 12px 0 rgba($color-grey-2, .25);
+        z-index: -2;
+        top: -6px;
+        right: 12px;
+        transform: rotate(135deg);
+        width: 0;
+        height: 0;
+    }
+
+    // Dropdown background
+    &::after {
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        background-color: $color-white;
+    }
+
+    // Active class
+    &.is-active {
+        transform: translateY(20px);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dropdown {
+        // Item
+        &--item {
+            margin: 4px 0;
+        }
+
+        // Icon
+        &--icon {
+            width: 30px;
+        }
+
+        // Link
+        &--link {
+            font-size: 1.2rem;
+            color: $color-grey;
+            display: block;
+            transition: all .3s ease;
+
+            &:hover,
+            &:focus {
+                color: $color-green;
+            }
         }
     }
 }
@@ -687,7 +831,7 @@
 
             // Icon
             &--icon {
-                font-size: 20px;
+                font-size: 2rem;
                 line-height: 30px;
                 color: $color-black;
 
@@ -708,7 +852,7 @@
                     // List item
                     &--item {
                         font-weight: $font-weight-regular;
-                        font-size: 14px;
+                        font-size: 1.4rem;
                         color: $color-grey;
                         margin: 5px 0;
                     }
@@ -716,7 +860,7 @@
                     // Name
                     &--name {
                         font-weight: $font-weight-bold;
-                        font-size: 18px;
+                        font-size: 1.8rem;
                         color: $color-black;
                     }
 
@@ -748,7 +892,7 @@
 
     // Heading
     &--heading {
-        font: $font-weight-medium 16px $font-primary;
+        font: $font-weight-medium 1.6rem $font-primary;
         color: $color-black;
         display: block;
         margin-bottom: 30px;
@@ -756,7 +900,7 @@
 
     // Label
     &--label {
-        font: $font-weight-medium 13px $font-primary;
+        font: $font-weight-medium 1.3rem $font-primary;
         color: $color-grey-3;
         margin-bottom: 10px;
         display: block;
@@ -768,7 +912,7 @@
         
         // Active class
         &.is-active {
-            font-size: 12px;
+            font-size: 1.2rem;
             transform: translate(-20px, -30px);
         }
 
@@ -781,7 +925,7 @@
     // Input
     &--input {
         font-weight: $font-weight-regular;
-        font-size: 14px;
+        font-size: 1.4rem;
         color: $color-black;
         height: 40px;
         width: 100%;
@@ -824,7 +968,7 @@
         // Big button
         &.is-big {
             font-weight: $font-weight-regular;
-            font-size: 15px;
+            font-size: 1.5rem;
             height: 56px;
         }
 
@@ -842,7 +986,7 @@
     // Form text
     &--text {
         font-weight: $font-weight-regular;
-        font-size: 12px;
+        font-size: 1.2rem;
         display: inline-block;
     }
 
@@ -860,7 +1004,7 @@
 
     // Checkbox label
     &--checkbox-label {
-        font: $font-weight-regular 12px $font-primary;
+        font: $font-weight-regular 1.2rem $font-primary;
         color: $color-black;
         padding-left: 30px;
         cursor: pointer;
@@ -890,7 +1034,7 @@
         // Check icon
         &::after {
             content: '\f00c';
-            font: 900 12px 'Font Awesome 5 Free';
+            font: 900 1.2rem 'Font Awesome 5 Free';
             color: $color-green;
             position: absolute;
             visibility: hidden;
@@ -930,7 +1074,7 @@
         
             // Link
             &--link {
-                font: $font-weight-regular 12px/30px $font-primary;
+                font: $font-weight-regular 1.2rem/30px $font-primary;
                 color: $color-grey;
                 z-index: 1;
                 transition: all .3s ease;
@@ -945,7 +1089,7 @@
 
     // Icon
     &--icon {
-        font-size: 30px;
+        font-size: 3rem;
         color: $color-green;
     }
 }

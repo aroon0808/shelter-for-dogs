@@ -7,10 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var tabsNav = document.querySelector('.tabs--nav');
 
   if (tabsNav) {
-    var _tabsNav = document.querySelector('.tabs--nav');
-
-    var tabsNavElements = _tabsNav.querySelectorAll('.nav--link');
-
+    var tabsNavElements = tabsNav.querySelectorAll('.nav--link');
     var tabsContainer = document.querySelector('.tabs--content');
     var tabsPanels = tabsContainer.querySelectorAll('.tabs--panel'); // Set container height
 

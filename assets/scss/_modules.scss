@@ -2,12 +2,13 @@
 // Table of Contents
 // 
 // Button
-// Navbar
+// Navigation
 // Header
 // Section
 // Registration
 // Company profile
 // Tabs
+// Dropdown
 // Gallery
 // Form
 // Footer
@@ -230,127 +231,53 @@
             // Image
             &--image {
                 border-radius: 50%;
-                margin-right: 10px;
                 display: inline-block;
+            }
+
+            // Name
+            &--name {
+                margin-left: 10px;
+                display: none;
             }
 
             // Message
             &--msg {
-                font: $font-weight-medium 1.4rem/34px $font-primary;
+                font: $font-weight-regular 1.4rem/36px $font-primary;
                 color: $color-black;
-                margin-left: 10px;
-                height: 34px;
+                height: 36px;
+                margin-left: 20px;
                 flex-shrink: 0;
                 display: flex;
                 align-items: center;
-                padding: 0 20px 0 10px;
-                border-left: 1px solid $color-grey-bright;
                 cursor: pointer;
                 position: relative;
 
-                &::after {
-                    content: '\f0d7';
-                    font: 900 1.2rem 'Font Awesome 5 Free';
+                &::before {
+                    content: '';
+                    width: 1px;
+                    height: 100%;
+                    background-color: $color-white-dark;
                     position: absolute;
-                    top: 50%;
-                    right: 0;
-                    transform: translateY(-50%);
+                    left: -20px;
+                    top: 0;
                 }
             }
             
             // Link
             &--link {
-                font-size: 1.4rem;
+                font-size: 1.6rem;
                 color: $color-black;
-                line-height: 34px;
-                width: 34px;
-                height: 34px;
+                line-height: 36px;
+                width: 36px;
+                height: 36px;
                 text-align: center;
-                margin-left: 6px;
+                margin-right: 10px;
                 transition: color .3s ease;
 
                 &:hover,
                 &:focus {
                     color: $color-green;
                 }
-            }
-        }
-    }
-}
-
-// Dropdown
-.dropdown {
-    background-color: $color-white;
-    min-width: 150px;
-    padding: 10px 15px;
-    border-radius: 6px;
-    box-shadow: 0 2px 12px rgba($color-grey-2, .25);
-    z-index: 4;
-    position: absolute;
-    transition: all .2s ease;
-    visibility: hidden;
-    top: 30px;
-    right: 0; 
-    opacity: 0;
-
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-    }
-
-    // Arrow
-    &::before {
-        border-bottom: 15px solid $color-white;
-        border-right: 15px solid transparent;
-        box-shadow: -1px 1px 12px 0 rgba($color-grey-2, .25);
-        z-index: -2;
-        top: -6px;
-        right: 12px;
-        transform: rotate(135deg);
-        width: 0;
-        height: 0;
-    }
-
-    // Dropdown background
-    &::after {
-        width: 100%;
-        height: 100%;
-        border-radius: 6px;
-        z-index: -1;
-        left: 0;
-        top: 0;
-        background-color: $color-white;
-    }
-
-    // Active class
-    &.is-active {
-        transform: translateY(20px);
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .dropdown {
-        // Item
-        &--item {
-            margin: 4px 0;
-        }
-
-        // Icon
-        &--icon {
-            width: 30px;
-        }
-
-        // Link
-        &--link {
-            font-size: 1.2rem;
-            color: $color-grey;
-            display: block;
-            transition: all .3s ease;
-
-            &:hover,
-            &:focus {
-                color: $color-green;
             }
         }
     }
@@ -754,6 +681,84 @@
             visibility: visible;
             transform: translateX(0);
             opacity: 1;
+        }
+    }
+}
+
+// Dropdown
+.dropdown {
+    background-color: $color-white;
+    min-width: 150px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba($color-grey-2, .25);
+    z-index: 4;
+    position: absolute;
+    transition: all .2s ease;
+    visibility: hidden;
+    top: 30px;
+    right: 0; 
+    opacity: 0;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+    }
+
+    // Arrow
+    &::before {
+        border-bottom: 15px solid $color-white;
+        border-right: 15px solid transparent;
+        box-shadow: -1px 1px 12px 0 rgba($color-grey-2, .25);
+        z-index: -2;
+        top: -6px;
+        right: 12px;
+        transform: rotate(135deg);
+        width: 0;
+        height: 0;
+    }
+
+    // Dropdown background
+    &::after {
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        background-color: $color-white;
+    }
+
+    // Active class
+    &.is-active {
+        transform: translateY(20px);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dropdown {
+        // Item
+        &--item {
+            margin: 4px 0;
+        }
+
+        // Icon
+        &--icon {
+            width: 30px;
+        }
+
+        // Link
+        &--link {
+            font-size: 1.2rem;
+            color: $color-grey;
+            display: block;
+            transition: all .3s ease;
+
+            &:hover,
+            &:focus {
+                color: $color-green;
+            }
         }
     }
 }

@@ -351,15 +351,19 @@ ul li {
 
 .navbar--user .user--image {
   border-radius: 50%;
-  margin-right: 10px;
   display: inline-block;
 }
 
-.navbar--user .user--msg {
-  font: 500 1.4rem/34px "Work Sans", Arial, Verdana, sans-serif;
-  color: #111;
+.navbar--user .user--name {
   margin-left: 10px;
-  height: 34px;
+  display: none;
+}
+
+.navbar--user .user--msg {
+  font: 400 1.4rem/36px "Work Sans", Arial, Verdana, sans-serif;
+  color: #111;
+  height: 36px;
+  margin-left: 20px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -371,106 +375,33 @@ ul li {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 20px 0 10px;
-  border-left: 1px solid #c7c7c7;
   cursor: pointer;
   position: relative;
 }
 
-.navbar--user .user--msg::after {
-  content: '\f0d7';
-  font: 900 1.2rem 'Font Awesome 5 Free';
+.navbar--user .user--msg::before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  background-color: #eee;
   position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  left: -20px;
+  top: 0;
 }
 
 .navbar--user .user--link {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #111;
-  line-height: 34px;
-  width: 34px;
-  height: 34px;
+  line-height: 36px;
+  width: 36px;
+  height: 36px;
   text-align: center;
-  margin-left: 6px;
+  margin-right: 10px;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
 }
 
 .navbar--user .user--link:hover, .navbar--user .user--link:focus {
-  color: #8cde4a;
-}
-
-.dropdown {
-  background-color: #fff;
-  min-width: 150px;
-  padding: 10px 15px;
-  border-radius: 6px;
-  box-shadow: 0 2px 12px rgba(131, 147, 153, 0.25);
-  z-index: 4;
-  position: absolute;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
-  visibility: hidden;
-  top: 30px;
-  right: 0;
-  opacity: 0;
-}
-
-.dropdown::before, .dropdown::after {
-  content: '';
-  position: absolute;
-}
-
-.dropdown::before {
-  border-bottom: 15px solid #fff;
-  border-right: 15px solid transparent;
-  box-shadow: -1px 1px 12px 0 rgba(131, 147, 153, 0.25);
-  z-index: -2;
-  top: -6px;
-  right: 12px;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  width: 0;
-  height: 0;
-}
-
-.dropdown::after {
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  background-color: #fff;
-}
-
-.dropdown.is-active {
-  -webkit-transform: translateY(20px);
-  transform: translateY(20px);
-  opacity: 1;
-  visibility: visible;
-}
-
-.dropdown .dropdown--item {
-  margin: 4px 0;
-}
-
-.dropdown .dropdown--icon {
-  width: 30px;
-}
-
-.dropdown .dropdown--link {
-  font-size: 1.2rem;
-  color: #647179;
-  display: block;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.dropdown .dropdown--link:hover, .dropdown .dropdown--link:focus {
   color: #8cde4a;
 }
 
@@ -810,6 +741,77 @@ ul li {
   opacity: 1;
 }
 
+.dropdown {
+  background-color: #fff;
+  min-width: 150px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(131, 147, 153, 0.25);
+  z-index: 4;
+  position: absolute;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  visibility: hidden;
+  top: 30px;
+  right: 0;
+  opacity: 0;
+}
+
+.dropdown::before, .dropdown::after {
+  content: '';
+  position: absolute;
+}
+
+.dropdown::before {
+  border-bottom: 15px solid #fff;
+  border-right: 15px solid transparent;
+  box-shadow: -1px 1px 12px 0 rgba(131, 147, 153, 0.25);
+  z-index: -2;
+  top: -6px;
+  right: 12px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  width: 0;
+  height: 0;
+}
+
+.dropdown::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+}
+
+.dropdown.is-active {
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown .dropdown--item {
+  margin: 4px 0;
+}
+
+.dropdown .dropdown--icon {
+  width: 30px;
+}
+
+.dropdown .dropdown--link {
+  font-size: 1.2rem;
+  color: #647179;
+  display: block;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.dropdown .dropdown--link:hover, .dropdown .dropdown--link:focus {
+  color: #8cde4a;
+}
+
 .gallery--container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1130,6 +1132,9 @@ ul li {
     -webkit-transform: translateX(-30%);
     transform: translateX(-30%);
     opacity: 1;
+  }
+  .navbar--user .user--name {
+    display: block;
   }
   .section--skewed-top {
     padding-top: 100px;

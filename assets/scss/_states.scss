@@ -47,6 +47,19 @@
         }
     }
 
+    // Navigation
+    .navbar {
+        // User area
+        &--user {
+            .user {
+                // Name
+                &--name {
+                    display: block;
+                }
+            }
+        }
+    }
+
     // Section
     .section {
         // Skew top

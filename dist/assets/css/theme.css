@@ -261,6 +261,8 @@ ul li {
   font-size: 1.2rem;
   width: 20px;
   margin-right: 10px;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
 }
 
 .navbar--nav .nav--register {

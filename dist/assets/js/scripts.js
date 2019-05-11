@@ -124,4 +124,40 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+  /**
+   * Back to top
+   */
+
+
+  var footerBtn = document.getElementById('footer-btn');
+
+  if (footerBtn) {
+    footerBtn.addEventListener('click', function (e) {
+      e.preventDefault(); // Scroll to the element
+
+      var windowOffset = window.pageYOffset;
+      var duration = 1000; // 1s
+
+      var start = null; // Scroll animation - easeInOutQuad
+
+      var animate = function animate(t) {
+        return t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      };
+
+      window.requestAnimationFrame(function step(timestamp) {
+        if (!start) {
+          start = timestamp;
+        }
+
+        var time = timestamp - start;
+        var percent = Math.min(time / duration, 1);
+        percent = animate(percent);
+        window.scrollTo(0, windowOffset + -windowOffset * percent);
+
+        if (time < duration) {
+          window.requestAnimationFrame(step);
+        }
+      });
+    });
+  }
 });

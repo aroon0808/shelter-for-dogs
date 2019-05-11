@@ -143,4 +143,39 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    /**
+     * Back to top
+     */
+    const footerBtn = document.getElementById('footer-btn');
+
+    if (footerBtn) {
+        footerBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Scroll to the element
+            const windowOffset = window.pageYOffset;
+            const duration = 1000; // 1s
+            let start = null;
+
+            // Scroll animation - easeInOutQuad
+            const animate = (t) => t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+            window.requestAnimationFrame(function step(timestamp) {
+                if (!start) {
+                    start = timestamp;
+                }
+
+                let time = timestamp - start;
+                let percent = Math.min(time / duration, 1);
+                percent = animate(percent);
+
+                window.scrollTo(0, windowOffset + (-windowOffset * percent));
+
+                if (time < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            });
+        });
+    }
 });

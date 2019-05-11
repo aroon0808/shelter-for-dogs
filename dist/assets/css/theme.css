@@ -1452,12 +1452,6 @@ ul li {
   .section--content {
     max-width: 900px;
   }
-  .gallery--col {
-    width: 25%;
-  }
-  .gallery--container.has-3-columns .gallery--col {
-    width: calc(100% / 3);
-  }
   .l-container, .l-navbar, .l-header, .l-section, .l-gallery, .l-footer {
     max-width: 970px;
   }
@@ -1478,9 +1472,6 @@ ul li {
   }
   .l-container, .l-navbar, .l-header, .l-section, .l-gallery, .l-footer {
     max-width: 1100px;
-  }
-  .l-container.is-medium, .is-medium.l-navbar, .is-medium.l-header, .is-medium.l-section, .is-medium.l-gallery, .is-medium.l-footer {
-    max-width: 950px;
   }
   .l-container.is-small, .is-small.l-navbar, .is-small.l-header, .is-small.l-section, .is-small.l-gallery, .is-small.l-footer {
     max-width: 400px;

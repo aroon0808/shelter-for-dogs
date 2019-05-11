@@ -371,21 +371,6 @@
             max-width: $l-tablet - 70px;
         }
     }
-    
-    // Gallery
-    .gallery {
-        // Column
-        &--col {
-            width: 25%;
-        }
-
-        &--container.has-3-columns {
-            // Column
-            .gallery--col {
-                width: calc(100% / 3);
-            }
-        }
-    }
 
     // Layouts
     .l-container {
@@ -420,11 +405,6 @@
     .l-container {
         max-width: $l-desktop;
 
-        // Medium container
-        &.is-medium {
-            max-width: $l-desktop-medium;
-        }
-        
         // Small container
         &.is-small {
             max-width: $l-desktop-small;

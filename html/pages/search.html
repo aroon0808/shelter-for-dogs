@@ -1,0 +1,91 @@
+---
+layout: default
+title: Wyszukaj Psy
+---
+
+<!-- Header section -->
+<header class="l-container">
+    <div class="section--container has-big-spacing">
+        <h1 class="section--heading">Wyszukaj Psy</h1>
+        <span class="section--subheading search--subheading">
+            Chcesz się dowiedzieć więcej o procesie adopcji? <br>
+            Odwiedź nasze <a href="#" class="link">Centrum Pomocy</a>
+        </span>
+
+        <form action="#" method="get" class="form">
+            <div class="form--container">
+                <div class="form--group form--mr">
+                    <label class="form--label is-hidden" for="city">Miejscowość</label>
+                    <select name="city" id="city" class="form--select is-big">
+                        <option disabled selected>Wybierz miejscowość</option>
+                        <option value="Warszawa">Warszawa</option>
+                        <option value="Kraków">Kraków</option>
+                        <option value="Wrocław">Wrocław</option>
+                        <option value="Gdańsk">Gdańsk</option>
+                    </select>
+                </div>
+
+                <div class="form--group form--mr">
+                    <label class="form--label is-hidden" for="gender">Płeć</label>
+                    <select name="gender" id="gender" class="form--select is-big">
+                        <option disabled selected>Płeć</option>
+                        <option value="pies">Pies</option>
+                        <option value="suka">Suka</option>
+                    </select>
+                </div>
+
+                <div class="form--group">
+                    <label class="form--label is-hidden" for="size">Wielkość Psa</label>
+                    <select name="size" id="size" class="form--select is-big">
+                        <option disabled selected>Wielkość Psa</option>
+                        <option value="maly">Mały (0-10 kg)</option>
+                        <option value="sredni">Średni (11 -25 kg)</option>
+                        <option value="duzy">Duży (26-39 kg)</option>
+                        <option value="olbrzym">Olbrzym (40 kg i więcej)</option>
+                    </select>
+                </div>
+            </div>
+                
+            <div class="form--container">
+                <div class="form--group form--mr">
+                    <label class="form--label is-hidden" for="race">Rasa Psa</label>
+                    <select name="race" id="race" class="form--select is-big">
+                        <option disabled selected>Rasa Psa</option>
+                        <option value="delmatynczyk">Delmatyńczyk</option>
+                        <option value="labrador">Labrador</option>
+                        <option value="beagle">Beagle</option>
+                        <option value="mops">Mops</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn form--btn form--btn-search is-big">
+                    Szukaj <span class="btn--icon fas fa-search" aria-hidden="true"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</header>
+
+<!-- Gallery section -->
+<section class="l-section section--skewed-top section--skewed-bottom is-cyan">
+    <div class="section--container is-cyan">
+        <div class="l-container no-padding">
+            <div class="section--header">
+                <h2 class="section--heading">Lista Psów</h2>
+                <span class="section--icon is-white fas fa-dog" aria-hidden="true"></span>
+            </div>
+    
+            {{> gallery}}
+            {{> gallery}}
+
+            <div class="pagination">
+                <a href="#" class="btn pagination--item">
+                    <span class="fas fa-long-arrow-alt-left pagination--prev" aria-hidden="true"></span> Poprzednia strona
+                </a>
+                <a href="#" class="btn pagination--item">
+                    Nastepna strona <span class="fas fa-long-arrow-alt-right pagination--next" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

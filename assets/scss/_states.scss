@@ -123,9 +123,22 @@
             max-width: 170px;
         }
 
-        // Homepage search select
-        &--select-search {
-            margin-right: 15px;
+        // Margin right
+        &--mr {
+            margin-right: 20px;
+        }
+    }
+
+    // Pagination 
+    .pagination {
+        display: flex;
+    }
+
+    // Footer
+    .footer {
+        // Navigation
+        &--nav {
+            width: auto;
         }
     }
 }
@@ -145,18 +158,6 @@
         // Column
         &--col {
             width: calc(100% / 3);
-        }
-    }
-
-    // Footer
-    .footer {
-        flex-direction: row;
-        
-        // Navigation
-        &--nav {
-            text-align: left;
-            margin-left: 60px;
-            margin-right: 60px;
         }
     }
 
@@ -265,6 +266,24 @@
             }
         }
     }
+
+    // Footer
+    .footer {
+        align-items: flex-start;
+        flex-direction: row;
+        
+        // Navigation
+        &--nav {
+            text-align: left;
+            padding: 0;
+        }
+
+        // Container
+        &--container {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    }
 }
 
 // Min-width: 992px
@@ -274,6 +293,7 @@
         // Sidebar
         &--sidebar {
             width: 100%;
+            margin-left: 20px;
             display: flex;
             align-items: center;
             background: transparent;
@@ -281,6 +301,7 @@
             overflow: hidden;
             border: 0;
             left: 0;
+            transition: none;
 
             &.is-active {
                 transform: translateX(0);
@@ -308,7 +329,7 @@
                 // Link
                 &--link {
                     padding: 0;
-                    margin-right: 40px;
+                    margin-right: 50px;
 
                     &:hover,
                     &:focus {
@@ -340,6 +361,12 @@
         &--btn {
             display: none;
         }
+
+        // Overlay
+        &--overlay.is-active {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     // Header
@@ -357,21 +384,6 @@
         // Content
         &--content {
             max-width: $l-tablet - 70px;
-        }
-    }
-    
-    // Gallery
-    .gallery {
-        // Column
-        &--col {
-            width: 25%;
-        }
-
-        &--container.has-3-columns {
-            // Column
-            .gallery--col {
-                width: calc(100% / 3);
-            }
         }
     }
 
@@ -408,11 +420,6 @@
     .l-container {
         max-width: $l-desktop;
 
-        // Medium container
-        &.is-medium {
-            max-width: $l-desktop-medium;
-        }
-        
         // Small container
         &.is-small {
             max-width: $l-desktop-small;

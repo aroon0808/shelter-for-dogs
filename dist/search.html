@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/vendors.min.css">
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Profil schroniska</title>
+    <title>Wyszukaj Psy</title>
 </head>
 <body>
 
@@ -52,44 +52,64 @@
     <div class="navbar--overlay"></div>    
     <!-- Header section -->
     <header class="l-container">
-        <div class="section--container company--container has-big-spacing">
-            <div class="section--columns">
-                <div class="section--column company--column">
-                    <figure class="company--thumbnail">
-                        <img src="https://via.placeholder.com/160x160" class="image" alt="">
-                    </figure>
+        <div class="section--container has-big-spacing">
+            <h1 class="section--heading">Wyszukaj Psy</h1>
+            <span class="section--subheading search--subheading">
+                Chcesz się dowiedzieć więcej o procesie adopcji? <br>
+                Odwiedź nasze <a href="#" class="link">Centrum Pomocy</a>
+            </span>
+    
+            <form action="#" method="get" class="form">
+                <div class="form--container">
+                    <div class="form--group form--mr">
+                        <label class="form--label is-hidden" for="city">Miejscowość</label>
+                        <select name="city" id="city" class="form--select is-big">
+                            <option disabled selected>Wybierz miejscowość</option>
+                            <option value="Warszawa">Warszawa</option>
+                            <option value="Kraków">Kraków</option>
+                            <option value="Wrocław">Wrocław</option>
+                            <option value="Gdańsk">Gdańsk</option>
+                        </select>
+                    </div>
+    
+                    <div class="form--group form--mr">
+                        <label class="form--label is-hidden" for="gender">Płeć</label>
+                        <select name="gender" id="gender" class="form--select is-big">
+                            <option disabled selected>Płeć</option>
+                            <option value="pies">Pies</option>
+                            <option value="suka">Suka</option>
+                        </select>
+                    </div>
+    
+                    <div class="form--group">
+                        <label class="form--label is-hidden" for="size">Wielkość Psa</label>
+                        <select name="size" id="size" class="form--select is-big">
+                            <option disabled selected>Wielkość Psa</option>
+                            <option value="maly">Mały (0-10 kg)</option>
+                            <option value="sredni">Średni (11 -25 kg)</option>
+                            <option value="duzy">Duży (26-39 kg)</option>
+                            <option value="olbrzym">Olbrzym (40 kg i więcej)</option>
+                        </select>
+                    </div>
                 </div>
+                    
+                <div class="form--container">
+                    <div class="form--group form--mr">
+                        <label class="form--label is-hidden" for="race">Rasa Psa</label>
+                        <select name="race" id="race" class="form--select is-big">
+                            <option disabled selected>Rasa Psa</option>
+                            <option value="delmatynczyk">Delmatyńczyk</option>
+                            <option value="labrador">Labrador</option>
+                            <option value="beagle">Beagle</option>
+                            <option value="mops">Mops</option>
+                        </select>
+                    </div>
     
-                <div class="section--column">
-                    <h1 class="section--heading company--heading">Schronisko im. Jana Kowalskiego</h1>
-                    <span class="company--subheading">Ul. Polna 60 123-77 Poznań</span>
-    
-                    <ul class="company--list">
-                        <li class="list--item">
-                            <span class="list--icon fas fa-envelope" aria-hidden="true"></span>
-                            contact@schronisko.com
-                        </li>
-    
-                        <li class="list--item">
-                            <span class="list--icon fas fa-phone" aria-hidden="true"></span>
-                            +48 765 99 233
-                        </li>
-    
-                        <li class="list--item">
-                            <span class="list--icon fas fa-globe" aria-hidden="true"></span>
-                            <a href="#" class="list--link">www.schronisko.com</a>
-                        </li>
-                    </ul>
-               
-                    <p class="company--text">
-                        Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. 
-                    </p>
-                
-                    <a href="#" class="btn company--btn is-blue">
-                        Wesprzyj Schronisko <span class="btn--icon fas fa-heart" aria-hidden="true"></span>
-                    </a>
+                    <button type="submit" class="btn form--btn form--btn-search is-big">
+                        Szukaj <span class="btn--icon fas fa-search" aria-hidden="true"></span>
+                    </button>
                 </div>
-            </div>
+            </form>
         </div>
     </header>
     
@@ -98,7 +118,7 @@
         <div class="section--container is-cyan">
             <div class="l-container no-padding">
                 <div class="section--header">
-                    <h2 class="section--heading">Psy w tym schronisku</h2>
+                    <h2 class="section--heading">Lista Psów</h2>
                     <span class="section--icon is-white fas fa-dog" aria-hidden="true"></span>
                 </div>
         
@@ -329,7 +349,243 @@
                             </ul>
                         </div>
                     </div>
-                </div>        </div>
+                </div>            <div class="l-gallery gallery--container">
+                    <!-- Gallery Item -->
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=6')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Azor</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Warszawa</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=3')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-venus" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Kala</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Kraków</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=5')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Bruno</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Poznań</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=46')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-venus" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Kasja</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Warszawa</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=31')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Lotos</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Wrocław</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=29')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Jaszczomb</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Kraków</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=70')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Rexio</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Poznań</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=80')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Apart</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Łódź</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <!-- Gallery Item -->
+                    <div class="gallery--col">
+                        <div class="gallery--item">
+                            <a href="#">
+                                <div class="item--image" style="background-image: url('https://placedog.net/360/250/?id=19')">
+                                    <div class="item--icon-bg">
+                                        <span class="item--icon fas fa-mars" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="sr-only">Pokaż profil</div>
+                            </a>
+                            
+                            <ul class="item--list">
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-signature" aria-hidden="true"></span>
+                                    <span class="list--name">Aman</span>
+                                </li>
+                
+                                <li class="list--item">
+                                    <span class="list--icon fas fa-map-marker-alt" aria-hidden="true"></span>
+                                    <span>Kalisz</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <a href="#" class="btn pagination--item">
+                        <span class="fas fa-long-arrow-alt-left pagination--prev" aria-hidden="true"></span> Poprzednia strona
+                    </a>
+                    <a href="#" class="btn pagination--item">
+                        Nastepna strona <span class="fas fa-long-arrow-alt-right pagination--next" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
     <footer class="l-footer footer">

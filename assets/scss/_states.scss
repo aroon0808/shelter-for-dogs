@@ -133,6 +133,14 @@
     .pagination {
         display: flex;
     }
+
+    // Footer
+    .footer {
+        // Navigation
+        &--nav {
+            width: auto;
+        }
+    }
 }
 
 // Min-width: 768px
@@ -261,13 +269,19 @@
 
     // Footer
     .footer {
+        align-items: flex-start;
         flex-direction: row;
         
         // Navigation
         &--nav {
             text-align: left;
-            margin-left: 60px;
-            margin-right: 60px;
+            padding: 0;
+        }
+
+        // Container
+        &--container {
+            margin-left: 50px;
+            margin-right: 50px;
         }
     }
 }
@@ -279,6 +293,7 @@
         // Sidebar
         &--sidebar {
             width: 100%;
+            margin-left: 20px;
             display: flex;
             align-items: center;
             background: transparent;
@@ -314,7 +329,7 @@
                 // Link
                 &--link {
                     padding: 0;
-                    margin-right: 40px;
+                    margin-right: 50px;
 
                     &:hover,
                     &:focus {

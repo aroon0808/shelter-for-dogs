@@ -31,13 +31,14 @@
                 <li class="nav--item"><a href="search.html" class="nav--link">Wyszukaj Psy</a></li>
                 <li class="nav--item"><a href="adopt.html" class="nav--link">Adopcje</a></li>
                 <li class="nav--item"><a href="faq.html" class="nav--link">FAQ</a></li>
-                <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li>
-                <li class="nav--register"><a href="register.html" class="btn nav--register-link"><span class="nav--icon fas fa-plus" aria-hidden="true"></span>Rejestracja</a></li>
+                <!-- <li class="nav--item"><a href="#" class="nav--link">Wyloguj się</a></li>  If: Logged -->
+                <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li> <!-- If: NOT Logged -->
+                <li class="nav--register"><a href="register.html" class="btn nav--register-link"><span class="nav--icon fas fa-plus" aria-hidden="true"></span>Rejestracja</a></li> <!-- If: NOT Logged -->
             </ul>
         </div>
     
         <div class="navbar--right">
-            <!-- Logged User -->
+            <!-- If: Logged User -->
             <!--  -->
     
             <button type="button" id="navbar-btn" class="navbar--btn" tabindex="5">
@@ -332,16 +333,30 @@
     <footer class="l-footer footer">
         <img src="./assets/images/logo.png" class="footer--brand" alt="Psytulimy">
         
-        <ul class="footer--nav">
-            <li class="nav--item"><a href="#" class="nav--link">Wyszukaj Psy</a></li>
-            <li class="nav--item"><a href="#" class="nav--link">Adopcje</a></li>
-            <li class="nav--item"><a href="#" class="nav--link">FAQ</a></li>
-            <li class="nav--item"><a href="#" class="nav--link">Polityka Prywatności</a></li>
-            <li class="nav--item"><a href="#" class="nav--link">Regulamin</a></li>
-            <li class="nav--item"><a href="#" class="nav--link">Kontakt</a></li>
-            <li class="nav--item"><a href="#" class="nav--link">Zaloguj się</a></li>
-            <li class="nav--item"><a href="register.html" class="nav--link">Rejestracja</a></li>
-        </ul>
+        <div class="footer--container">
+            <ul class="footer--nav">
+                <li class="nav--item"><a href="#" class="nav--link">Strona Główna</a></li>
+                <li class="nav--item"><a href="#" class="nav--link">Wyszukaj Psy</a></li>
+                <li class="nav--item"><a href="#" class="nav--link">Adopcje</a></li>
+            </ul>
+    
+            <ul class="footer--nav">
+                <li class="nav--item"><a href="#" class="nav--link">Kontakt</a></li>
+                <li class="nav--item"><a href="#" class="nav--link">FAQ</a></li>
+                <li class="nav--item"><a href="#" class="nav--link">O Nas</a></li>
+            </ul>
+    
+            <ul class="footer--nav">
+                <li class="nav--item"><a href="#" class="nav--link">Polityka Prywatności</a></li>
+                <li class="nav--item"><a href="#" class="nav--link">Regulamin</a></li>
+                <li class="nav--item"><a href="#" class="nav--link">Jak Pomóc?</a></li>
+            </ul>
+    
+            <ul class="footer--nav">
+                <li class="nav--item"><a href="register.html" class="nav--link">Rejestracja</a></li>
+                <li class="nav--item"><a href="#" class="nav--link">Zaloguj się</a></li>
+            </ul>
+        </div>
     
         <a href="#top">
             <span class="footer--icon fas fa-chevron-up"></span>

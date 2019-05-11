@@ -15,13 +15,14 @@
             <li class="nav--item"><a href="search.html" class="nav--link">Wyszukaj Psy</a></li>
             <li class="nav--item"><a href="adopt.html" class="nav--link">Adopcje</a></li>
             <li class="nav--item"><a href="faq.html" class="nav--link">FAQ</a></li>
-            <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li>
-            <li class="nav--register"><a href="register.html" class="btn nav--register-link"><span class="nav--icon fas fa-plus" aria-hidden="true"></span>Rejestracja</a></li>
+            <!-- <li class="nav--item"><a href="#" class="nav--link">Wyloguj się</a></li>  If: Logged -->
+            <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li> <!-- If: NOT Logged -->
+            <li class="nav--register"><a href="register.html" class="btn nav--register-link"><span class="nav--icon fas fa-plus" aria-hidden="true"></span>Rejestracja</a></li> <!-- If: NOT Logged -->
         </ul>
     </div>
 
     <div class="navbar--right">
-        <!-- Logged User -->
+        <!-- If: Logged User -->
         <!-- {{ nav-user}} -->
 
         <button type="button" id="navbar-btn" class="navbar--btn" tabindex="5">

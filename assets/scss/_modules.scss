@@ -1135,32 +1135,43 @@
 
 // Footer
 .footer {
+    // Container
+    &--container {
+        width: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
     // Brand
     &--brand {
         display: block;
+        padding: 15px 0;
+        margin-right: 10px;
         flex-shrink: 0;
     }
 
     // Navigation
     &--nav {
-        width: 100%;
-        padding: 20px 0;
+        width: 50%;
         text-align: center;
+        flex-grow: 1;
+        padding: 15px 0;
 
         .nav {
             // Item
             &--item {
                 height: 30px;
-                margin-bottom: 5px;
-                padding: 0 12px;
-                display: inline-block;
+                margin-bottom: 7px;
+                padding: 0 14px;
             }
         
             // Link
             &--link {
                 font: $font-weight-regular 1.2rem/30px $font-primary;
                 color: $color-grey;
-                z-index: 1;
+                display: block;
                 transition: all .25s ease;
 
                 &:hover,
@@ -1175,5 +1186,6 @@
     &--icon {
         font-size: 3rem;
         color: $color-green;
+        padding: 15px 0;
     }
 }

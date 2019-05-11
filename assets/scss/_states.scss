@@ -123,10 +123,15 @@
             max-width: 170px;
         }
 
-        // Homepage search select
-        &--select-search {
-            margin-right: 15px;
+        // Margin right
+        &--mr {
+            margin-right: 20px;
         }
+    }
+
+    // Pagination 
+    .pagination {
+        display: flex;
     }
 }
 
@@ -145,18 +150,6 @@
         // Column
         &--col {
             width: calc(100% / 3);
-        }
-    }
-
-    // Footer
-    .footer {
-        flex-direction: row;
-        
-        // Navigation
-        &--nav {
-            text-align: left;
-            margin-left: 60px;
-            margin-right: 60px;
         }
     }
 
@@ -263,6 +256,18 @@
                     }
                 }
             }
+        }
+    }
+
+    // Footer
+    .footer {
+        flex-direction: row;
+        
+        // Navigation
+        &--nav {
+            text-align: left;
+            margin-left: 60px;
+            margin-right: 60px;
         }
     }
 }

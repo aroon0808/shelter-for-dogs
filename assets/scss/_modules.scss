@@ -423,11 +423,20 @@
     // Heading
     &--heading {
         font-weight: $font-weight-bold;
-        font-size: 2.5rem;
+        font-size: 3rem;
         color: $color-black;
         text-align: center;
         z-index: 2;
         position: relative;
+    }
+
+    // Subheading
+    &--subheading {
+        font-size: 1.6rem;
+        color: $color-grey;
+        text-align: center;
+        margin: 15px 0;
+        display: block;
     }
 
     // Content
@@ -468,6 +477,31 @@
     }
 }
 
+// Pagination
+.pagination {
+    padding: 15px;
+    justify-content: space-between;
+
+    // Item
+    &--item {
+        margin-top: 10px;
+        text-align: center;
+        color: $color-black;
+        background-color: $color-white;
+    }
+
+    // Previous button
+    &--prev {
+        margin-right: 10px;
+    }
+
+    // Next button
+    &--next {
+        margin-left: 10px;
+
+    }
+}
+
 // Registration
 .register {
     // Column
@@ -483,7 +517,6 @@
 
     // Heading
     &--heading {
-        font-size: 3rem;
         padding-bottom: 60px;
     }
 
@@ -500,17 +533,13 @@
         padding-bottom: 50px !important;
     }
 
-    // Header
-    &--heading {
-        font-size: 3rem;
-    }
-
     // Subheading
     &--subheading {
         font-size: 1.8rem;
         color: $color-grey;
         text-align: center;
         margin: 10px 0;
+        display: block;
     }
 
     // Thumbnail
@@ -589,6 +618,14 @@
         font: $font-weight-regular 1.4rem/24px $font-primary;
         text-align: center;
         margin-top: 30px;
+    }
+}
+
+// Search page
+.search {
+    // subheading
+    &--subheading {
+        margin-bottom: 80px;
     }
 }
 
@@ -887,7 +924,7 @@
     // Group
     &--group {
         flex-grow: 1;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
         position: relative;
     }
 
@@ -937,7 +974,7 @@
 
         // Big input
         &.is-big {
-            height: 56px;
+            height: 52px;
         }
     }
 
@@ -970,7 +1007,7 @@
         &.is-big {
             font-weight: $font-weight-regular;
             font-size: 1.5rem;
-            height: 56px;
+            height: 52px;
         }
 
         &:hover {
@@ -1047,6 +1084,11 @@
         &.is-blue::after {
             color: $color-blue;
         }
+    }
+
+    // Margin top
+    &--mt {
+        margin-top: 15px;
     }
 }
 

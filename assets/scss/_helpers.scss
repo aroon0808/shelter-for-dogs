@@ -35,6 +35,19 @@
     border: 0;
 }
 
+// Link
+.link {
+    font-weight: $font-weight-medium;
+    text-decoration: none;
+    color: $color-green;
+    transition: color .2s ease;
+
+    &:hover,
+    &:focus {
+        color: $color-blue;
+    }
+}
+
 // Paddings
 .no-padding {
     padding: 0 !important;

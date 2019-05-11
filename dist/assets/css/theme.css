@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,500,700");
 * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -64,6 +66,18 @@ ul li {
   background-color: #c7c7c7;
   margin: 20px 0;
   border: 0;
+}
+
+.link {
+  font-weight: 500;
+  text-decoration: none;
+  color: #8cde4a;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+.link:hover, .link:focus {
+  color: #5dbee5;
 }
 
 .no-padding {
@@ -527,11 +541,19 @@ ul li {
 
 .section--heading {
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #111;
   text-align: center;
   z-index: 2;
   position: relative;
+}
+
+.section--subheading {
+  font-size: 1.6rem;
+  color: #647179;
+  text-align: center;
+  margin: 15px 0;
+  display: block;
 }
 
 .section--content {
@@ -568,6 +590,29 @@ ul li {
   margin: 50px auto;
 }
 
+.pagination {
+  padding: 15px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.pagination--item {
+  margin-top: 10px;
+  text-align: center;
+  color: #111;
+  background-color: #fff;
+}
+
+.pagination--prev {
+  margin-right: 10px;
+}
+
+.pagination--next {
+  margin-left: 10px;
+}
+
 .register--column {
   width: 100%;
 }
@@ -578,7 +623,6 @@ ul li {
 }
 
 .register--heading {
-  font-size: 3rem;
   padding-bottom: 60px;
 }
 
@@ -590,15 +634,12 @@ ul li {
   padding-bottom: 50px !important;
 }
 
-.company--heading {
-  font-size: 3rem;
-}
-
 .company--subheading {
   font-size: 1.8rem;
   color: #647179;
   text-align: center;
   margin: 10px 0;
+  display: block;
 }
 
 .company--thumbnail {
@@ -664,6 +705,10 @@ ul li {
   font: 400 1.4rem/24px "Work Sans", Arial, Verdana, sans-serif;
   text-align: center;
   margin-top: 30px;
+}
+
+.search--subheading {
+  margin-bottom: 80px;
 }
 
 .tabs--nav {
@@ -933,7 +978,7 @@ ul li {
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -980,7 +1025,7 @@ ul li {
 }
 
 .form--input.is-big, .is-big.form--select {
-  height: 56px;
+  height: 52px;
 }
 
 .form--select {
@@ -1008,7 +1053,7 @@ ul li {
 .form--btn.is-big {
   font-weight: 400;
   font-size: 1.5rem;
-  height: 56px;
+  height: 52px;
 }
 
 .form--btn:hover {
@@ -1072,6 +1117,10 @@ ul li {
 
 .form--checkbox-label.is-blue::after {
   color: #5dbee5;
+}
+
+.form--mt {
+  margin-top: 15px;
 }
 
 .footer--brand {
@@ -1175,8 +1224,14 @@ ul li {
     margin: 0;
     max-width: 170px;
   }
-  .form--select-search {
-    margin-right: 15px;
+  .form--mr {
+    margin-right: 20px;
+  }
+  .pagination {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -1186,18 +1241,6 @@ ul li {
   }
   .gallery--col {
     width: calc(100% / 3);
-  }
-  .footer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-  .footer--nav {
-    text-align: left;
-    margin-left: 60px;
-    margin-right: 60px;
   }
   .section--columns {
     display: -webkit-box;
@@ -1268,6 +1311,18 @@ ul li {
   }
   .tabs--nav .nav--item:not(:last-child) {
     margin-right: 15px;
+  }
+  .footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .footer--nav {
+    text-align: left;
+    margin-left: 60px;
+    margin-right: 60px;
   }
 }
 

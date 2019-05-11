@@ -2,8 +2,32 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   /*
+   * Navbar mobile button
+   */
+  var navSidebar = document.querySelector('.navbar--sidebar');
+  var navOverlay = document.querySelector('.navbar--overlay');
+  var navBtn = document.getElementById('navbar-btn');
+  var navSidebarBtn = document.getElementById('sidebar-btn'); // Navbar button
+
+  navBtn.addEventListener('click', function () {
+    navSidebar.classList.add('is-active');
+    navOverlay.classList.add('is-active');
+  }); // Sidebar button
+
+  navSidebarBtn.addEventListener('click', function () {
+    navSidebar.classList.remove('is-active');
+    navOverlay.classList.remove('is-active');
+  }); // Overlay
+
+  navOverlay.addEventListener('click', function () {
+    this.classList.remove('is-active');
+    navSidebar.classList.remove('is-active');
+    navBtn.classList.remove('is-active');
+  });
+  /*
    * Tabs
    */
+
   var tabsNav = document.querySelector('.tabs--nav');
 
   if (tabsNav) {

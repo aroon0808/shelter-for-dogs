@@ -286,6 +286,7 @@
             overflow: hidden;
             border: 0;
             left: 0;
+            transition: none;
 
             &.is-active {
                 transform: translateX(0);
@@ -344,6 +345,12 @@
         // Button
         &--btn {
             display: none;
+        }
+
+        // Overlay
+        &--overlay.is-active {
+            opacity: 0;
+            visibility: hidden;
         }
     }
 

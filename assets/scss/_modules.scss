@@ -27,7 +27,7 @@
     display: block;
     padding: 0 20px;
     position: relative;
-    transition: all .3s ease;
+    transition: all .25s ease;
 
     // Blue button
     &.is-blue {
@@ -43,7 +43,7 @@
         border-radius: 6px;
         box-shadow: 0 2px 12px rgba($color-grey-2, .25);
         position: absolute;
-        transition: all .3s ease;
+        transition: all .25s ease;
         top: 0;
         left: 0;
         opacity: 0;
@@ -62,7 +62,7 @@
     }
 }
 
-// Navbar
+// Navigation
 .navbar {
     // Brand
     &--brand {
@@ -78,13 +78,13 @@
         background-color: $color-white;
         border-right: 1px solid $color-white-dark;
         overflow: auto;
-        z-index: 5;
+        z-index: 20;
         position: fixed;
-        transition: transform .3s ease;   
+        transition: transform .25s ease-in-out;   
         left: -300px;
         top: 0; 
         
-        // Active class
+        // Active
         &.is-active {
             transform: translateX(300px);
         }
@@ -128,7 +128,7 @@
                 z-index: 1;
                 padding: 0 20px;
                 position: relative;
-                transition: all .3s ease;
+                transition: all .25s ease;
 
                 &:hover,
                 &:focus {
@@ -139,17 +139,18 @@
 
             // Icon
             &--icon {
-                color: $color-green;
+                color: $color-white;
                 font-size: 1.2rem;
                 width: 20px;
                 margin-right: 10px;
-                transition: color .3s ease;
+                transition: color .25s ease;
             }
 
             // Register button
             &--register {
                 margin: 30px 0 10px 0;
                 padding-left: 20px;
+                z-index: 1;
 
                 // Link
                 &-link {
@@ -165,51 +166,71 @@
                         }
                     }
                 }
-
-                // Icon
-                &-icon {
-                    @extend .nav--icon;
-
-                    color: $color-white;
-                }
             }
         }
     }
 
     // Mobile button
     &--btn {
-        width: 30px;
-        height: 30px;
+        width: 34px;
+        height: 34px;
         margin-left: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        border: 0;
+        padding: 0;
+        background: none;
         cursor: pointer;
+        padding: 5px;
+        transform: translateX(5px);
 
         .btn {
-            // Bar
-            &--bar {
+            // Bars
+            &--bars {
                 width: 100%;
                 height: 2px;
                 display: block;
                 margin: 3px 0;
                 background-color: $color-black;
+                position: relative;
+
+                &::before,
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    display: block;
+                    background-color: $color-black;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transition: transform .25s ease;
+                }
+
+                &::before {
+                    transform: translateY(7px);
+                }
+
+                &::after {
+                    transform: translateY(-7px);
+                }
             }
         }
 
-        // Sidebar button
-        &.sidebar--btn {
+        // Active
+        &.is-active {
             .btn {
-                // Bar
-                &--bar {
-                    margin: 0;
+                // Bars
+                &--bars {
+                    background-color: transparent;
 
-                    &:nth-child(1) {
-                        transform: translateY(1px) rotate(45deg);
+                    &::before {
+                        transform: translateY(0) rotate(45deg);
                     }
 
-                    &:nth-child(2) {
-                        transform: translateY(-1px) rotate(-45deg);
+                    &::after {
+                        transform: translateY(0) rotate(-45deg);
                     }
                 }
             }
@@ -273,13 +294,33 @@
                 height: 36px;
                 text-align: center;
                 margin-right: 10px;
-                transition: color .3s ease;
+                transition: color .25s ease;
 
                 &:hover,
                 &:focus {
                     color: $color-green;
                 }
             }
+        }
+    }
+
+    // Overlay
+    &--overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color-black, 0.5);
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0; 
+        opacity: 0;
+        visibility: hidden;
+        transition: all .25s ease-in-out;
+        
+        // Active
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }
@@ -407,7 +448,7 @@
             background-color: $color-cyan-bright;
         }
 
-        // Class with bigger padding
+        // Bigger padding
         &.has-big-spacing {
             padding: 120px 0;
         }
@@ -598,7 +639,7 @@
                     height: 2px;
                     background-color: $color-blue;
                     position: absolute;
-                    transition: width .2s ease;
+                    transition: width .25s ease;
                     left: 0;
                     bottom: -2px;
                 }
@@ -651,7 +692,7 @@
                 border-left: 4px solid $color-white-dark;
                 display: block;
                 margin-bottom: 10px;
-                transition: all .3s ease;
+                transition: all .25s ease;
 
                 &.is-active,
                 &:hover,
@@ -691,7 +732,7 @@
             &--icon {
                 width: 30px;
                 text-align: left;
-                transition: all .3s ease;
+                transition: all .25s ease;
             }
         }
     }
@@ -714,7 +755,7 @@
         top: 0;
         left: 0;
 
-        // Active class
+        // Active
         &.is-active {
             visibility: visible;
             transform: translateX(0);
@@ -732,7 +773,7 @@
     box-shadow: 0 2px 12px rgba($color-grey-2, .25);
     z-index: 4;
     position: absolute;
-    transition: all .2s ease;
+    transition: all .25s ease;
     visibility: hidden;
     top: 30px;
     right: 0; 
@@ -768,7 +809,7 @@
         background-color: $color-white;
     }
 
-    // Active class
+    // Active
     &.is-active {
         transform: translateY(20px);
         opacity: 1;
@@ -791,7 +832,7 @@
             font-size: 1.2rem;
             color: $color-grey;
             display: block;
-            transition: all .3s ease;
+            transition: all .25s ease;
 
             &:hover,
             &:focus {
@@ -831,7 +872,7 @@
             border-radius: 6px;
             box-shadow: 0 4px 30px rgba($color-grey-2, .3);
             position: absolute;
-            transition: all .3s ease;
+            transition: all .25s ease;
             top: 0;
             left: 0;
             opacity: 0;
@@ -924,7 +965,7 @@
     // Group
     &--group {
         flex-grow: 1;
-        margin-bottom: 30px;
+        margin-bottom: 34px;
         position: relative;
     }
 
@@ -946,15 +987,15 @@
         position: absolute;
         top: 12px;
         left: 20px;
-        transition: all .3s ease;
+        transition: all .25s ease;
         
-        // Active class
+        // Active
         &.is-active {
             font-size: 1.2rem;
             transform: translate(-20px, -30px);
         }
 
-        // Hidden class
+        // Hidden
         &.is-hidden {
             display: none;
         }
@@ -1048,7 +1089,7 @@
         cursor: pointer;
         position: relative;
 
-        // Required class
+        // Required
         &.is-required {
             &::before {
                 border-color: $color-red;
@@ -1120,7 +1161,7 @@
                 font: $font-weight-regular 1.2rem/30px $font-primary;
                 color: $color-grey;
                 z-index: 1;
-                transition: all .3s ease;
+                transition: all .25s ease;
 
                 &:hover,
                 &:focus {

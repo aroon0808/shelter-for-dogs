@@ -303,6 +303,7 @@
             left: 0;
             transition: none;
 
+            // Active
             &.is-active {
                 transform: translateX(0);
             }
@@ -348,6 +349,7 @@
                     margin: 0 0 0 auto;
                     padding: 0;
 
+                    // Link
                     &-link {
                         padding: 0 20px;
                         display: inline-block;
@@ -362,7 +364,7 @@
             display: none;
         }
 
-        // Overlay
+        // Overlay active
         &--overlay.is-active {
             opacity: 0;
             visibility: hidden;

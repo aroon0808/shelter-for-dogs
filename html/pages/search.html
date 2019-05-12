@@ -5,7 +5,7 @@ title: Wyszukaj Psy
 
 <!-- Header section -->
 <header class="l-container">
-    <div class="section--container has-big-spacing">
+    <div class="section--container section--container-padding">
         <h1 class="section--heading">Wyszukaj Psy</h1>
         <span class="section--subheading search--subheading">
             Chcesz się dowiedzieć więcej o procesie adopcji? <br>
@@ -16,7 +16,7 @@ title: Wyszukaj Psy
             <div class="form--container">
                 <div class="form--group form--mr">
                     <label class="form--label is-hidden" for="city">Miejscowość</label>
-                    <select name="city" id="city" class="form--select is-big">
+                    <select name="city" id="city" class="form--select form--input-big">
                         <option disabled selected>Wybierz miejscowość</option>
                         <option value="Warszawa">Warszawa</option>
                         <option value="Kraków">Kraków</option>
@@ -27,7 +27,7 @@ title: Wyszukaj Psy
 
                 <div class="form--group form--mr">
                     <label class="form--label is-hidden" for="gender">Płeć</label>
-                    <select name="gender" id="gender" class="form--select is-big">
+                    <select name="gender" id="gender" class="form--select form--input-big">
                         <option disabled selected>Płeć</option>
                         <option value="pies">Pies</option>
                         <option value="suka">Suka</option>
@@ -36,7 +36,7 @@ title: Wyszukaj Psy
 
                 <div class="form--group">
                     <label class="form--label is-hidden" for="size">Wielkość Psa</label>
-                    <select name="size" id="size" class="form--select is-big">
+                    <select name="size" id="size" class="form--select form--input-big">
                         <option disabled selected>Wielkość Psa</option>
                         <option value="maly">Mały (0-10 kg)</option>
                         <option value="sredni">Średni (11 -25 kg)</option>
@@ -49,7 +49,7 @@ title: Wyszukaj Psy
             <div class="form--container">
                 <div class="form--group form--mr">
                     <label class="form--label is-hidden" for="race">Rasa Psa</label>
-                    <select name="race" id="race" class="form--select is-big">
+                    <select name="race" id="race" class="form--select form--input-big">
                         <option disabled selected>Rasa Psa</option>
                         <option value="delmatynczyk">Delmatyńczyk</option>
                         <option value="labrador">Labrador</option>
@@ -58,7 +58,7 @@ title: Wyszukaj Psy
                     </select>
                 </div>
 
-                <button type="submit" class="btn form--btn form--btn-search is-big">
+                <button type="submit" class="btn form--btn form--btn-search form--btn-big">
                     Szukaj <span class="btn--icon fas fa-search" aria-hidden="true"></span>
                 </button>
             </div>
@@ -67,12 +67,12 @@ title: Wyszukaj Psy
 </header>
 
 <!-- Gallery section -->
-<section class="l-section section--skewed-top section--skewed-bottom is-cyan">
-    <div class="section--container is-cyan">
+<section class="l-section section--skewed-top section--skewed-bottom skewed-cyan">
+    <div class="section--container section--container-cyan">
         <div class="l-container no-padding">
             <div class="section--header">
                 <h2 class="section--heading">Lista Psów</h2>
-                <span class="section--icon is-white fas fa-dog" aria-hidden="true"></span>
+                <span class="section--icon section--icon-white fas fa-dog" aria-hidden="true"></span>
             </div>
     
             {{> gallery}}

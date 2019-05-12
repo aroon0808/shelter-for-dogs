@@ -84,6 +84,14 @@ ul li {
   padding: 0 !important;
 }
 
+.text-regular {
+  font-weight: 400;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
 .l-container, .l-navbar, .l-header, .l-section, .l-gallery, .l-footer {
   margin-left: auto;
   margin-right: auto;
@@ -160,7 +168,7 @@ ul li {
   transition: all .25s ease;
 }
 
-.btn.is-blue {
+.btn--blue {
   background-color: #5dbee5;
 }
 
@@ -286,9 +294,9 @@ ul li {
 }
 
 .navbar--nav .nav--register-link {
-  display: table;
   line-height: 36px;
   height: 36px;
+  display: table;
 }
 
 .navbar--nav .nav--register-link:hover .nav--icon, .navbar--nav .nav--register-link:focus .nav--icon {
@@ -485,11 +493,6 @@ ul li {
   display: block;
 }
 
-.header--subheading .is-bold {
-  font-weight: 700;
-  display: block;
-}
-
 .header--buttons {
   text-align: center;
   width: 80%;
@@ -505,17 +508,9 @@ ul li {
   display: inline-block;
 }
 
-.header--btn.is-transparent {
+.header--btn-transparent {
   color: #111;
   background-color: transparent;
-}
-
-.header--btn.is-transparent:hover {
-  background-color: #fff;
-}
-
-.header--btn .is-regular {
-  font-weight: 400;
 }
 
 .header--image {
@@ -544,7 +539,7 @@ ul li {
   top: 0;
 }
 
-.section--skewed-top.is-cyan::before {
+.section--skewed-top.skewed-cyan::before {
   border-bottom-color: #f2f7f9;
 }
 
@@ -564,7 +559,7 @@ ul li {
   bottom: 0;
 }
 
-.section--skewed-bottom.is-cyan::after {
+.section--skewed-bottom.skewed-cyan::after {
   border-top-color: #f2f7f9;
 }
 
@@ -573,11 +568,11 @@ ul li {
   background-color: #fff;
 }
 
-.section--container.is-cyan {
+.section--container-cyan {
   background-color: #f2f7f9;
 }
 
-.section--container.has-big-spacing {
+.section--container-padding {
   padding: 120px 0;
 }
 
@@ -622,7 +617,7 @@ ul li {
   transform: translate(-50%, -50%);
 }
 
-.section--icon.is-white {
+.section--icon-white {
   color: #fff;
 }
 
@@ -676,10 +671,6 @@ ul li {
 
 .register--image {
   margin: 50px auto;
-}
-
-.company--container {
-  padding-bottom: 50px !important;
 }
 
 .company--subheading {
@@ -1072,7 +1063,7 @@ ul li {
   border-radius: 6px;
 }
 
-.form--input.is-big, .is-big.form--select {
+.form--input-big {
   height: 52px;
 }
 
@@ -1098,15 +1089,10 @@ ul li {
   margin-top: 10px;
 }
 
-.form--btn.is-big {
+.form--btn-big {
   font-weight: 400;
   font-size: 1.5rem;
   height: 52px;
-}
-
-.form--btn:hover {
-  color: #111;
-  background-color: #fff;
 }
 
 .form--btn .btn--icon {
@@ -1163,7 +1149,7 @@ ul li {
   top: 0;
 }
 
-.form--checkbox-label.is-blue::after {
+.form--checkbox-label-blue::after {
   color: #5dbee5;
 }
 

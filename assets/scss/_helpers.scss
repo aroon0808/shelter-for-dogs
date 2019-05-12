@@ -5,6 +5,7 @@
 // Images
 // Line
 // Paddings
+// Text
 //
 // *************************
 
@@ -51,4 +52,13 @@
 // Paddings
 .no-padding {
     padding: 0 !important;
+}
+
+// Text
+.text-regular {
+    font-weight: $font-weight-regular;
+}
+
+.text-bold {
+    font-weight: $font-weight-bold;
 }

@@ -30,7 +30,7 @@
     transition: all .25s ease;
 
     // Blue button
-    &.is-blue {
+    &--blue {
         background-color: $color-blue;
     }
 
@@ -154,9 +154,9 @@
 
                 // Link
                 &-link {
-                    display: table;
                     line-height: 36px;
                     height: 36px;
+                    display: table;
 
                     &:hover,
                     &:focus {
@@ -343,12 +343,6 @@
         color: $color-grey-dark;
         text-align: center;
         display: block;
-
-        // Bold text
-        .is-bold {
-            font-weight: $font-weight-bold;
-            display: block;
-        }
     }
 
     // Buttons container
@@ -368,18 +362,9 @@
         display: inline-block;
 
         // Transparent button
-        &.is-transparent {
+        &-transparent {
             color: $color-black;
             background-color: transparent;
-
-            &:hover {
-                background-color: $color-white;
-            }
-        }
-
-        // Regular text
-        .is-regular {
-            font-weight: $font-weight-regular;
         }
     }
 
@@ -412,7 +397,8 @@
             top: 0;
         }
 
-        &.is-cyan::before {
+        // Cyan background
+        &.skewed-cyan::before {
             border-bottom-color: $color-cyan-bright;
         }
     }
@@ -433,7 +419,8 @@
             bottom: 0;
         }
 
-        &.is-cyan::after {
+        // Cyan background
+        &.skewed-cyan::after {
             border-top-color: $color-cyan-bright;
         }
     }
@@ -444,12 +431,12 @@
         background-color: $color-white;
 
         // Cyan background
-        &.is-cyan {
+        &-cyan {
             background-color: $color-cyan-bright;
         }
 
         // Bigger padding
-        &.has-big-spacing {
+        &-padding {
             padding: 120px 0;
         }
     }
@@ -498,7 +485,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        &.is-white {
+        // White icon
+        &-white {
             color: $color-white;
         }
     }
@@ -539,7 +527,6 @@
     // Next button
     &--next {
         margin-left: 10px;
-
     }
 }
 
@@ -569,11 +556,6 @@
 
 // Company profile
 .company {
-    // Container
-    &--container {
-        padding-bottom: 50px !important;
-    }
-
     // Subheading
     &--subheading {
         font-size: 1.8rem;
@@ -601,6 +583,7 @@
         padding: 0 12px;
 
         .btn {
+            // Icon
             &--icon {
                 margin-left: 10px;
             }
@@ -699,7 +682,7 @@
                 &:focus {
                     border-left-color: $color-green;
 
-                    // ICon
+                    // Icon
                     .nav--icon {
                         color: $color-green;
                     }
@@ -737,7 +720,7 @@
         }
     }
 
-    // Container
+    // Content container
     &--content {
         min-height: 300px;
         position: relative;
@@ -898,7 +881,7 @@
                 justify-content: flex-end;
             }
 
-            // Icon 
+            // Icon with background 
             &--icon-bg {
                 text-align: center;
                 width: 30px;
@@ -914,10 +897,12 @@
                 line-height: 30px;
                 color: $color-black;
 
+                // Male icon
                 &.fa-mars {
                     color: #3e8ef1;
                 }
                 
+                // Female icon
                 &.fa-venus {
                     color: #f531ca;
                 }
@@ -1014,7 +999,7 @@
         border-radius: 6px;
 
         // Big input
-        &.is-big {
+        &-big {
             height: 52px;
         }
     }
@@ -1045,15 +1030,10 @@
         }
 
         // Big button
-        &.is-big {
+        &-big {
             font-weight: $font-weight-regular;
             font-size: 1.5rem;
             height: 52px;
-        }
-
-        &:hover {
-            color: $color-black;
-            background-color: $color-white;
         }
 
         // Icon
@@ -1122,7 +1102,7 @@
         }
 
         // Blue icon
-        &.is-blue::after {
+        &-blue::after {
             color: $color-blue;
         }
     }

@@ -15,10 +15,12 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700');
 
 // All
-* {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    box-sizing: border-box;
 }
 
 // Html

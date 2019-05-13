@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var tabsContainer = document.querySelector('.tabs--content');
     var tabsPanels = tabsContainer.querySelectorAll('.tabs--panel'); // Set container height
 
-    tabsContainer.style.height = tabsPanels[0].offsetHeight + 20 + 'px';
+    tabsContainer.style.height = tabsPanels[0].offsetHeight + 'px';
     tabsNavElements.forEach(function (navEl) {
       navEl.addEventListener('click', function (e) {
         e.preventDefault();
         var id = this.getAttribute('href');
         var activePanel = tabsContainer.querySelector(id); // Set container height
 
-        tabsContainer.style.height = activePanel.offsetHeight + 20 + 'px'; // Remove active class from links
+        tabsContainer.style.height = activePanel.offsetHeight + 'px'; // Remove active class from links
 
         tabsNavElements.forEach(function (el) {
           el.classList.remove('is-active');
@@ -130,34 +130,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   var footerBtn = document.getElementById('footer-btn');
+  footerBtn.addEventListener('click', function (e) {
+    e.preventDefault(); // Scroll to the element
 
-  if (footerBtn) {
-    footerBtn.addEventListener('click', function (e) {
-      e.preventDefault(); // Scroll to the element
+    var windowOffset = window.pageYOffset;
+    var duration = 1000; // 1s
 
-      var windowOffset = window.pageYOffset;
-      var duration = 1000; // 1s
+    var start = null; // Scroll animation - easeInOutQuad
 
-      var start = null; // Scroll animation - easeInOutQuad
+    var animate = function animate(t) {
+      return t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    };
 
-      var animate = function animate(t) {
-        return t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-      };
+    window.requestAnimationFrame(function step(timestamp) {
+      if (!start) {
+        start = timestamp;
+      }
 
-      window.requestAnimationFrame(function step(timestamp) {
-        if (!start) {
-          start = timestamp;
-        }
+      var time = timestamp - start;
+      var percent = Math.min(time / duration, 1);
+      percent = animate(percent);
+      window.scrollTo(0, windowOffset + -windowOffset * percent);
 
-        var time = timestamp - start;
-        var percent = Math.min(time / duration, 1);
-        percent = animate(percent);
-        window.scrollTo(0, windowOffset + -windowOffset * percent);
-
-        if (time < duration) {
-          window.requestAnimationFrame(step);
-        }
-      });
+      if (time < duration) {
+        window.requestAnimationFrame(step);
+      }
     });
-  }
+  });
 });

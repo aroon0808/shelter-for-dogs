@@ -1,15 +1,127 @@
 // *************************
 // Table of Contents
 // 
-// Min-width: 480px
-// Min-width: 600px
-// Min-width: 768px
-// Min-width: 992px
-// Min-width: 1200px
+// Navbar
+// Tabs
+// Dropdown
+// Form
+// Responsive: >= 480px
+// Responsive: >= 600px
+// Responsive: >= 768px
+// Responsive: >= 992px
+// Responsive: >= 1200px
 //
 // *************************
 
-// Min-width: 480px
+// Navbar
+.navbar {
+    // Sidebar
+    &--sidebar {
+        &.is-active {
+            transform: translateX(300px);
+        }
+    }
+
+    // Mobile button
+    &--btn {
+        &.is-active {
+            // Bars
+            .btn--bars {
+                background-color: transparent;
+    
+                &::before {
+                    transform: translateY(0) rotate(45deg);
+                }
+    
+                &::after {
+                    transform: translateY(0) rotate(-45deg);
+                }
+            }
+        }
+    }
+    
+    // Overlay
+    &--overlay {
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+// Tabs 
+.tabs {
+    // Navigation
+    &--nav {
+        // Link
+        .nav--link {
+            &.is-active {
+                border-color: $color-green;
+    
+                // Icon
+                .nav--icon {
+                    color: $color-green;
+                }
+            }
+        }
+
+        // Company link
+        .nav--link-company {
+            &.is-active {
+                border-color: $color-blue;
+    
+                // Icon
+                .nav--icon {
+                    color: $color-blue;
+                }
+            }
+        }
+    }
+
+    // Panel
+    &--panel {
+        &.is-active {
+            visibility: visible;
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+// Dropdown
+.dropdown {
+    &.is-active {
+        transform: translateY(20px);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// Form
+.form {
+    // Label
+    &--label {
+        &.is-active {
+            font-size: 1.3rem;
+            transform: translate(-20px, -30px);
+        }
+        
+        &.is-hidden {
+            display: none;
+        }
+    }
+
+    // Checkbox label
+    &--checkbox-label {
+        &.is-required {
+            &::before {
+                border-color: $color-red;
+            }
+        }
+    }
+}
+
+// Responsive: >= 480px
 @media (min-width: 480px) {
     // Header
     .header {
@@ -108,7 +220,7 @@
     }
 }
 
-// Min-width: 600px
+// Responsive: >= 600px
 @media (min-width: 600px) {
     // Form
     .form {
@@ -143,7 +255,7 @@
     }
 }
 
-// Min-width: 768px
+// Responsive: >= 768px
 @media (min-width: 768px) {
     // Header
     .header { 
@@ -172,22 +284,25 @@
         &--column {
             flex-grow: 1;
             width: 100%;
+
+            // Spacing
+            &-spacing {
+                margin-right: 30px;
+            }
+        }
+
+        // Container
+        &--container {
+            // Narrow container
+            &-narrow-mobile {
+                margin: 0;
+                max-width: none;
+            }
         }
     }
 
     // Registration
     .register {
-        // Column
-        &--column {
-            margin-right: 30px;
-        }
-
-        // Tabs 
-        &--tabs {
-            margin: 0;
-            max-width: none;
-        }
-
         // Heading
         &--heading {
             text-align: left;
@@ -269,8 +384,11 @@
 
     // Footer
     .footer {
-        align-items: flex-start;
-        flex-direction: row;
+        // Wrapper
+        &--wrapper {
+            align-items: flex-start;
+            flex-direction: row;
+        }
         
         // Navigation
         &--nav {
@@ -286,7 +404,7 @@
     }
 }
 
-// Min-width: 992px
+// Responsive: >= 992px
 @media (min-width: 992px) {
     // Navbar
     .navbar {
@@ -303,6 +421,7 @@
             left: 0;
             transition: none;
 
+            // Active
             &.is-active {
                 transform: translateX(0);
             }
@@ -348,6 +467,7 @@
                     margin: 0 0 0 auto;
                     padding: 0;
 
+                    // Link
                     &-link {
                         padding: 0 20px;
                         display: inline-block;
@@ -362,7 +482,7 @@
             display: none;
         }
 
-        // Overlay
+        // Overlay active
         &--overlay.is-active {
             opacity: 0;
             visibility: hidden;
@@ -393,7 +513,7 @@
     }
 }
 
-// Min-width: 1200px
+// Responsive: >= 1200px
 @media (min-width: 1200px) {
     // Section
     .section {
@@ -421,7 +541,7 @@
         max-width: $l-desktop;
 
         // Small container
-        &.is-small {
+        &-small {
             max-width: $l-desktop-small;
         }
     }

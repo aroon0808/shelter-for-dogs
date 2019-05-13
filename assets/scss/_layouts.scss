@@ -23,7 +23,7 @@
 .l-navbar {
     @extend .l-container;
 
-    height: 100px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,10 +57,6 @@
 .l-footer {
     @extend .l-container;
 
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }

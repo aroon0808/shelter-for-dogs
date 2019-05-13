@@ -12,10 +12,8 @@
 </head>
 <body>
 
-    <span id="top"></span>
-
     <nav class="l-navbar">
-        <img src="./assets/images/logo.png" class="navbar--brand" alt="">
+        <img src="./assets/images/logo.png" class="navbar--brand" alt="Psytulimy">
     
         <div class="navbar--sidebar">
             <div class="navbar--header">
@@ -32,7 +30,6 @@
                 <li class="nav--item"><a href="search.html" class="nav--link">Wyszukaj Psy</a></li>
                 <li class="nav--item"><a href="adopt.html" class="nav--link">Adopcje</a></li>
                 <li class="nav--item"><a href="faq.html" class="nav--link">FAQ</a></li>
-                <!-- <li class="nav--item"><a href="#" class="nav--link">Wyloguj się</a></li>  If: Logged -->
                 <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li> <!-- If: NOT Logged -->
                 <li class="nav--register"><a href="register.html" class="btn nav--register-link"><span class="nav--icon fas fa-plus" aria-hidden="true"></span>Rejestracja</a></li> <!-- If: NOT Logged -->
             </ul>
@@ -52,7 +49,7 @@
     <div class="navbar--overlay"></div>    
     <!-- Header section -->
     <header class="l-container">
-        <div class="section--container company--container has-big-spacing">
+        <div class="section--container section--container-spacing">
             <div class="section--columns">
                 <div class="section--column company--column">
                     <figure class="company--thumbnail">
@@ -85,7 +82,7 @@
                         Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. 
                     </p>
                 
-                    <a href="#" class="btn company--btn is-blue">
+                    <a href="#" class="btn company--btn">
                         Wesprzyj Schronisko <span class="btn--icon fas fa-heart" aria-hidden="true"></span>
                     </a>
                 </div>
@@ -94,12 +91,12 @@
     </header>
     
     <!-- Gallery section -->
-    <section class="l-section section--skewed-top section--skewed-bottom is-cyan">
-        <div class="section--container is-cyan">
+    <section class="l-section section--skewed-top section--skewed-bottom skewed-cyan">
+        <div class="section--container section--container-cyan">
             <div class="l-container no-padding">
                 <div class="section--header">
                     <h2 class="section--heading">Psy w tym schronisku</h2>
-                    <span class="section--icon is-white fas fa-dog" aria-hidden="true"></span>
+                    <span class="section--icon section--icon-white fas fa-dog" aria-hidden="true"></span>
                 </div>
         
                 <div class="l-gallery gallery--container">
@@ -333,37 +330,43 @@
         </div>
     </section>
     <footer class="l-footer footer">
-        <img src="./assets/images/logo.png" class="footer--brand" alt="">
-        
-        <div class="footer--container">
-            <ul class="footer--nav">
-                <li class="nav--item"><a href="index.html" class="nav--link">Strona Główna</a></li>
-                <li class="nav--item"><a href="search.html" class="nav--link">Wyszukaj Psy</a></li>
-                <li class="nav--item"><a href="#" class="nav--link">Adopcje</a></li>
-            </ul>
+        <div class="footer--wrapper">
+            <img src="./assets/images/logo.png" class="footer--brand" alt="Psytulimy">
+            
+            <div class="footer--container">
+                <ul class="footer--nav">
+                    <li class="nav--item"><a href="index.html" class="nav--link">Strona Główna</a></li>
+                    <li class="nav--item"><a href="search.html" class="nav--link">Wyszukaj Psy</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link">Adopcje</a></li>
+                </ul>
     
-            <ul class="footer--nav">
-                <li class="nav--item"><a href="#" class="nav--link">Kontakt</a></li>
-                <li class="nav--item"><a href="#" class="nav--link">FAQ</a></li>
-                <li class="nav--item"><a href="#" class="nav--link">O Nas</a></li>
-            </ul>
+                <ul class="footer--nav">
+                    <li class="nav--item"><a href="#" class="nav--link">Kontakt</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link">FAQ</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link">O Nas</a></li>
+                </ul>
     
-            <ul class="footer--nav">
-                <li class="nav--item"><a href="#" class="nav--link">Polityka Prywatności</a></li>
-                <li class="nav--item"><a href="#" class="nav--link">Regulamin</a></li>
-                <li class="nav--item"><a href="#" class="nav--link">Jak Pomóc?</a></li>
-            </ul>
+                <ul class="footer--nav">
+                    <li class="nav--item"><a href="#" class="nav--link">Polityka Prywatności</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link">Regulamin</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link">Jak Pomóc?</a></li>
+                </ul>
     
-            <ul class="footer--nav">
-                <li class="nav--item"><a href="register.html" class="nav--link">Rejestracja</a></li>
-                <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li>
-            </ul>
+                <ul class="footer--nav">
+                    <li class="nav--item"><a href="register.html" class="nav--link">Rejestracja</a></li>
+                    <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li>
+                </ul>
+            </div>
+    
+            <a href="#" id="footer-btn">
+                <span class="footer--icon fas fa-chevron-up"></span>
+                <span class="sr-only">Na górę</span>
+            </a>
         </div>
     
-        <a href="#top" id="footer-btn">
-            <span class="footer--icon fas fa-chevron-up"></span>
-            <span class="sr-only">Na górę</span>
-        </a>
+        <div class="footer--copyright">
+            Copyright &copy; 2019 Psytulimy
+        </div>
     </footer>
     <script src="./assets/js/scripts.js"></script>
     

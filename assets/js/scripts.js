@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const tabsPanels = tabsContainer.querySelectorAll('.tabs--panel');
 
         // Set container height
-        tabsContainer.style.height = tabsPanels[0].offsetHeight + 20 + 'px';
+        tabsContainer.style.height = tabsPanels[0].offsetHeight + 'px';
 
         tabsNavElements.forEach((navEl) => {
             navEl.addEventListener('click', function(e) {
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const activePanel = tabsContainer.querySelector(id);
 
                 // Set container height
-                tabsContainer.style.height = activePanel.offsetHeight + 20 + 'px';
+                tabsContainer.style.height = activePanel.offsetHeight + 'px';
 
                 // Remove active class from links
                 tabsNavElements.forEach((el)=> {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Labels
             formGroups.forEach((formGroup) => {
-                const formLabel = formGroup.querySelector('.form--label');
+                const formLabel = formGroup.querySelector('.form--label.is-animated');
                 const formInput = formGroup.querySelector('.form--input');
 
                 if (!formInput) return;
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
     
                 // On focus
-                formInput.addEventListener('focus', () => {
+                formInput.addEventListener('focus', function() {
                     formLabel.classList.add('is-active');
                 });
     
@@ -149,33 +149,31 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     const footerBtn = document.getElementById('footer-btn');
 
-    if (footerBtn) {
-        footerBtn.addEventListener('click', function(e) {
-            e.preventDefault();
+    footerBtn.addEventListener('click', function(e) {
+        e.preventDefault();
 
-            // Scroll to the element
-            const windowOffset = window.pageYOffset;
-            const duration = 1000; // 1s
-            let start = null;
+        // Scroll to the element
+        const windowOffset = window.pageYOffset;
+        const duration = 1000; // 1s
+        let start = null;
 
-            // Scroll animation - easeInOutQuad
-            const animate = (t) => t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        // Scroll animation - easeInOutQuad
+        const animate = (t) => t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 
-            window.requestAnimationFrame(function step(timestamp) {
-                if (!start) {
-                    start = timestamp;
-                }
+        window.requestAnimationFrame(function step(timestamp) {
+            if (!start) {
+                start = timestamp;
+            }
 
-                let time = timestamp - start;
-                let percent = Math.min(time / duration, 1);
-                percent = animate(percent);
+            let time = timestamp - start;
+            let percent = Math.min(time / duration, 1);
+            percent = animate(percent);
 
-                window.scrollTo(0, windowOffset + (-windowOffset * percent));
+            window.scrollTo(0, windowOffset + (-windowOffset * percent));
 
-                if (time < duration) {
-                    window.requestAnimationFrame(step);
-                }
-            });
+            if (time < duration) {
+                window.requestAnimationFrame(step);
+            }
         });
-    }
+    });
 });

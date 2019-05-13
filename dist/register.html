@@ -12,10 +12,8 @@
 </head>
 <body>
 
-    <span id="top"></span>
-
     <nav class="l-navbar">
-        <img src="./assets/images/logo.png" class="navbar--brand" alt="">
+        <img src="./assets/images/logo.png" class="navbar--brand" alt="Psytulimy">
     
         <div class="navbar--sidebar">
             <div class="navbar--header">
@@ -32,7 +30,6 @@
                 <li class="nav--item"><a href="search.html" class="nav--link">Wyszukaj Psy</a></li>
                 <li class="nav--item"><a href="adopt.html" class="nav--link">Adopcje</a></li>
                 <li class="nav--item"><a href="faq.html" class="nav--link">FAQ</a></li>
-                <!-- <li class="nav--item"><a href="#" class="nav--link">Wyloguj się</a></li>  If: Logged -->
                 <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li> <!-- If: NOT Logged -->
                 <li class="nav--register"><a href="register.html" class="btn nav--register-link"><span class="nav--icon fas fa-plus" aria-hidden="true"></span>Rejestracja</a></li> <!-- If: NOT Logged -->
             </ul>
@@ -52,8 +49,8 @@
     <div class="navbar--overlay"></div>    
     <!-- Registration section -->
     <section class="l-container">
-        <div class="section--columns section--container has-big-spacing">
-            <div class="section--column register--column">
+        <div class="section--columns section--container section--container-spacing">
+            <header class="section--column section--column-spacing">
                 <h1 class="section--heading register--heading">Załóż darmowe konto</h1>
     
                 <p class="section--text register--text">
@@ -63,12 +60,12 @@
                 </p>
     
                 <img src="./assets/images/register-dog.png" class="image register--image" alt="">
-            </div>
+            </header>
     
             <div class="section--column">
                 <h2 class="section--heading register--heading">Rejestracja</h2>
     
-                <div class="register--tabs">
+                <div class="section--container-narrow-mobile">
                     <!-- Tabs nav -->
                     <ul class="tabs--nav" role="tablist">
                         <li class="nav--item">
@@ -91,27 +88,27 @@
                     <!-- Tabs content -->
                     <div class="tabs--content">
                         <div class="tabs--panel is-active" id="user" role="tabpanel" aria-labelledby="user-tab">
-                            <!-- Register form -->
+                            <!-- form -->
                             <form action="#" method="POST" class="form">
                                 <span class="form--heading">Dane użytkownika</span>
     
                                 <div class="form--group">
-                                    <label for="login" class="form--label">Nazwa użytkownika</label>
+                                    <label for="login" class="form--label is-animated">Nazwa użytkownika</label>
                                     <input type="text" name="login" id="login" class="form--input" required>
                                 </div>
     
                                 <div class="form--group">
-                                    <label for="mail" class="form--label">Adres E-mail</label>
+                                    <label for="mail" class="form--label is-animated">Adres E-mail</label>
                                     <input type="email" name="mail" id="mail" class="form--input" required>
                                 </div>
     
                                 <div class="form--group">
-                                    <label for="passwd" class="form--label">Hasło</label>
+                                    <label for="passwd" class="form--label is-animated">Hasło</label>
                                     <input type="password" name="passwd" id="passwd" class="form--input" required>
                                 </div>
     
                                 <div class="form--group">
-                                    <label for="passwdConfirm" class="form--label">Potwierdź hasło</label>
+                                    <label for="passwdConfirm" class="form--label is-animated">Potwierdź hasło</label>
                                     <input type="password" name="passwdConfirm" id="passwdConfirm" class="form--input" required>
                                 </div>
     
@@ -125,65 +122,65 @@
                         </div>
     
                         <div class="tabs--panel" id="company" role="tabpanel" aria-labelledby="company-tab">
-                            <!-- Register form -->
+                            <!-- form -->
                             <form action="#" method="POST" class="form">
                                 <span class="form--heading">Dane użytkownika</span>
     
                                 <div class="form--group">
-                                    <label for="c_login" class="form--label">Nazwa użytkownika</label>
+                                    <label for="c_login" class="form--label is-animated">Nazwa użytkownika</label>
                                     <input type="text" name="c_login" id="c_login" class="form--input" required>
                                 </div>
     
                                 <div class="form--group">
-                                    <label for="c_mail" class="form--label">Adres E-mail</label>
+                                    <label for="c_mail" class="form--label is-animated">Adres E-mail</label>
                                     <input type="email" name="c_mail" id="c_mail" class="form--input" required>
                                 </div>
     
                                 <div class="form--group">
-                                    <label for="c_passwd" class="form--label">Hasło</label>
+                                    <label for="c_passwd" class="form--label is-animated">Hasło</label>
                                     <input type="password" name="c_passwd" id="c_passwd" class="form--input" required>
                                 </div>
     
                                 <div class="form--group">
-                                    <label for="c_passwdConfirm" class="form--label">Potwierdź hasło</label>
+                                    <label for="c_passwdConfirm" class="form--label is-animated">Potwierdź hasło</label>
                                     <input type="password" name="c_passwdConfirm" id="c_passwdConfirm" class="form--input" required>
                                 </div>
     
                                 <span class="form--heading">Dane schroniska</span>
     
                                 <div class="form--group">
-                                    <label for="c_companyName" class="form--label">Nazwa schroniska</label>
+                                    <label for="c_companyName" class="form--label is-animated">Nazwa schroniska</label>
                                     <input type="text" name="c_companyName" id="c_companyName" class="form--input" required>
                                 </div>
                                 
                                 <div class="form--inline">
                                     <div class="form--group form--post-code">
-                                        <label for="c_postCode" class="form--label">Kod pocztowy</label>
+                                        <label for="c_postCode" class="form--label is-animated">Kod pocztowy</label>
                                         <input type="text" name="c_postCode" id="c_postCode" class="form--input" maxlength="6" required>
                                     </div>
     
                                     <div class="form--group">
-                                        <label for="c_City" class="form--label">Miasto</label>
+                                        <label for="c_City" class="form--label is-animated">Miasto</label>
                                         <input type="text" name="c_City" id="c_City" class="form--input" required>
                                     </div>
                                 </div>
     
                                 <div class="form--group">
-                                    <label for="c_street" class="form--label">Ulica</label>
+                                    <label for="c_street" class="form--label is-animated">Ulica</label>
                                     <input type="text" name="c_street" id="c_street" class="form--input" required>
                                 </div>
     
                                 <div class="form--group">
-                                    <label for="c_phone" class="form--label">Numer kontaktowy</label>
+                                    <label for="c_phone" class="form--label is-animated">Numer kontaktowy</label>
                                     <input type="text" name="c_phone" id="c_phone" class="form--input" required>
                                 </div>
     
                                 <div class="form--group">
                                     <input type="checkbox" id="c_tos" name="c_tos" class="form--checkbox" required>
-                                    <label for="c_tos" class="form--checkbox-label is-blue" tabindex="0">Akceptuję regulamin serwisu.</label>
+                                    <label for="c_tos" class="form--checkbox-label form--checkbox-label-blue" tabindex="0">Akceptuję regulamin serwisu.</label>
                                 </div>
                                 
-                                <button type="submit" class="btn form--btn is-blue form--submit">Załóż konto</button>
+                                <button type="submit" class="btn form--btn form--btn-company form--submit">Załóż konto</button>
                             </form>
                         </div>
                     </div>
@@ -192,37 +189,43 @@
         </div>
     </section>
     <footer class="l-footer footer">
-        <img src="./assets/images/logo.png" class="footer--brand" alt="">
-        
-        <div class="footer--container">
-            <ul class="footer--nav">
-                <li class="nav--item"><a href="index.html" class="nav--link">Strona Główna</a></li>
-                <li class="nav--item"><a href="search.html" class="nav--link">Wyszukaj Psy</a></li>
-                <li class="nav--item"><a href="#" class="nav--link">Adopcje</a></li>
-            </ul>
+        <div class="footer--wrapper">
+            <img src="./assets/images/logo.png" class="footer--brand" alt="Psytulimy">
+            
+            <div class="footer--container">
+                <ul class="footer--nav">
+                    <li class="nav--item"><a href="index.html" class="nav--link">Strona Główna</a></li>
+                    <li class="nav--item"><a href="search.html" class="nav--link">Wyszukaj Psy</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link">Adopcje</a></li>
+                </ul>
     
-            <ul class="footer--nav">
-                <li class="nav--item"><a href="#" class="nav--link">Kontakt</a></li>
-                <li class="nav--item"><a href="#" class="nav--link">FAQ</a></li>
-                <li class="nav--item"><a href="#" class="nav--link">O Nas</a></li>
-            </ul>
+                <ul class="footer--nav">
+                    <li class="nav--item"><a href="#" class="nav--link">Kontakt</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link">FAQ</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link">O Nas</a></li>
+                </ul>
     
-            <ul class="footer--nav">
-                <li class="nav--item"><a href="#" class="nav--link">Polityka Prywatności</a></li>
-                <li class="nav--item"><a href="#" class="nav--link">Regulamin</a></li>
-                <li class="nav--item"><a href="#" class="nav--link">Jak Pomóc?</a></li>
-            </ul>
+                <ul class="footer--nav">
+                    <li class="nav--item"><a href="#" class="nav--link">Polityka Prywatności</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link">Regulamin</a></li>
+                    <li class="nav--item"><a href="#" class="nav--link">Jak Pomóc?</a></li>
+                </ul>
     
-            <ul class="footer--nav">
-                <li class="nav--item"><a href="register.html" class="nav--link">Rejestracja</a></li>
-                <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li>
-            </ul>
+                <ul class="footer--nav">
+                    <li class="nav--item"><a href="register.html" class="nav--link">Rejestracja</a></li>
+                    <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li>
+                </ul>
+            </div>
+    
+            <a href="#" id="footer-btn">
+                <span class="footer--icon fas fa-chevron-up"></span>
+                <span class="sr-only">Na górę</span>
+            </a>
         </div>
     
-        <a href="#top" id="footer-btn">
-            <span class="footer--icon fas fa-chevron-up"></span>
-            <span class="sr-only">Na górę</span>
-        </a>
+        <div class="footer--copyright">
+            Copyright &copy; 2019 Psytulimy
+        </div>
     </footer>
     <script src="./assets/js/scripts.js"></script>
     

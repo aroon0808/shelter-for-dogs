@@ -27,12 +27,8 @@
     display: block;
     padding: 0 20px;
     position: relative;
+    cursor: pointer;
     transition: all .25s ease;
-
-    // Blue button
-    &.is-blue {
-        background-color: $color-blue;
-    }
 
     // Shadow
     &::before {
@@ -82,17 +78,12 @@
         position: fixed;
         transition: transform .25s ease-in-out;   
         left: -300px;
-        top: 0; 
-        
-        // Active
-        &.is-active {
-            transform: translateX(300px);
-        }
+        top: 0;
     }
 
     // Sidebar header
     &--header {
-        height: 100px;
+        height: 110px;
         padding: 0 20px;
         display: flex;
         align-items: center;
@@ -154,9 +145,9 @@
 
                 // Link
                 &-link {
-                    display: table;
                     line-height: 36px;
                     height: 36px;
+                    display: table;
 
                     &:hover,
                     &:focus {
@@ -214,24 +205,6 @@
 
                 &::after {
                     transform: translateY(-7px);
-                }
-            }
-        }
-
-        // Active
-        &.is-active {
-            .btn {
-                // Bars
-                &--bars {
-                    background-color: transparent;
-
-                    &::before {
-                        transform: translateY(0) rotate(45deg);
-                    }
-
-                    &::after {
-                        transform: translateY(0) rotate(-45deg);
-                    }
                 }
             }
         }
@@ -316,12 +289,6 @@
         opacity: 0;
         visibility: hidden;
         transition: all .25s ease-in-out;
-        
-        // Active
-        &.is-active {
-            opacity: 1;
-            visibility: visible;
-        }
     }
 }
 
@@ -343,12 +310,6 @@
         color: $color-grey-dark;
         text-align: center;
         display: block;
-
-        // Bold text
-        .is-bold {
-            font-weight: $font-weight-bold;
-            display: block;
-        }
     }
 
     // Buttons container
@@ -368,25 +329,16 @@
         display: inline-block;
 
         // Transparent button
-        &.is-transparent {
+        &-transparent {
             color: $color-black;
             background-color: transparent;
-
-            &:hover {
-                background-color: $color-white;
-            }
-        }
-
-        // Regular text
-        .is-regular {
-            font-weight: $font-weight-regular;
         }
     }
 
     // Image
     &--image {
         position: absolute;
-        top: -100px;
+        top: -110px;
         left: 50%;
         z-index: -1;
         opacity: 0.5;
@@ -412,7 +364,8 @@
             top: 0;
         }
 
-        &.is-cyan::before {
+        // Cyan background
+        &.skewed-cyan::before {
             border-bottom-color: $color-cyan-bright;
         }
     }
@@ -433,7 +386,8 @@
             bottom: 0;
         }
 
-        &.is-cyan::after {
+        // Cyan background
+        &.skewed-cyan::after {
             border-top-color: $color-cyan-bright;
         }
     }
@@ -444,13 +398,27 @@
         background-color: $color-white;
 
         // Cyan background
-        &.is-cyan {
+        &-cyan {
             background-color: $color-cyan-bright;
         }
 
-        // Bigger padding
-        &.has-big-spacing {
+        // Narrow container
+        &-narrow-mobile {
+            margin: 0 auto;
+            max-width: $l-desktop-small;
+        }
+
+        // Container spacing
+        &-spacing {
             padding: 120px 0;
+        }
+
+        &-spacing-top {
+            padding-top: 120px;
+        }
+
+        &-spacing-bottom {
+            padding-bottom: 120px;
         }
     }
 
@@ -478,6 +446,11 @@
         text-align: center;
         margin: 15px 0;
         display: block;
+
+        // Bigger spacing
+        &-spacing {
+            margin-bottom: 100px;
+        }
     }
 
     // Content
@@ -498,7 +471,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        &.is-white {
+        // White icon
+        &-white {
             color: $color-white;
         }
     }
@@ -539,7 +513,6 @@
     // Next button
     &--next {
         margin-left: 10px;
-
     }
 }
 
@@ -548,12 +521,6 @@
     // Column
     &--column {
         width: 100%;
-    }
-
-    // Tabs 
-    &--tabs {
-        margin: 0 auto;
-        max-width: 400px;
     }
 
     // Heading
@@ -569,11 +536,6 @@
 
 // Company profile
 .company {
-    // Container
-    &--container {
-        padding-bottom: 50px !important;
-    }
-
     // Subheading
     &--subheading {
         font-size: 1.8rem;
@@ -598,9 +560,11 @@
         height: 40px;
         display: table;
         margin: 30px auto 0 auto;
+        background-color: $color-blue;
         padding: 0 12px;
 
         .btn {
+            // Icon
             &--icon {
                 margin-left: 10px;
             }
@@ -662,14 +626,6 @@
     }
 }
 
-// Search page
-.search {
-    // subheading
-    &--subheading {
-        margin-bottom: 80px;
-    }
-}
-
 // Tabs 
 .tabs {
     // Navigation
@@ -689,17 +645,16 @@
                 text-align: center;
                 width: 100%;
                 background-color: $color-white;
-                border-left: 4px solid $color-white-dark;
+                border: 1px solid $color-white-dark;
+                border-radius: 6px;
+                padding: 4px;
                 display: block;
                 margin-bottom: 10px;
                 transition: all .25s ease;
 
-                &.is-active,
                 &:hover,
                 &:focus {
-                    border-left-color: $color-green;
-
-                    // ICon
+                    // Icon
                     .nav--icon {
                         color: $color-green;
                     }
@@ -707,11 +662,8 @@
                 
                 // Company button
                 &-company {
-                    &.is-active,
                     &:hover,
                     &:focus {
-                        border-left-color: $color-blue;
-
                         // Icon
                         .nav--icon {
                             color: $color-blue;
@@ -730,14 +682,14 @@
 
             // Icon
             &--icon {
-                width: 30px;
+                width: 22px;
                 text-align: left;
                 transition: all .25s ease;
             }
         }
     }
 
-    // Container
+    // Content container
     &--content {
         min-height: 300px;
         position: relative;
@@ -754,13 +706,6 @@
         opacity: 0;
         top: 0;
         left: 0;
-
-        // Active
-        &.is-active {
-            visibility: visible;
-            transform: translateX(0);
-            opacity: 1;
-        }
     }
 }
 
@@ -807,13 +752,6 @@
         left: 0;
         top: 0;
         background-color: $color-white;
-    }
-
-    // Active
-    &.is-active {
-        transform: translateY(20px);
-        opacity: 1;
-        visibility: visible;
     }
 
     .dropdown {
@@ -898,7 +836,7 @@
                 justify-content: flex-end;
             }
 
-            // Icon 
+            // Icon with background 
             &--icon-bg {
                 text-align: center;
                 width: 30px;
@@ -914,10 +852,12 @@
                 line-height: 30px;
                 color: $color-black;
 
+                // Male icon
                 &.fa-mars {
                     color: #3e8ef1;
                 }
                 
+                // Female icon
                 &.fa-venus {
                     color: #f531ca;
                 }
@@ -974,7 +914,7 @@
         font: $font-weight-medium 1.6rem $font-primary;
         color: $color-black;
         display: block;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     // Label
@@ -983,22 +923,10 @@
         color: $color-grey-3;
         margin-bottom: 10px;
         display: block;
-        cursor: pointer;
         position: absolute;
         top: 12px;
         left: 20px;
         transition: all .25s ease;
-        
-        // Active
-        &.is-active {
-            font-size: 1.2rem;
-            transform: translate(-20px, -30px);
-        }
-
-        // Hidden
-        &.is-hidden {
-            display: none;
-        }
     }
 
     // Input
@@ -1008,13 +936,13 @@
         color: $color-black;
         height: 40px;
         width: 100%;
-        padding: 0 20px;
-        background-color: $color-cyan-bright;
+        padding: 0 15px;
+        background-color: $color-white;
         border: 2px solid $color-cyan-bright-2;
         border-radius: 6px;
 
         // Big input
-        &.is-big {
+        &-big {
             height: 52px;
         }
     }
@@ -1024,6 +952,68 @@
         @extend .form--input;
 
         appearance: none;
+    }
+
+    // Textarea
+    &--textarea {
+        @extend .form--input;
+
+        padding: 15px;
+        resize: vertical;
+        min-height: 150px;
+    }
+
+    // Upload container
+    &--upload {
+        padding: 10px;
+        border-radius: 6px;
+        padding: 0;
+
+        // Upload label
+        &-label {
+            line-height: 40px;
+            color: $color-black;
+            background-color: $color-white;
+            border-color: $color-white-dark;
+            height: 40px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        // Upload Icon
+        &-icon {
+            width: 20px;
+        }
+
+        // Upload preview
+        &-preview {
+            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 6px;
+            margin-bottom: 34px;
+            background-color: $color-cyan-bright-2;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        // Upload description
+        &-desc {
+            font-size: 1.2rem;
+            line-height: 20px;
+            display: block;
+            margin: 10px;
+        }
+    }
+
+    // File
+    &--file {
+        position: absolute;
+        overflow: hidden;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        opacity: 0;
     }
 
     // Post code form
@@ -1044,16 +1034,16 @@
             margin-top: 10px;
         }
 
+        // Company register button
+        &-company {
+            background-color: $color-blue;
+        }
+
         // Big button
-        &.is-big {
+        &-big {
             font-weight: $font-weight-regular;
             font-size: 1.5rem;
             height: 52px;
-        }
-
-        &:hover {
-            color: $color-black;
-            background-color: $color-white;
         }
 
         // Icon
@@ -1089,18 +1079,11 @@
         cursor: pointer;
         position: relative;
 
-        // Required
-        &.is-required {
-            &::before {
-                border-color: $color-red;
-            }
-        }
-
         // Checkbox background
         &::before {
             content: '';
-            width: 16px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
             border-radius: 4px;
             background-color: $color-white;
             border: 2px solid $color-cyan-bright-2;
@@ -1122,7 +1105,7 @@
         }
 
         // Blue icon
-        &.is-blue::after {
+        &-blue::after {
             color: $color-blue;
         }
     }
@@ -1135,6 +1118,14 @@
 
 // Footer
 .footer {
+    // Wrapper
+    &--wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
     // Container
     &--container {
         width: 100%;
@@ -1170,7 +1161,7 @@
             // Link
             &--link {
                 font: $font-weight-regular 1.2rem/30px $font-primary;
-                color: $color-grey;
+                color: $color-black;
                 display: block;
                 transition: all .25s ease;
 
@@ -1187,5 +1178,13 @@
         font-size: 3rem;
         color: $color-green;
         padding: 15px 0;
+    }
+
+    // Copyright
+    &--copyright {
+        font-size: 1.1rem;
+        color: $color-grey-2;
+        text-align: center;
+        padding-top: 20px;
     }
 }

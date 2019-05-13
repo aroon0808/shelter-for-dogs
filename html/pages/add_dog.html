@@ -1,0 +1,97 @@
+---
+layout: default
+title: Dodaj psa
+---
+
+<!-- Add dog header -->
+<header class="l-container">
+    <div class="section--container section--container-spacing-top">
+        <h1 class="section--heading">Dodaj Psa</h1>
+        <span class="section--subheading">
+            Utwórz nowy profil psa na stronie.
+        </span>
+    </div>
+</header>
+
+<!-- Add dog section -->
+<section class="l-container">
+    <div class="section--container section--container-narrow-mobile section--container-spacing-bottom">
+        <!-- form -->
+        <form action="#" method="POST" class="form">
+            <div class="section--columns">
+                <div class="section--column section--column-spacing">
+                    <h2 class="form--heading">Podstawowe dane</h2>
+
+                    <div class="form--group">
+                        <label for="dog_name" class="form--label is-active">Imię psa</label>
+                        <input type="text" name="dog_name" id="dog_name" class="form--input" required>
+                    </div>
+
+                    <div class="form--group">
+                        <label for="gender" class="form--label is-active">Płeć</label>
+                        <select name="gender" id="gender" class="form--select" required>
+                            <option disabled selected>Wybierz...</option>
+                            <option value="pies">Pies</option>
+                            <option value="suka">Suka</option>
+                        </select>
+                    </div>
+    
+                    <div class="form--group">
+                        <label for="race" class="form--label is-active">Rasa</label>
+                        <select name="race" id="race" class="form--select" required>
+                            <option disabled selected>Wybierz...</option>
+                            <option value="delmatynczyk">Delmatyńczyk</option>
+                            <option value="labrador">Labrador</option>
+                            <option value="beagle">Beagle</option>
+                            <option value="mops">Mops</option>
+                        </select>
+                    </div>
+    
+                    <div class="form--group">
+                        <label for="size" class="form--label is-active">Wielkość</label>
+                        <select name="size" id="size" class="form--select" required>
+                            <option disabled selected>Wybierz...</option>
+                            <option value="maly">Mały (0-10 kg)</option>
+                            <option value="sredni">Średni (11 -25 kg)</option>
+                            <option value="duzy">Duży (26-39 kg)</option>
+                            <option value="olbrzym">Olbrzym (40 kg i więcej)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="section--column">
+                    <h2 class="form--heading">Opis psa / Zdjęcie</h2>
+        
+                    <div class="form--inline">
+                        <div class="form--upload-preview"></div>
+
+                        <div class="form--group form--upload">
+                            <label for="picture" class="btn form--upload-label" tabindex="0">
+                                <span class="form--upload-icon fas fa-plus" aria-hidden="true"></span> Wybierz zdjęcie
+                            </label>
+
+                            <span class="form--upload-desc">
+                                Minimalna wielkość obrazka: 500x400 <br>
+                                Maksymalny rozmiar obrazka: 400KB
+                            </span>
+
+                            <input type="file" name="picture" id="picture" class="form--file">
+                        </div>
+                    </div>
+
+                    <div class="form--group">
+                        <label for="desc" class="form--label is-active">Opis</label>
+                        <textarea name="desc" id="desc" class="form--textarea" cols="30" rows="10" required></textarea>
+                    </div>
+
+                    <div class="form--group">
+                        <input type="checkbox" id="tos" name="tos" class="form--checkbox" required>
+                        <label for="tos" class="form--checkbox-label" tabindex="0">Akceptuję regulamin serwisu.</label>
+                    </div>
+        
+                    <button type="submit" class="btn form--btn form--submit">Dodaj psa</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

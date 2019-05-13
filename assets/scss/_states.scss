@@ -56,7 +56,7 @@
         // Link
         .nav--link {
             &.is-active {
-                border-left-color: $color-green;
+                border-color: $color-green;
     
                 // Icon
                 .nav--icon {
@@ -68,7 +68,7 @@
         // Company link
         .nav--link-company {
             &.is-active {
-                border-left-color: $color-blue;
+                border-color: $color-blue;
     
                 // Icon
                 .nav--icon {
@@ -384,8 +384,11 @@
 
     // Footer
     .footer {
-        align-items: flex-start;
-        flex-direction: row;
+        // Wrapper
+        &--wrapper {
+            align-items: flex-start;
+            flex-direction: row;
+        }
         
         // Navigation
         &--nav {

@@ -27,6 +27,7 @@
     display: block;
     padding: 0 20px;
     position: relative;
+    cursor: pointer;
     transition: all .25s ease;
 
     // Shadow
@@ -82,7 +83,7 @@
 
     // Sidebar header
     &--header {
-        height: 100px;
+        height: 110px;
         padding: 0 20px;
         display: flex;
         align-items: center;
@@ -337,7 +338,7 @@
     // Image
     &--image {
         position: absolute;
-        top: -100px;
+        top: -110px;
         left: 50%;
         z-index: -1;
         opacity: 0.5;
@@ -644,15 +645,15 @@
                 text-align: center;
                 width: 100%;
                 background-color: $color-white;
-                border-left: 4px solid $color-white-dark;
+                border: 1px solid $color-white-dark;
+                border-radius: 6px;
+                padding: 4px;
                 display: block;
                 margin-bottom: 10px;
                 transition: all .25s ease;
 
                 &:hover,
                 &:focus {
-                    border-left-color: $color-green;
-
                     // Icon
                     .nav--icon {
                         color: $color-green;
@@ -663,8 +664,6 @@
                 &-company {
                     &:hover,
                     &:focus {
-                        border-left-color: $color-blue;
-
                         // Icon
                         .nav--icon {
                             color: $color-blue;
@@ -683,7 +682,7 @@
 
             // Icon
             &--icon {
-                width: 30px;
+                width: 22px;
                 text-align: left;
                 transition: all .25s ease;
             }
@@ -924,7 +923,6 @@
         color: $color-grey-3;
         margin-bottom: 10px;
         display: block;
-        cursor: pointer;
         position: absolute;
         top: 12px;
         left: 20px;
@@ -938,7 +936,7 @@
         color: $color-black;
         height: 40px;
         width: 100%;
-        padding: 0 20px;
+        padding: 0 15px;
         background-color: $color-white;
         border: 2px solid $color-cyan-bright-2;
         border-radius: 6px;
@@ -960,13 +958,62 @@
     &--textarea {
         @extend .form--input;
 
+        padding: 15px;
         resize: vertical;
-        min-height: 200px;
+        min-height: 150px;
+    }
+
+    // Upload container
+    &--upload {
+        padding: 10px;
+        border-radius: 6px;
+        padding: 0;
+
+        // Upload label
+        &-label {
+            line-height: 40px;
+            color: $color-black;
+            background-color: $color-white;
+            border-color: $color-white-dark;
+            height: 40px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        // Upload Icon
+        &-icon {
+            width: 20px;
+        }
+
+        // Upload preview
+        &-preview {
+            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 6px;
+            margin-bottom: 34px;
+            background-color: $color-cyan-bright-2;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        // Upload description
+        &-desc {
+            font-size: 1.2rem;
+            line-height: 20px;
+            display: block;
+            margin: 10px;
+        }
     }
 
     // File
     &--file {
-        
+        position: absolute;
+        overflow: hidden;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        opacity: 0;
     }
 
     // Post code form
@@ -1071,6 +1118,14 @@
 
 // Footer
 .footer {
+    // Wrapper
+    &--wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
     // Container
     &--container {
         width: 100%;
@@ -1106,7 +1161,7 @@
             // Link
             &--link {
                 font: $font-weight-regular 1.2rem/30px $font-primary;
-                color: $color-grey;
+                color: $color-black;
                 display: block;
                 transition: all .25s ease;
 
@@ -1123,5 +1178,13 @@
         font-size: 3rem;
         color: $color-green;
         padding: 15px 0;
+    }
+
+    // Copyright
+    &--copyright {
+        font-size: 1.1rem;
+        color: $color-grey-2;
+        text-align: center;
+        padding-top: 20px;
     }
 }

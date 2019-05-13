@@ -23,7 +23,7 @@
 .l-navbar {
     @extend .l-container;
 
-    height: 100px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,9 +58,5 @@
     @extend .l-container;
 
     padding-top: 40px;
-    padding-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+    padding-bottom: 20px;
 }

@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var formSubmitBtn = form.querySelector('.form--submit'); // Labels
 
       formGroups.forEach(function (formGroup) {
-        var formLabel = formGroup.querySelector('.form--label');
+        var formLabel = formGroup.querySelector('.form--label.is-animated');
         var formInput = formGroup.querySelector('.form--input');
         if (!formInput) return; // On init
 

@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Labels
             formGroups.forEach((formGroup) => {
-                const formLabel = formGroup.querySelector('.form--label');
+                const formLabel = formGroup.querySelector('.form--label.is-animated');
                 const formInput = formGroup.querySelector('.form--input');
 
                 if (!formInput) return;

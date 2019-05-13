@@ -102,7 +102,7 @@
     // Label
     &--label {
         &.is-active {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             transform: translate(-20px, -30px);
         }
         
@@ -284,22 +284,25 @@
         &--column {
             flex-grow: 1;
             width: 100%;
+
+            // Spacing
+            &-spacing {
+                margin-right: 30px;
+            }
+        }
+
+        // Container
+        &--container {
+            // Narrow container
+            &-narrow-mobile {
+                margin: 0;
+                max-width: none;
+            }
         }
     }
 
     // Registration
     .register {
-        // Column
-        &--column {
-            margin-right: 30px;
-        }
-
-        // Tabs 
-        &--tabs {
-            margin: 0;
-            max-width: none;
-        }
-
         // Heading
         &--heading {
             text-align: left;

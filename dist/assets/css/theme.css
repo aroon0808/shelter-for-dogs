@@ -126,8 +126,8 @@ ul li {
 }
 
 .l-footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -538,8 +538,21 @@ ul li {
   background-color: #f2f7f9;
 }
 
-.section--container-padding {
+.section--container-narrow-mobile {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.section--container-spacing {
   padding: 120px 0;
+}
+
+.section--container-spacing-top {
+  padding-top: 120px;
+}
+
+.section--container-spacing-bottom {
+  padding-bottom: 120px;
 }
 
 .section--header {
@@ -563,6 +576,10 @@ ul li {
   text-align: center;
   margin: 15px 0;
   display: block;
+}
+
+.section--subheading-spacing {
+  margin-bottom: 100px;
 }
 
 .section--content {
@@ -624,11 +641,6 @@ ul li {
 
 .register--column {
   width: 100%;
-}
-
-.register--tabs {
-  margin: 0 auto;
-  max-width: 400px;
 }
 
 .register--heading {
@@ -711,10 +723,6 @@ ul li {
   font: 400 1.4rem/24px "Work Sans", Arial, Verdana, sans-serif;
   text-align: center;
   margin-top: 30px;
-}
-
-.search--subheading {
-  margin-bottom: 80px;
 }
 
 .tabs--nav {
@@ -978,7 +986,7 @@ ul li {
   font: 500 1.6rem "Work Sans", Arial, Verdana, sans-serif;
   color: #111;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .form--label {
@@ -994,14 +1002,14 @@ ul li {
   transition: all .25s ease;
 }
 
-.form--input, .form--select {
+.form--input, .form--select, .form--textarea {
   font-weight: 400;
   font-size: 1.4rem;
   color: #111;
   height: 40px;
   width: 100%;
   padding: 0 20px;
-  background-color: #f2f7f9;
+  background-color: #fff;
   border: 2px solid #e4ebef;
   border-radius: 6px;
 }
@@ -1014,6 +1022,11 @@ ul li {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.form--textarea {
+  resize: vertical;
+  min-height: 200px;
 }
 
 .form--post-code {
@@ -1211,7 +1224,7 @@ ul li {
 }
 
 .form--label.is-active {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   -webkit-transform: translate(-20px, -30px);
   transform: translate(-20px, -30px);
 }
@@ -1322,10 +1335,10 @@ ul li {
     flex-grow: 1;
     width: 100%;
   }
-  .register--column {
+  .section--column-spacing {
     margin-right: 30px;
   }
-  .register--tabs {
+  .section--container-narrow-mobile {
     margin: 0;
     max-width: none;
   }

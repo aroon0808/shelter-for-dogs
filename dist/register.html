@@ -32,7 +32,6 @@
                 <li class="nav--item"><a href="search.html" class="nav--link">Wyszukaj Psy</a></li>
                 <li class="nav--item"><a href="adopt.html" class="nav--link">Adopcje</a></li>
                 <li class="nav--item"><a href="faq.html" class="nav--link">FAQ</a></li>
-                <!-- <li class="nav--item"><a href="#" class="nav--link">Wyloguj się</a></li>  If: Logged -->
                 <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li> <!-- If: NOT Logged -->
                 <li class="nav--register"><a href="register.html" class="btn nav--register-link"><span class="nav--icon fas fa-plus" aria-hidden="true"></span>Rejestracja</a></li> <!-- If: NOT Logged -->
             </ul>
@@ -52,8 +51,8 @@
     <div class="navbar--overlay"></div>    
     <!-- Registration section -->
     <section class="l-container">
-        <div class="section--columns section--container section--container-padding">
-            <div class="section--column register--column">
+        <div class="section--columns section--container section--container-spacing">
+            <header class="section--column section--column-spacing">
                 <h1 class="section--heading register--heading">Załóż darmowe konto</h1>
     
                 <p class="section--text register--text">
@@ -63,12 +62,12 @@
                 </p>
     
                 <img src="./assets/images/register-dog.png" class="image register--image" alt="">
-            </div>
+            </header>
     
             <div class="section--column">
                 <h2 class="section--heading register--heading">Rejestracja</h2>
     
-                <div class="register--tabs">
+                <div class="section--container-small-mobile">
                     <!-- Tabs nav -->
                     <ul class="tabs--nav" role="tablist">
                         <li class="nav--item">
@@ -91,7 +90,7 @@
                     <!-- Tabs content -->
                     <div class="tabs--content">
                         <div class="tabs--panel is-active" id="user" role="tabpanel" aria-labelledby="user-tab">
-                            <!-- Register form -->
+                            <!-- form -->
                             <form action="#" method="POST" class="form">
                                 <span class="form--heading">Dane użytkownika</span>
     
@@ -125,7 +124,7 @@
                         </div>
     
                         <div class="tabs--panel" id="company" role="tabpanel" aria-labelledby="company-tab">
-                            <!-- Register form -->
+                            <!-- form -->
                             <form action="#" method="POST" class="form">
                                 <span class="form--heading">Dane użytkownika</span>
     

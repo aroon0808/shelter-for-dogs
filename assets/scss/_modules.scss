@@ -401,9 +401,23 @@
             background-color: $color-cyan-bright;
         }
 
-        // Bigger padding
-        &-padding {
+        // Narrow container
+        &-narrow-mobile {
+            margin: 0 auto;
+            max-width: $l-desktop-small;
+        }
+
+        // Container spacing
+        &-spacing {
             padding: 120px 0;
+        }
+
+        &-spacing-top {
+            padding-top: 120px;
+        }
+
+        &-spacing-bottom {
+            padding-bottom: 120px;
         }
     }
 
@@ -431,6 +445,11 @@
         text-align: center;
         margin: 15px 0;
         display: block;
+
+        // Bigger spacing
+        &-spacing {
+            margin-bottom: 100px;
+        }
     }
 
     // Content
@@ -501,12 +520,6 @@
     // Column
     &--column {
         width: 100%;
-    }
-
-    // Tabs 
-    &--tabs {
-        margin: 0 auto;
-        max-width: 400px;
     }
 
     // Heading
@@ -609,14 +622,6 @@
         font: $font-weight-regular 1.4rem/24px $font-primary;
         text-align: center;
         margin-top: 30px;
-    }
-}
-
-// Search page
-.search {
-    // subheading
-    &--subheading {
-        margin-bottom: 80px;
     }
 }
 
@@ -910,7 +915,7 @@
         font: $font-weight-medium 1.6rem $font-primary;
         color: $color-black;
         display: block;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     // Label
@@ -934,7 +939,7 @@
         height: 40px;
         width: 100%;
         padding: 0 20px;
-        background-color: $color-cyan-bright;
+        background-color: $color-white;
         border: 2px solid $color-cyan-bright-2;
         border-radius: 6px;
 
@@ -949,6 +954,19 @@
         @extend .form--input;
 
         appearance: none;
+    }
+
+    // Textarea
+    &--textarea {
+        @extend .form--input;
+
+        resize: vertical;
+        min-height: 200px;
+    }
+
+    // File
+    &--file {
+        
     }
 
     // Post code form

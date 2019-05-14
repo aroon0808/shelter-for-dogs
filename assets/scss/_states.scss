@@ -119,6 +119,23 @@
             }
         }
     }
+
+    // Upload preview
+    &--upload-preview {
+        &.is-empty {
+            position: relative;
+
+            &::before {
+                content: '\f6d3';
+                font: 900 4rem 'Font Awesome 5 Free';
+                color: $color-grey;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
 }
 
 // Responsive: >= 480px
@@ -244,9 +261,9 @@
             max-width: 170px;
         }
 
-        // Margin right
-        &--mr {
-            margin-right: 20px;
+        // Spacing
+        &--spacing {
+            margin-right: 15px;
         }
     }
 

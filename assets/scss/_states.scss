@@ -157,7 +157,16 @@
             transform: translateX(-30%);
             opacity: 1;
         }
+        .l-container {
+
+            //Small container
+            &-small{
+    max-width: $l-desktop-small;
+            }
+        }
     }
+
+    
 
     // Navigation
     .navbar {
@@ -510,6 +519,11 @@
     // Layouts
     .l-container {
         max-width: $l-tablet;
+
+        //Small container
+        &-small{
+        max-width: $l-tablet;
+        }
     }
 }
 

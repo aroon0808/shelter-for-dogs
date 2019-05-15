@@ -171,6 +171,10 @@ ul li {
   opacity: 1;
 }
 
+.btn--fb {
+  background-color: #3C5A99;
+}
+
 .navbar--brand {
   display: block;
   margin-right: 50px;
@@ -633,6 +637,19 @@ ul li {
 
 .register--image {
   margin: 50px auto;
+}
+
+.login--btn {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.login--icon {
+  margin-right: 20px;
+}
+
+.login--link {
+  font-size: 1.4rem;
 }
 
 .company--subheading {
@@ -1313,6 +1330,9 @@ ul li {
     transform: translateX(-30%);
     opacity: 1;
   }
+  .header .l-container-small {
+    max-width: 400px;
+  }
   .navbar--user .user--name {
     display: block;
   }
@@ -1545,6 +1565,9 @@ ul li {
     max-width: 900px;
   }
   .l-container, .l-navbar, .l-header, .l-section, .l-gallery, .l-footer {
+    max-width: 970px;
+  }
+  .l-container-small {
     max-width: 970px;
   }
 }

@@ -56,6 +56,10 @@
             opacity: 1;
         }
     }
+
+    &--fb {
+        background-color: $color-fb;
+    }
 }
 
 // Navigation
@@ -531,6 +535,25 @@
     // Image
     &--image {
         margin: 50px auto;
+    }
+}
+
+// Login
+.login {
+    // Button
+    &--btn {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    //Icon
+    &--icon {
+       margin-right: 20px; 
+    }
+
+    //Link
+    &--link {
+        font-size: 1.4rem;
     }
 }
 

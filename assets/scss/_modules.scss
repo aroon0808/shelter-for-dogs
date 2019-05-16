@@ -434,6 +434,7 @@
         position: relative;
         margin-bottom: 70px;
 
+        // Spacing
         &-spacing {
             margin-bottom: 100px;
         }
@@ -552,6 +553,8 @@
         font-weight: 400;
         font-size: 1.2rem;
         color: $color-black;
+        margin: 25px 0;
+        display: block;
     }
 
     // Line

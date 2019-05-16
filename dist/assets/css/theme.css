@@ -648,6 +648,8 @@ ul li {
   font-weight: 400;
   font-size: 1.2rem;
   color: #111;
+  margin: 25px 0;
+  display: block;
 }
 
 .login--line {

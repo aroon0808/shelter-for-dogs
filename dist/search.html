@@ -47,31 +47,38 @@
     </nav>
     
     <div class="navbar--overlay"></div>    
-    <!-- Header section -->
-    <header class="l-container">
-        <div class="section--container section--container-spacing">
+    <!-- Header -->
+    <header class="l-container section--container-spacing-top">
+        <div class="section--header section--header-spacing">
             <h1 class="section--heading">Wyszukaj Psy</h1>
-            <span class="section--subheading section--subheading-spacing">
-                Wyszukaj swojego pupila spośród dziesiątek psów<br>
+            <span class="section--subheading">
+                Wyszukaj swojego pupila spośród dziesiątek psów
             </span>
+        </div>
+    </header>
+    
+    <!-- Search section -->
+    <section class="l-container">
+        <div class="section--container-spacing-bottom">
+            <h2 class="is-hidden">Kryteria wyszukiwania</h2>
     
             <form action="#" method="get" class="form">
                 <div class="form--container">
                     <div class="form--group form--spacing">
                         <label class="form--label is-active" for="city">Lokalizacja</label>
                         <select name="city" id="city" class="form--select form--input-big">
-                            <option disabled selected>Wybierz...</option>
+                            <option disabled selected value>Wybierz...</option>
                             <option value="Warszawa">Warszawa</option>
-                            <option value="Kraków">Kraków</option>
-                            <option value="Wrocław">Wrocław</option>
-                            <option value="Gdańsk">Gdańsk</option>
+                            <option value="Krakow">Kraków</option>
+                            <option value="Wroclaw">Wrocław</option>
+                            <option value="Gdansk">Gdańsk</option>
                         </select>
                     </div>
     
                     <div class="form--group form--spacing">
                         <label for="gender" class="form--label is-active">Płeć</label>
                         <select name="gender" id="gender" class="form--select form--input-big">
-                            <option disabled selected>Wybierz...</option>
+                            <option disabled selected value>Wybierz...</option>
                             <option value="pies">Pies</option>
                             <option value="suka">Suka</option>
                         </select>
@@ -80,7 +87,7 @@
                     <div class="form--group">
                         <label for="size" class="form--label is-active">Wielkość</label>
                         <select name="size" id="size" class="form--select form--input-big">
-                            <option disabled selected>Wybierz...</option>
+                            <option disabled selected value>Wybierz...</option>
                             <option value="maly">Mały (0-10 kg)</option>
                             <option value="sredni">Średni (11 -25 kg)</option>
                             <option value="duzy">Duży (26-39 kg)</option>
@@ -93,7 +100,7 @@
                     <div class="form--group form--spacing">
                         <label for="race" class="form--label is-active">Rasa</label>
                         <select name="race" id="race" class="form--select form--input-big">
-                            <option disabled selected>Wybierz...</option>
+                            <option disabled selected value>Wybierz...</option>
                             <option value="delmatynczyk">Delmatyńczyk</option>
                             <option value="labrador">Labrador</option>
                             <option value="beagle">Beagle</option>
@@ -104,7 +111,7 @@
                     <div class="form--group form--spacing">
                         <label for="age" class="form--label is-active">Wiek</label>
                         <select name="age" id="age" class="form--select form--input-big">
-                            <option disabled selected>Wybierz...</option>
+                            <option disabled selected value>Wybierz...</option>
                             <option value="delmatynczyk">poniżej 1 miesiąca</option>
                             <option value="labrador">1-6 miesiący</option>
                             <option value="beagle">7-12 miesięcy</option>
@@ -120,7 +127,7 @@
                 </div>
             </form>
         </div>
-    </header>
+    </section>
     
     <!-- Gallery section -->
     <section class="l-section section--skewed-top section--skewed-bottom skewed-cyan">

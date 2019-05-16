@@ -3,9 +3,9 @@ layout: default
 title: Dodaj psa
 ---
 
-<!-- Add dog header -->
-<header class="l-container">
-    <div class="section--container section--container-spacing-top">
+<!-- Header -->
+<header class="l-container section--container-spacing-top">
+    <div class="section--header section--header-spacing">
         <h1 class="section--heading">Dodaj Psa</h1>
         <span class="section--subheading">
             Utwórz nowy profil psa na stronie.
@@ -15,9 +15,9 @@ title: Dodaj psa
 
 <!-- Add dog section -->
 <section class="l-container">
-    <div class="section--container section--container-narrow-mobile section--container-spacing-bottom">
+    <div class="section--container-narrow-mobile section--container-spacing-bottom">
         <!-- form -->
-        <form action="#" method="POST" class="form">
+        <form action="#" method="POST" class="form" enctype="multipart/form-data">
             <div class="section--columns">
                 <div class="section--column section--column-spacing">
                     <h2 class="form--heading">Podstawowe dane</h2>
@@ -31,7 +31,7 @@ title: Dodaj psa
                         <div class="form--group form--gender">
                             <label for="gender" class="form--label is-active">Płeć</label>
                             <select name="gender" id="gender" class="form--select" required>
-                                <option disabled selected>Wybierz...</option>
+                                <option disabled selected value>Wybierz...</option>
                                 <option value="pies">Pies</option>
                                 <option value="suka">Suka</option>
                             </select>
@@ -40,13 +40,13 @@ title: Dodaj psa
                         <div class="form--group">
                             <label for="age" class="form--label is-active">Wiek</label>
                             <select name="age" id="age" class="form--select" required>
-                                <option disabled selected>Wybierz...</option>
-                                <option value="delmatynczyk">poniżej 1 miesiąca</option>
-                                <option value="labrador">1-6 miesiący</option>
-                                <option value="beagle">7-12 miesięcy</option>
-                                <option value="mops">1-3 lata</option>
-                                <option value="mops">4-6 lat</option>
-                                <option value="mops">powyżej 6 lat</option>
+                                <option disabled selected value>Wybierz...</option>
+                                <option value="1">poniżej 1 miesiąca</option>
+                                <option value="2">1-6 miesiący</option>
+                                <option value="3">7-12 miesięcy</option>
+                                <option value="4">1-3 lata</option>
+                                <option value="5">4-6 lat</option>
+                                <option value="6">powyżej 6 lat</option>
                             </select>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ title: Dodaj psa
                     <div class="form--group">
                         <label for="race" class="form--label is-active">Rasa</label>
                         <select name="race" id="race" class="form--select" required>
-                            <option disabled selected>Wybierz...</option>
+                            <option disabled selected value>Wybierz...</option>
                             <option value="delmatynczyk">Delmatyńczyk</option>
                             <option value="labrador">Labrador</option>
                             <option value="beagle">Beagle</option>
@@ -65,7 +65,7 @@ title: Dodaj psa
                     <div class="form--group">
                         <label for="size" class="form--label is-active">Wielkość</label>
                         <select name="size" id="size" class="form--select" required>
-                            <option disabled selected>Wybierz...</option>
+                            <option disabled selected value>Wybierz...</option>
                             <option value="maly">Mały (0-10 kg)</option>
                             <option value="sredni">Średni (11 -25 kg)</option>
                             <option value="duzy">Duży (26-39 kg)</option>
@@ -76,9 +76,9 @@ title: Dodaj psa
                     <div class="form--group">
                         <label for="city" class="form--label is-active">Lokalizacja</label>
                         <select name="city" id="city" class="form--select" required>
-                            <option disabled selected>Wybierz...</option>
-                            <option value="maly">Warszawa</option>
-                            <option value="sredni">Kraków</option>
+                            <option disabled selected value>Wybierz...</option>
+                            <option value="warszawa">Warszawa</option>
+                            <option value="krakow">Kraków</option>
                         </select>
                     </div>
                 </div>

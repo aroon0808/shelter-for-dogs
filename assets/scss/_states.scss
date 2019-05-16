@@ -1,6 +1,7 @@
 // *************************
 // Table of Contents
 // 
+// Hidden class
 // Navbar
 // Tabs
 // Dropdown
@@ -12,6 +13,11 @@
 // Responsive: >= 1200px
 //
 // *************************
+
+// Hidden class
+.is-hidden {
+    display: none;
+}
 
 // Navbar
 .navbar {
@@ -105,10 +111,6 @@
             font-size: 1.3rem;
             transform: translate(-20px, -30px);
         }
-        
-        &.is-hidden {
-            display: none;
-        }
     }
 
     // Checkbox label
@@ -174,16 +176,7 @@
             transform: translateX(-30%);
             opacity: 1;
         }
-        .l-container {
-
-            //Small container
-            &-small{
-    max-width: $l-desktop-small;
-            }
-        }
     }
-
-    
 
     // Navigation
     .navbar {
@@ -428,6 +421,14 @@
             margin-right: 50px;
         }
     }
+
+    // Layouts
+    .l-container {
+        // Small container
+        &-small {
+            max-width: $l-desktop-small + 30 !important;
+        }
+    }
 }
 
 // Responsive: >= 992px
@@ -532,15 +533,10 @@
             max-width: $l-tablet - 70px;
         }
     }
-
+    
     // Layouts
     .l-container {
         max-width: $l-tablet;
-
-        //Small container
-        &-small{
-        max-width: $l-tablet;
-        }
     }
 }
 
@@ -570,10 +566,5 @@
     // Layouts
     .l-container {
         max-width: $l-desktop;
-
-        // Small container
-        &-small {
-            max-width: $l-desktop-small;
-        }
     }
 }

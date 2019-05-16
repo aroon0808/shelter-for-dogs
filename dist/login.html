@@ -50,11 +50,11 @@
     <!-- Login section-->
     <section class="l-container l-container-small">
         <div class="section--container section--container-spacing">
-            <div class="section--header">
-                <h1 class="section--heading">Logowanie</h1>
-            </div>
+            <header class="section--header">
+                <h1 class="section--heading">Zaloguj się</h1>
+            </header>
+            
             <div class="section--container-narrow-mobile">
-    
                 <!-- form -->
                 <form action="#" method="POST" class="form">
                     <div class="form--group">
@@ -67,13 +67,14 @@
                         <input type="password" name="passwd" id="passwd" class="form--input" required>
                     </div>
     
-                    <div class="form--group">
-                        <a href="#" class="link login--link">Nie pamiętam hasła</a>
-                    </div>
-    
                     <button type="submit" class="btn login--btn">Zaloguj się</button>
-                    <button type="submit" class="btn btn--fb form--log-btn login--btn"> <span
-                            class="fab fa-facebook-f login--icon" aria-hidden="true"></span>Zaloguj się przez Facebook
+    
+                    <a href="#" class="link login--link">Nie pamiętam hasła</a>
+    
+                    <span class="login--line"></span>
+    
+                    <button type="button" class="btn btn--fb form--log-btn login--btn">
+                        <span class="fab fa-facebook-f login--icon" aria-hidden="true"></span>Zaloguj się przez Facebook
                     </button>
                 </form>
             </div>
@@ -118,6 +119,7 @@
             Copyright &copy; 2019 Psytulimy
         </div>
     </footer>
+    <script src="./assets/js/vendors.min.js"></script>
     <script src="./assets/js/scripts.js"></script>
     
 </body>

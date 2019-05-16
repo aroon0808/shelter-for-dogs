@@ -22,6 +22,7 @@
 // Navbar
 .l-navbar {
     @extend .l-container;
+    
     height: 110px;
     display: flex;
     align-items: center;
@@ -56,6 +57,6 @@
 .l-footer {
     @extend .l-container;
 
-    padding-top: 40px;
+    padding-top: 50px;
     padding-bottom: 20px;
 }

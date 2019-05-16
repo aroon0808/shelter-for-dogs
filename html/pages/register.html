@@ -7,7 +7,9 @@ title: Rejestracja
 <section class="l-container">
     <div class="section--columns section--container section--container-spacing">
         <header class="section--column section--column-spacing">
-            <h1 class="section--heading register--heading">Załóż darmowe konto</h1>
+            <div class="section--header no-padding">
+                <h1 class="section--heading register--heading">Załóż darmowe konto</h1>
+            </div>
 
             <p class="section--text register--text">
                 Psy ze schroniska kochają mocniej<br>
@@ -18,8 +20,10 @@ title: Rejestracja
             <img src="./assets/images/register-dog.png" class="image register--image" alt="">
         </header>
 
-        <div class="section--column">
-            <h2 class="section--heading register--heading">Rejestracja</h2>
+        <section class="section--column">
+            <div class="section--header no-padding">
+                <h2 class="section--heading register--heading">Rejestracja</h2>
+            </div>
 
             <div class="section--container-narrow-mobile">
                 <!-- Tabs nav -->
@@ -110,14 +114,14 @@ title: Rejestracja
                             </div>
                             
                             <div class="form--inline">
-                                <div class="form--group form--post-code">
+                                <div class="form--group form--post-code form--spacing">
                                     <label for="c_postCode" class="form--label is-animated">Kod pocztowy</label>
                                     <input type="text" name="c_postCode" id="c_postCode" class="form--input" maxlength="6" required>
                                 </div>
 
                                 <div class="form--group">
-                                    <label for="c_City" class="form--label is-animated">Miasto</label>
-                                    <input type="text" name="c_City" id="c_City" class="form--input" required>
+                                    <label for="c_city" class="form--label is-animated">Miasto</label>
+                                    <input type="text" name="c_city" id="c_city" class="form--input" required>
                                 </div>
                             </div>
 
@@ -127,8 +131,8 @@ title: Rejestracja
                             </div>
 
                             <div class="form--group">
-                                <label for="c_phone" class="form--label is-animated">Numer kontaktowy</label>
-                                <input type="text" name="c_phone" id="c_phone" class="form--input" required>
+                                <label for="c_phone" class="form--label is-animated">Numer telefonu (opcjonalne)</label>
+                                <input type="text" name="c_phone" id="c_phone" class="form--input">
                             </div>
 
                             <div class="form--group">
@@ -141,6 +145,6 @@ title: Rejestracja
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </section>

@@ -126,7 +126,7 @@ ul li {
 }
 
 .l-footer {
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 20px;
 }
 
@@ -549,6 +549,10 @@ ul li {
   margin-bottom: 70px;
 }
 
+.section--header-spacing {
+  margin-bottom: 100px;
+}
+
 .section--heading {
   font-weight: 700;
   font-size: 3rem;
@@ -564,10 +568,6 @@ ul li {
   text-align: center;
   margin: 15px 0;
   display: block;
-}
-
-.section--subheading-spacing {
-  margin-bottom: 100px;
 }
 
 .section--content {
@@ -631,17 +631,13 @@ ul li {
   width: 100%;
 }
 
-.register--heading {
-  padding-bottom: 60px;
-}
-
 .register--image {
   margin: 50px auto;
 }
 
 .login--btn {
-  margin-top: 15px;
   width: 100%;
+  margin-top: 15px;
 }
 
 .login--icon {
@@ -649,7 +645,33 @@ ul li {
 }
 
 .login--link {
-  font-size: 1.4rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #111;
+  margin: 25px 0;
+  display: block;
+}
+
+.login--line {
+  width: 100%;
+  height: 1px;
+  background-color: #c7c7c7;
+  margin: 30px 0;
+  display: block;
+  position: relative;
+}
+
+.login--line::before {
+  content: 'Lub';
+  font-size: 1.2rem;
+  color: #111;
+  padding: 4px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .company--subheading {
@@ -1016,18 +1038,33 @@ ul li {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background: url("../images/arrow.png") right 10px center no-repeat;
 }
 
 .form--textarea {
   padding: 15px;
   resize: vertical;
-  min-height: 150px;
+  min-height: 120px;
 }
 
 .form--upload {
   padding: 10px;
   border-radius: 6px;
   padding: 0;
+}
+
+.form--upload-preview {
+  margin: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 6px;
+  margin-bottom: 34px;
+  background-color: #e4ebef;
+  background-size: cover;
+  background-position: center center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .form--upload-label {
@@ -1042,17 +1079,6 @@ ul li {
 
 .form--upload-icon {
   width: 20px;
-}
-
-.form--upload-preview {
-  margin: 0;
-  width: 120px;
-  height: 120px;
-  border-radius: 6px;
-  margin-bottom: 34px;
-  background-color: #e4ebef;
-  background-size: cover;
-  background-position: center center;
 }
 
 .form--upload-desc {
@@ -1073,7 +1099,11 @@ ul li {
 
 .form--post-code {
   max-width: 140px;
-  margin-right: 10px;
+  margin-right: 15px;
+}
+
+.form--gender {
+  margin-right: 15px;
 }
 
 .form--btn {
@@ -1098,7 +1128,7 @@ ul li {
 }
 
 .form--btn .btn--icon {
-  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .form--text {
@@ -1238,6 +1268,10 @@ ul li {
   padding-top: 20px;
 }
 
+.is-hidden {
+  display: none;
+}
+
 .navbar--sidebar.is-active {
   -webkit-transform: translateX(300px);
   transform: translateX(300px);
@@ -1298,12 +1332,23 @@ ul li {
   transform: translate(-20px, -30px);
 }
 
-.form--label.is-hidden {
-  display: none;
-}
-
 .form--checkbox-label.is-required::before {
   border-color: #ff3636;
+}
+
+.form--upload-preview.is-empty {
+  position: relative;
+}
+
+.form--upload-preview.is-empty::before {
+  content: '\f6d3';
+  font: 900 4rem 'Font Awesome 5 Free';
+  color: #647179;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: 480px) {
@@ -1329,9 +1374,6 @@ ul li {
     -webkit-transform: translateX(-30%);
     transform: translateX(-30%);
     opacity: 1;
-  }
-  .header .l-container-small {
-    max-width: 400px;
   }
   .navbar--user .user--name {
     display: block;
@@ -1373,8 +1415,8 @@ ul li {
     margin: 0;
     max-width: 170px;
   }
-  .form--mr {
-    margin-right: 20px;
+  .form--spacing {
+    margin-right: 15px;
   }
   .pagination {
     display: -webkit-box;
@@ -1483,6 +1525,9 @@ ul li {
     margin-left: 50px;
     margin-right: 50px;
   }
+  .l-container-small {
+    max-width: 430px !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1567,9 +1612,6 @@ ul li {
   .l-container, .l-navbar, .l-header, .l-section, .l-gallery, .l-footer {
     max-width: 970px;
   }
-  .l-container-small {
-    max-width: 970px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -1587,8 +1629,5 @@ ul li {
   }
   .l-container, .l-navbar, .l-header, .l-section, .l-gallery, .l-footer {
     max-width: 1100px;
-  }
-  .l-container-small {
-    max-width: 400px;
   }
 }

@@ -142,8 +142,8 @@ ul li {
   padding: 0 20px;
   position: relative;
   cursor: pointer;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: color .25s ease, border-color .25s ease, background-color .25s ease;
+  transition: color .25s ease, border-color .25s ease, background-color .25s ease;
 }
 
 .btn::before {
@@ -154,8 +154,8 @@ ul li {
   border-radius: 6px;
   box-shadow: 0 2px 12px rgba(131, 147, 153, 0.25);
   position: absolute;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: opacity .25s ease;
+  transition: opacity .25s ease;
   top: 0;
   left: 0;
   opacity: 0;
@@ -241,8 +241,10 @@ ul li {
   z-index: 1;
   padding: 0 20px;
   position: relative;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: color .25s ease, -webkit-transform .25s ease;
+  transition: color .25s ease, -webkit-transform .25s ease;
+  transition: color .25s ease, transform .25s ease;
+  transition: color .25s ease, transform .25s ease, -webkit-transform .25s ease;
 }
 
 .navbar--nav .nav--link:hover, .navbar--nav .nav--link:focus {
@@ -427,8 +429,8 @@ ul li {
   left: 0;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
+  transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
 }
 
 .header--heading {
@@ -767,8 +769,8 @@ ul li {
   padding: 4px;
   display: block;
   margin-bottom: 10px;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: border-color .25s ease;
+  transition: border-color .25s ease;
 }
 
 .tabs--nav .nav--link:hover .nav--icon, .tabs--nav .nav--link:focus .nav--icon {
@@ -789,8 +791,8 @@ ul li {
 .tabs--nav .nav--icon {
   width: 22px;
   text-align: left;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: color .25s ease;
+  transition: color .25s ease;
 }
 
 .tabs--content {
@@ -802,8 +804,10 @@ ul li {
   width: 100%;
   background-color: #fff;
   position: absolute;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: opacity .5s ease, visibility .5s ease, -webkit-transform .5s ease;
+  transition: opacity .5s ease, visibility .5s ease, -webkit-transform .5s ease;
+  transition: transform .5s ease, opacity .5s ease, visibility .5s ease;
+  transition: transform .5s ease, opacity .5s ease, visibility .5s ease, -webkit-transform .5s ease;
   -webkit-transform: translateX(150px);
   transform: translateX(150px);
   visibility: hidden;
@@ -820,8 +824,10 @@ ul li {
   box-shadow: 0 2px 12px rgba(131, 147, 153, 0.25);
   z-index: 4;
   position: absolute;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: opacity .25s ease, visibility .25s ease, -webkit-transform .25s ease;
+  transition: opacity .25s ease, visibility .25s ease, -webkit-transform .25s ease;
+  transition: transform .25s ease, opacity .25s ease, visibility .25s ease;
+  transition: transform .25s ease, opacity .25s ease, visibility .25s ease, -webkit-transform .25s ease;
   visibility: hidden;
   top: 30px;
   right: 0;
@@ -868,8 +874,8 @@ ul li {
   font-size: 1.2rem;
   color: #647179;
   display: block;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: color .25s ease;
+  transition: color .25s ease;
 }
 
 .dropdown .dropdown--link:hover, .dropdown .dropdown--link:focus {
@@ -906,8 +912,8 @@ ul li {
   border-radius: 6px;
   box-shadow: 0 4px 30px rgba(131, 147, 153, 0.3);
   position: absolute;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: opacity .25s ease;
+  transition: opacity .25s ease;
   top: 0;
   left: 0;
   opacity: 0;
@@ -1014,8 +1020,10 @@ ul li {
   position: absolute;
   top: 12px;
   left: 20px;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: -webkit-transform .25s ease;
+  transition: -webkit-transform .25s ease;
+  transition: transform .25s ease;
+  transition: transform .25s ease, -webkit-transform .25s ease;
 }
 
 .form--input, .form--select, .form--textarea {
@@ -1247,8 +1255,8 @@ ul li {
   font: 400 1.2rem/30px "Work Sans", Arial, Verdana, sans-serif;
   color: #111;
   display: block;
-  -webkit-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: color .25s ease;
+  transition: color .25s ease;
 }
 
 .footer--nav .nav--link:hover, .footer--nav .nav--link:focus {
@@ -1327,7 +1335,6 @@ ul li {
 }
 
 .form--label.is-active {
-  font-size: 1.3rem;
   -webkit-transform: translate(-20px, -30px);
   transform: translate(-20px, -30px);
 }

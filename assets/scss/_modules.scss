@@ -29,7 +29,7 @@
     padding: 0 20px;
     position: relative;
     cursor: pointer;
-    transition: all .25s ease;
+    transition: color .25s ease, border-color .25s ease, background-color .25s ease;
 
     // Shadow
     &::before {
@@ -40,7 +40,7 @@
         border-radius: 6px;
         box-shadow: 0 2px 12px rgba($color-grey-2, .25);
         position: absolute;
-        transition: all .25s ease;
+        transition: opacity .25s ease;
         top: 0;
         left: 0;
         opacity: 0;
@@ -125,7 +125,7 @@
                 z-index: 1;
                 padding: 0 20px;
                 position: relative;
-                transition: all .25s ease;
+                transition: color .25s ease, transform .25s ease;
 
                 &:hover,
                 &:focus {
@@ -294,7 +294,7 @@
         left: 0; 
         opacity: 0;
         visibility: hidden;
-        transition: all .25s ease-in-out;
+        transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
     }
 }
 
@@ -696,7 +696,7 @@
                 padding: 4px;
                 display: block;
                 margin-bottom: 10px;
-                transition: all .25s ease;
+                transition: border-color .25s ease;
 
                 &:hover,
                 &:focus {
@@ -730,7 +730,7 @@
             &--icon {
                 width: 22px;
                 text-align: left;
-                transition: all .25s ease;
+                transition: color .25s ease;
             }
         }
     }
@@ -746,7 +746,7 @@
         width: 100%;
         background-color: $color-white;
         position: absolute;
-        transition: all .5s ease;
+        transition: transform .5s ease, opacity .5s ease, visibility .5s ease;
         transform: translateX(150px);
         visibility: hidden;
         opacity: 0;
@@ -764,7 +764,7 @@
     box-shadow: 0 2px 12px rgba($color-grey-2, .25);
     z-index: 4;
     position: absolute;
-    transition: all .25s ease;
+    transition: transform .25s ease, opacity .25s ease, visibility .25s ease;
     visibility: hidden;
     top: 30px;
     right: 0; 
@@ -816,7 +816,7 @@
             font-size: 1.2rem;
             color: $color-grey;
             display: block;
-            transition: all .25s ease;
+            transition: color .25s ease;
 
             &:hover,
             &:focus {
@@ -856,7 +856,7 @@
             border-radius: 6px;
             box-shadow: 0 4px 30px rgba($color-grey-2, .3);
             position: absolute;
-            transition: all .25s ease;
+            transition: opacity .25s ease;
             top: 0;
             left: 0;
             opacity: 0;
@@ -972,7 +972,7 @@
         position: absolute;
         top: 12px;
         left: 20px;
-        transition: all .25s ease;
+        transition: transform .25s ease;
     }
 
     // Input
@@ -1216,7 +1216,7 @@
                 font: $font-weight-regular 1.2rem/30px $font-primary;
                 color: $color-black;
                 display: block;
-                transition: all .25s ease;
+                transition: color .25s ease;
 
                 &:hover,
                 &:focus {

@@ -432,6 +432,15 @@
         position: relative;
         margin-bottom: 70px;
     }
+    
+    //Color Header
+    &--profile {
+        background-color: $color-cyan-bright-2;
+        display: flex;
+        padding: 8px 15px;
+        border-radius: 6px;
+
+    }
 
     // Heading
     &--heading {
@@ -535,6 +544,25 @@
     // Image
     &--image {
         margin: 50px auto;
+    }
+}
+
+//Profile
+.profile {
+
+    //Link
+    &--link { 
+        color: $color-grey;
+        background-color: $color-white;
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-right: 15px;
+        width: 150px;
+        padding: 0 15px 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
     }
 }
 

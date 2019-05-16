@@ -549,6 +549,16 @@ ul li {
   margin-bottom: 70px;
 }
 
+.section--profile {
+  background-color: #e4ebef;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
 .section--heading {
   font-weight: 700;
   font-size: 3rem;
@@ -637,6 +647,28 @@ ul li {
 
 .register--image {
   margin: 50px auto;
+}
+
+.profile--link {
+  color: #647179;
+  background-color: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-right: 15px;
+  width: 150px;
+  padding: 0 15px 0 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .login--btn {

@@ -1096,6 +1096,11 @@ ul li {
   margin: 10px 0;
 }
 
+.form--upload-bg {
+  background-color: #e4ebef;
+  padding: 5px;
+}
+
 .form--file {
   position: absolute;
   overflow: hidden;

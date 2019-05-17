@@ -1010,13 +1010,13 @@
         min-height: 120px;
     }
 
-    // Upload container
+    // Upload
     &--upload {
         padding: 10px;
         border-radius: 6px;
         padding: 0;
 
-        // Upload preview
+        // Preview
         &-preview {
             margin: 0;
             width: 120px;
@@ -1030,7 +1030,7 @@
             flex-shrink: 0;
         }
 
-        // Upload label
+        // Label
         &-label {
             line-height: 40px;
             color: $color-black;
@@ -1040,17 +1040,23 @@
             display: inline-block;
         }
 
-        // Upload icon
+        // Icon
         &-icon {
             width: 20px;
         }
 
-        // Upload description
+        // Description
         &-desc {
             font-size: 1.2rem;
             line-height: 20px;
             display: block;
             margin: 10px 0;
+        }
+
+        // Background
+        &-bg {
+            background-color: $color-cyan-bright-2;
+            padding: 5px;
         }
     }
 

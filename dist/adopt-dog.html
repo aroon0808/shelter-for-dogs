@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/vendors.min.css">
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Dodaj psa</title>
+    <title>Adoptuj psa</title>
 </head>
 <body>
 
@@ -50,106 +50,67 @@
     <!-- Header -->
     <header class="l-container section--container-spacing-top">
         <div class="section--header section--header-spacing">
-            <h1 class="section--heading">Dodaj Psa</h1>
+            <h1 class="section--heading">Zaadoptuj Psa</h1>
             <span class="section--subheading">
-                Utwórz nowy profil psa na stronie.
+                Chcesz wiedzieć więcej o adopcji?<br> Odwiedź nasze <a href="#" class="link">Centrum Pomocy</a>
             </span>
         </div>
     </header>
     
-    <!-- Add dog section -->
+    <!-- Adopt dog section -->
     <section class="l-container">
         <div class="section--container-narrow-mobile section--container-spacing-bottom">
-            <!-- form -->
-            <form action="#" method="POST" class="form" enctype="multipart/form-data">
-                <div class="section--columns">
-                    <div class="section--column section--column-spacing">
-                        <h2 class="form--heading">Podstawowe dane</h2>
+            <div class="section--columns">
+                <div class="section--column section--column-spacing">
+                    <h2 class="form--heading">Opis psa</h2>
+                </div>
+    
+                <div class="section--column">
+                    <h2 class="form--heading">Twoje dane</h2>
+    
+                    <!-- form -->
+                    <form action="#" method="POST" class="form" enctype="multipart/form-data">
+                        <div class="form--group">
+                            <label for="name" class="form--label is-animated">Imię</label>
+                            <input type="text" name="name" id="name" class="form--input" required>
+                        </div>
     
                         <div class="form--group">
-                            <label for="dog_name" class="form--label is-active">Imię psa</label>
-                            <input type="text" name="dog_name" id="dog_name" class="form--input" required>
+                            <label for="surname" class="form--label is-animated">Nazwisko</label>
+                            <input type="text" name="surname" id="surname" class="form--input" required>
                         </div>
     
                         <div class="form--inline">
-                            <div class="form--group form--gender">
-                                <label for="gender" class="form--label is-active">Płeć</label>
-                                <select name="gender" id="gender" class="form--select" required>
-                                    <option disabled selected value>Wybierz...</option>
-                                    <option value="pies">Pies</option>
-                                    <option value="suka">Suka</option>
-                                </select>
+                            <div class="form--group form--post-code form--spacing">
+                                <label for="postCode" class="form--label is-animated">Kod pocztowy</label>
+                                <input type="text" name="postCode" id="postCode" class="form--input" maxlength="6" required>
                             </div>
     
                             <div class="form--group">
-                                <label for="age" class="form--label is-active">Wiek</label>
-                                <select name="age" id="age" class="form--select" required>
-                                    <option disabled selected value>Wybierz...</option>
-                                    <option value="1">poniżej 1 miesiąca</option>
-                                    <option value="2">1-6 miesiący</option>
-                                    <option value="3">7-12 miesięcy</option>
-                                    <option value="4">1-3 lata</option>
-                                    <option value="5">4-6 lat</option>
-                                    <option value="6">powyżej 6 lat</option>
-                                </select>
-                            </div>
-                        </div>
-        
-                        <div class="form--group">
-                            <label for="race" class="form--label is-active">Rasa</label>
-                            <select name="race" id="race" class="form--select" required>
-                                <option disabled selected value>Wybierz...</option>
-                                <option value="delmatynczyk">Delmatyńczyk</option>
-                                <option value="labrador">Labrador</option>
-                                <option value="beagle">Beagle</option>
-                                <option value="mops">Mops</option>
-                            </select>
-                        </div>
-    
-                        <div class="form--group">
-                            <label for="size" class="form--label is-active">Wielkość</label>
-                            <select name="size" id="size" class="form--select" required>
-                                <option disabled selected value>Wybierz...</option>
-                                <option value="maly">Mały (0-10 kg)</option>
-                                <option value="sredni">Średni (11 -25 kg)</option>
-                                <option value="duzy">Duży (26-39 kg)</option>
-                                <option value="olbrzym">Olbrzym (40 kg i więcej)</option>
-                            </select>
-                        </div>
-    
-                        <div class="form--group">
-                            <label for="city" class="form--label is-active">Lokalizacja</label>
-                            <select name="city" id="city" class="form--select" required>
-                                <option disabled selected value>Wybierz...</option>
-                                <option value="warszawa">Warszawa</option>
-                                <option value="krakow">Kraków</option>
-                            </select>
-                        </div>
-                    </div>
-    
-                    <div class="section--column">
-                        <h2 class="form--heading">Opis psa / Zdjęcie</h2>
-            
-                        <div class="form--inline">
-                            <div class="form--upload-preview is-empty"></div>
-    
-                            <div class="form--group form--upload">
-                                <label for="picture" class="btn form--upload-label" tabindex="0">
-                                    <span class="form--upload-icon fas fa-file-image" aria-hidden="true"></span> Wybierz zdjęcie
-                                </label>
-    
-                                <span class="form--upload-desc">
-                                    Minimalna wielkość zdjęcia: 500x400 <br>
-                                    Maksymalny rozmiar zdjęcia: 400KB
-                                </span>
-    
-                                <input type="file" name="picture" id="picture" class="form--file" tabindex="-1">
+                                <label for="city" class="form--label is-animated">Miasto</label>
+                                <input type="text" name="city" id="city" class="form--input" required>
                             </div>
                         </div>
     
                         <div class="form--group">
-                            <label for="desc" class="form--label is-active">Opis</label>
-                            <textarea name="desc" id="desc" class="form--textarea" cols="30" rows="10" required></textarea>
+                            <label for="c_street" class="form--label is-animated">Ulica</label>
+                            <input type="text" name="c_street" id="c_street" class="form--input" required>
+                        </div>
+    
+                        <div class="form--group">
+                            <p class="form--text">
+                                Do adopcji potrzebujemy jeszcze kilku ważnych informacji. Proszę odpowiedz na pytania znajdujące się w 
+                                poniższym pliku i dołącz go jako załącznik do tego formularza.
+                            </p>
+                            <a href="#" class="link">Adopcja652.docx</a>
+                        </div>
+    
+                        <div class="form--group form--upload">
+                            <label for="file" class="btn form--upload-label" tabindex="0">
+                                <span class="form--upload-icon fas fa-upload" aria-hidden="true"></span> Prześlij plik
+                            </label>
+    
+                            <input type="file" name="file" id="file" class="form--file" tabindex="-1">
                         </div>
     
                         <div class="form--group">
@@ -157,10 +118,10 @@
                             <label for="tos" class="form--checkbox-label" tabindex="0">Akceptuję regulamin serwisu.</label>
                         </div>
             
-                        <button type="submit" class="btn form--btn">Dodaj psa</button>
-                    </div>
+                        <button type="submit" class="btn">Zgłoś chęć adopcji</button>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </section>
     <footer class="l-footer footer">

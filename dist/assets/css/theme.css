@@ -1067,6 +1067,7 @@ ul li {
   height: 120px;
   border-radius: 6px;
   margin-bottom: 34px;
+  margin-right: 10px;
   background-color: #e4ebef;
   background-size: cover;
   background-position: center center;
@@ -1081,7 +1082,6 @@ ul li {
   background-color: #fff;
   border-color: #eee;
   height: 40px;
-  margin: 0 10px;
   display: inline-block;
 }
 
@@ -1093,7 +1093,7 @@ ul li {
   font-size: 1.2rem;
   line-height: 20px;
   display: block;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .form--file {

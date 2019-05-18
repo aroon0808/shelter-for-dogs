@@ -9,6 +9,7 @@ const rename       = require('gulp-rename');
 const concat       = require('gulp-concat');
 const panini       = require('panini');
 const del          = require('del');
+const sourcemaps   = require('gulp-sourcemaps');
 
 // Config
 const config = {
@@ -48,12 +49,14 @@ function reloadHtml(done) {
 // Sass
 function compileSass() {
     return gulp.src(config.srcCSS)
+        .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'expanded'})
         .on('error', sass.logError))
         .pipe(autoprefixer({cascade: false}))
         .pipe(gulp.dest(config.distCSS))
         .pipe(cleanCSS())
         .pipe(rename({suffix: '.min'}))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.distCSS));
 }
 

@@ -46,6 +46,10 @@ ul li {
   list-style: none;
 }
 
+p {
+  line-height: 22px;
+}
+
 .sr-only {
   width: 1px;
   height: 1px;
@@ -747,7 +751,7 @@ ul li {
 .company--text {
   font: 400 1.4rem/24px "Work Sans", Arial, Verdana, sans-serif;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .dog {
@@ -1511,7 +1515,7 @@ ul li {
     margin-left: 0;
   }
   .company--column {
-    max-width: 200px;
+    max-width: 220px;
   }
   .company--thumbnail {
     margin-left: 0;

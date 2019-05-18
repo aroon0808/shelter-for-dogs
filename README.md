@@ -25,3 +25,4 @@ Some basic informations about the project
 - **Concat** - Combines multiple files into one file
 - **Panini** - HTML files generator
 - **Del** - Removes files and folders
+- **Sourcemaps** - Sourcemaps support

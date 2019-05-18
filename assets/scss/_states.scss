@@ -108,7 +108,6 @@
     // Label
     &--label {
         &.is-active {
-            font-size: 1.3rem;
             transform: translate(-20px, -30px);
         }
     }
@@ -342,7 +341,7 @@
     .company {
         // Column
         &--column {
-            max-width: 200px;
+            max-width: 220px;
         }
 
         // Thumbnail

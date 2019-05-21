@@ -433,15 +433,6 @@
         margin-bottom: 70px;
     }
     
-    //Color Header
-    &--profile {
-        background-color: $color-cyan-bright-2;
-        display: flex;
-        padding: 8px 15px;
-        border-radius: 6px;
-
-    }
-
     // Heading
     &--heading {
         font-weight: $font-weight-bold;
@@ -564,6 +555,14 @@
         align-items: center;
         
     }
+    //Color Header
+        &--container {
+            background-color: $color-cyan-bright;
+            display: flex;
+            padding: 8px 15px;
+            border-radius: 6px;
+    
+        }
 }
 
 // Login

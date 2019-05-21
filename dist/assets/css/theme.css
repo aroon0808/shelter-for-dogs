@@ -549,16 +549,6 @@ ul li {
   margin-bottom: 70px;
 }
 
-.section--profile {
-  background-color: #e4ebef;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 8px 15px;
-  border-radius: 6px;
-}
-
 .section--heading {
   font-weight: 700;
   font-size: 3rem;
@@ -669,6 +659,16 @@ ul li {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.profile--container {
+  background-color: #f2f7f9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 15px;
+  border-radius: 6px;
 }
 
 .login--btn {

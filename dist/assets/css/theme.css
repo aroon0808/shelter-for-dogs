@@ -647,7 +647,7 @@ p {
   font-size: 1.4rem;
   font-weight: 400;
   margin-right: 15px;
-  width: 150px;
+  min-width: 150px;
   padding: 0 15px 0 15px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -665,12 +665,20 @@ p {
 
 .profile--container {
   background-color: #f2f7f9;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 8px 15px;
-  border-radius: 6px;
+}
+
+.profile--item {
+  margin: 10px;
+}
+
+.profile--icon {
+  margin-left: 20px;
+}
+
+.profile--sign {
+  color: #111;
+  font-size: 1.4rem;
+  margin-top: 0;
 }
 
 .login--btn {
@@ -718,6 +726,12 @@ p {
   text-align: center;
   margin: 10px 0;
   display: block;
+}
+
+.company--profile-text {
+  color: #111;
+  font-size: 1.4rem;
+  margin-top: 0;
 }
 
 .company--thumbnail {
@@ -1455,6 +1469,9 @@ p {
     -webkit-transform: translateX(-30%);
     transform: translateX(-30%);
     opacity: 1;
+  }
+  .header .l-container-small {
+    max-width: 400px;
   }
   .navbar--user .user--name {
     display: block;

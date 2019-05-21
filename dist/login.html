@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="./assets/css/vendors.min.css">
-    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/theme.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Login</title>
 </head>
@@ -28,8 +29,8 @@
             <ul class="navbar--nav">
                 <li class="nav--item"><a href="index.html" class="nav--link">Strona Główna</a></li>
                 <li class="nav--item"><a href="search.html" class="nav--link">Wyszukaj Psy</a></li>
-                <li class="nav--item"><a href="adopt.html" class="nav--link">Adopcje</a></li>
-                <li class="nav--item"><a href="faq.html" class="nav--link">FAQ</a></li>
+                <li class="nav--item"><a href="#" class="nav--link">Adopcje</a></li>
+                <li class="nav--item"><a href="#" class="nav--link">FAQ</a></li>
                 <li class="nav--item"><a href="login.html" class="nav--link">Zaloguj się</a></li> <!-- If: NOT Logged -->
                 <li class="nav--register"><a href="register.html" class="btn nav--register-link"><span class="nav--icon fas fa-plus" aria-hidden="true"></span>Rejestracja</a></li> <!-- If: NOT Logged -->
             </ul>
@@ -50,11 +51,11 @@
     <!-- Login section-->
     <section class="l-container l-container-small">
         <div class="section--container section--container-spacing">
-            <div class="section--header">
-                <h1 class="section--heading">Logowanie</h1>
-            </div>
+            <header class="section--header">
+                <h1 class="section--heading">Zaloguj się</h1>
+            </header>
+            
             <div class="section--container-narrow-mobile">
-    
                 <!-- form -->
                 <form action="#" method="POST" class="form">
                     <div class="form--group">
@@ -67,13 +68,14 @@
                         <input type="password" name="passwd" id="passwd" class="form--input" required>
                     </div>
     
-                    <div class="form--group">
-                        <a href="#" class="link login--link">Nie pamiętam hasła</a>
-                    </div>
-    
                     <button type="submit" class="btn login--btn">Zaloguj się</button>
-                    <button type="submit" class="btn btn--fb form--log-btn login--btn"> <span
-                            class="fab fa-facebook-f login--icon" aria-hidden="true"></span>Zaloguj się przez Facebook
+    
+                    <a href="#" class="link login--link">Nie pamiętam hasła</a>
+    
+                    <span class="login--line"></span>
+    
+                    <button type="button" class="btn btn--fb form--log-btn login--btn">
+                        <span class="fab fa-facebook-f login--icon" aria-hidden="true"></span>Zaloguj się przez Facebook
                     </button>
                 </form>
             </div>
@@ -118,6 +120,7 @@
             Copyright &copy; 2019 Psytulimy
         </div>
     </footer>
+    <script src="./assets/js/vendors.min.js"></script>
     <script src="./assets/js/scripts.js"></script>
     
 </body>

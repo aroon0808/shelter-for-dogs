@@ -6,7 +6,9 @@
 // Header
 // Section
 // Registration
+// Login
 // Company profile
+// Adopt page
 // Tabs
 // Dropdown
 // Gallery
@@ -28,7 +30,7 @@
     padding: 0 20px;
     position: relative;
     cursor: pointer;
-    transition: all .25s ease;
+    transition: color .25s ease, border-color .25s ease, background-color .25s ease;
 
     // Shadow
     &::before {
@@ -39,7 +41,7 @@
         border-radius: 6px;
         box-shadow: 0 2px 12px rgba($color-grey-2, .25);
         position: absolute;
-        transition: all .25s ease;
+        transition: opacity .25s ease;
         top: 0;
         left: 0;
         opacity: 0;
@@ -57,6 +59,7 @@
         }
     }
 
+    // Facebook button
     &--fb {
         background-color: $color-fb;
     }
@@ -123,7 +126,7 @@
                 z-index: 1;
                 padding: 0 20px;
                 position: relative;
-                transition: all .25s ease;
+                transition: color .25s ease, transform .25s ease;
 
                 &:hover,
                 &:focus {
@@ -292,7 +295,7 @@
         left: 0; 
         opacity: 0;
         visibility: hidden;
-        transition: all .25s ease-in-out;
+        transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
     }
 }
 
@@ -431,6 +434,11 @@
         padding: 0 15px;
         position: relative;
         margin-bottom: 70px;
+
+        // Spacing
+        &-spacing {
+            margin-bottom: 100px;
+        }
     }
     
     // Heading
@@ -450,11 +458,6 @@
         text-align: center;
         margin: 15px 0;
         display: block;
-
-        // Bigger spacing
-        &-spacing {
-            margin-bottom: 100px;
-        }
     }
 
     // Content
@@ -527,11 +530,6 @@
         width: 100%;
     }
 
-    // Heading
-    &--heading {
-        padding-bottom: 60px;
-    }
-
     // Image
     &--image {
         margin: 50px auto;
@@ -569,18 +567,44 @@
 .login {
     // Button
     &--btn {
-        margin-top: 15px;
         width: 100%;
+        margin-top: 15px;
     }
 
-    //Icon
+    // Icon
     &--icon {
        margin-right: 20px; 
     }
 
-    //Link
+    // Link
     &--link {
-        font-size: 1.4rem;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: $color-black;
+        margin: 25px 0;
+        display: block;
+    }
+
+    // Line
+    &--line {
+        width: 100%;
+        height: 1px;
+        background-color: $color-grey-bright;
+        margin: 30px 0;
+        display: block;
+        position: relative;
+
+        &::before {
+            content: 'Lub';
+            font-size: 1.2rem;
+            color: $color-black;
+            padding: 4px;
+            background-color: $color-white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
 
@@ -672,7 +696,48 @@
     &--text {
         font: $font-weight-regular 1.4rem/24px $font-primary;
         text-align: center;
-        margin-top: 30px;
+        margin-top: 40px;
+    }
+}
+
+// Dog profile
+.dog {
+    max-width: 400px;
+    margin-bottom: 30px;
+
+    // Image
+    &--image {
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 250px;
+        border-radius: 6px;
+        margin-bottom: 30px;
+    }
+
+    // List
+    &--list {
+        margin-bottom: 30px;
+
+        .list {
+            // Item
+            &--item {
+                font-size: 1.4rem;
+                margin: 6px 0;
+            }
+
+            // Value
+            &--value {
+                font-weight: $font-weight-medium;
+                color: $color-black;
+            }
+        }
+    }
+
+    // Description
+    &--desc {
+        font-size: 1.4rem;
+        line-height: 22px;
     }
 }
 
@@ -700,7 +765,7 @@
                 padding: 4px;
                 display: block;
                 margin-bottom: 10px;
-                transition: all .25s ease;
+                transition: border-color .25s ease;
 
                 &:hover,
                 &:focus {
@@ -734,7 +799,7 @@
             &--icon {
                 width: 22px;
                 text-align: left;
-                transition: all .25s ease;
+                transition: color .25s ease;
             }
         }
     }
@@ -750,7 +815,7 @@
         width: 100%;
         background-color: $color-white;
         position: absolute;
-        transition: all .5s ease;
+        transition: transform .5s ease, opacity .5s ease, visibility .5s ease;
         transform: translateX(150px);
         visibility: hidden;
         opacity: 0;
@@ -768,7 +833,7 @@
     box-shadow: 0 2px 12px rgba($color-grey-2, .25);
     z-index: 4;
     position: absolute;
-    transition: all .25s ease;
+    transition: transform .25s ease, opacity .25s ease, visibility .25s ease;
     visibility: hidden;
     top: 30px;
     right: 0; 
@@ -820,7 +885,7 @@
             font-size: 1.2rem;
             color: $color-grey;
             display: block;
-            transition: all .25s ease;
+            transition: color .25s ease;
 
             &:hover,
             &:focus {
@@ -860,7 +925,7 @@
             border-radius: 6px;
             box-shadow: 0 4px 30px rgba($color-grey-2, .3);
             position: absolute;
-            transition: all .25s ease;
+            transition: opacity .25s ease;
             top: 0;
             left: 0;
             opacity: 0;
@@ -976,7 +1041,7 @@
         position: absolute;
         top: 12px;
         left: 20px;
-        transition: all .25s ease;
+        transition: transform .25s ease;
     }
 
     // Input
@@ -1002,6 +1067,7 @@
         @extend .form--input;
 
         appearance: none;
+        background: url('../images/arrow.png') right 10px center no-repeat;
     }
 
     // Textarea
@@ -1010,49 +1076,56 @@
 
         padding: 15px;
         resize: vertical;
-        min-height: 150px;
+        min-height: 120px;
     }
 
-    // Upload container
+    // Upload
     &--upload {
         padding: 10px;
         border-radius: 6px;
         padding: 0;
 
-        // Upload label
-        &-label {
-            line-height: 40px;
-            color: $color-black;
-            background-color: $color-white;
-            border-color: $color-white-dark;
-            height: 40px;
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        // Upload Icon
-        &-icon {
-            width: 20px;
-        }
-
-        // Upload preview
+        // Preview
         &-preview {
             margin: 0;
             width: 120px;
             height: 120px;
             border-radius: 6px;
             margin-bottom: 34px;
+            margin-right: 10px;
             background-color: $color-cyan-bright-2;
             background-size: cover;
             background-position: center center;
+            flex-shrink: 0;
         }
 
-        // Upload description
+        // Label
+        &-label {
+            line-height: 40px;
+            color: $color-black;
+            background-color: $color-white;
+            border-color: $color-white-dark;
+            height: 40px;
+            display: inline-block;
+        }
+
+        // Icon
+        &-icon {
+            width: 20px;
+        }
+
+        // Description
         &-desc {
             font-size: 1.2rem;
             line-height: 20px;
             display: block;
-            margin: 10px;
+            margin: 10px 0;
+        }
+
+        // Background
+        &-bg {
+            background-color: $color-cyan-bright-2;
+            padding: 5px;
         }
     }
 
@@ -1066,10 +1139,15 @@
         opacity: 0;
     }
 
-    // Post code form
+    // Post code input
     &--post-code {
         max-width: 140px;
-        margin-right: 10px;
+        margin-right: 15px;
+    }
+
+    // Gender input
+    &--gender {
+        margin-right: 15px;
     }
 
     // Button
@@ -1098,7 +1176,7 @@
 
         // Icon
         .btn--icon {
-            margin-left: 15px;
+            margin-right: 15px;
         }
     }
 
@@ -1213,7 +1291,7 @@
                 font: $font-weight-regular 1.2rem/30px $font-primary;
                 color: $color-black;
                 display: block;
-                transition: all .25s ease;
+                transition: color .25s ease;
 
                 &:hover,
                 &:focus {

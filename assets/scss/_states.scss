@@ -1,6 +1,7 @@
 // *************************
 // Table of Contents
 // 
+// Hidden class
 // Navbar
 // Tabs
 // Dropdown
@@ -12,6 +13,11 @@
 // Responsive: >= 1200px
 //
 // *************************
+
+// Hidden class
+.is-hidden {
+    display: none;
+}
 
 // Navbar
 .navbar {
@@ -102,12 +108,7 @@
     // Label
     &--label {
         &.is-active {
-            font-size: 1.3rem;
             transform: translate(-20px, -30px);
-        }
-        
-        &.is-hidden {
-            display: none;
         }
     }
 
@@ -116,6 +117,23 @@
         &.is-required {
             &::before {
                 border-color: $color-red;
+            }
+        }
+    }
+
+    // Upload preview
+    &--upload-preview {
+        &.is-empty {
+            position: relative;
+
+            &::before {
+                content: '\f6d3';
+                font: 900 4rem 'Font Awesome 5 Free';
+                color: $color-grey;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -157,6 +175,7 @@
             transform: translateX(-30%);
             opacity: 1;
         }
+<<<<<<< HEAD
         .l-container {
 
             //Small container
@@ -164,9 +183,9 @@
             max-width: $l-desktop-small;
             }
         }
+=======
+>>>>>>> origin/master
     }
-
-    
 
     // Navigation
     .navbar {
@@ -244,9 +263,9 @@
             max-width: 170px;
         }
 
-        // Margin right
-        &--mr {
-            margin-right: 20px;
+        // Spacing
+        &--spacing {
+            margin-right: 15px;
         }
     }
 
@@ -332,7 +351,7 @@
     .company {
         // Column
         &--column {
-            max-width: 200px;
+            max-width: 220px;
         }
 
         // Thumbnail
@@ -409,6 +428,14 @@
         &--container {
             margin-left: 50px;
             margin-right: 50px;
+        }
+    }
+
+    // Layouts
+    .l-container {
+        // Small container
+        &-small {
+            max-width: $l-desktop-small + 30 !important;
         }
     }
 }
@@ -515,15 +542,10 @@
             max-width: $l-tablet - 70px;
         }
     }
-
+    
     // Layouts
     .l-container {
         max-width: $l-tablet;
-
-        //Small container
-        &-small{
-        max-width: $l-tablet;
-        }
     }
 }
 
@@ -553,10 +575,5 @@
     // Layouts
     .l-container {
         max-width: $l-desktop;
-
-        // Small container
-        &-small {
-            max-width: $l-desktop-small;
-        }
     }
 }

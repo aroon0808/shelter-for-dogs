@@ -8,6 +8,7 @@
 // Headinga
 // Link
 // List
+// Paragraph
 //
 // *************************
 
@@ -66,4 +67,9 @@ ul {
     li {
         list-style: none;
     }
+}
+
+// Paragraph
+p {
+    line-height: 22px;
 }

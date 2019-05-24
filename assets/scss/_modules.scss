@@ -512,6 +512,31 @@
         display: table;
         margin: 50px auto;
     }
+
+    // Bar
+    &--bar {
+        background-color: $color-cyan-bright;
+        padding: 6px;
+        border-radius: 6px;
+        margin-bottom: 70px;
+
+        .bar {
+            // Link
+            &--link {
+                line-height: 40px;
+                height: 40px;
+                display: table;
+                font-weight: $font-weight-medium;
+                color: $color-black;
+                background-color: $color-white;
+            }
+
+            // Icon
+            &--icon {
+                margin-right: 15px;
+            }
+        }
+    }
 }
 
 // Pagination
@@ -811,7 +836,7 @@
         line-height: 24px;
     }
 
-    // Hyperlink
+    // Link
     &--link {
         font-size: 1.4rem;
         margin-top: 15px;

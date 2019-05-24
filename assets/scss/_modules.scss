@@ -338,14 +338,15 @@
         font: $font-weight-bold 1.5rem/50px $font-primary;
         width: 100%;
         height: 50px;
-        border: 2px solid $color-green;
         margin-top: 10px;
         display: inline-block;
+        border: 2px solid $color-green;
 
         // Transparent button
         &-transparent {
             color: $color-black;
             background-color: transparent;
+            border-color: $color-white-dark;
         }
     }
 
@@ -456,6 +457,13 @@
         text-align: center;
         z-index: 2;
         position: relative;
+
+        // Small heading
+        &-small {
+            font: $font-weight-medium 1.6rem $font-primary;
+            margin-bottom: 40px;
+            text-align: left;
+        }
     }
 
     // Subheading
@@ -699,7 +707,7 @@
         .btn {
             // Icon
             &--icon {
-                margin-left: 10px;
+                margin-right: 10px;
             }
         }
     }
@@ -782,13 +790,17 @@
             // Item
             &--item {
                 font-size: 1.4rem;
-                margin: 6px 0;
+                margin-bottom: 25px;
             }
 
             // Value
             &--value {
-                font-weight: $font-weight-medium;
+                font-weight: $font-weight-bold;
                 color: $color-black;
+                background-color: $color-cyan-bright;
+                padding: 6px 10px;
+                border-radius: 40px;
+                margin-left: 5px;
             }
         }
     }
@@ -796,7 +808,39 @@
     // Description
     &--desc {
         font-size: 1.4rem;
-        line-height: 22px;
+        line-height: 24px;
+    }
+
+    // Hyperlink
+    &--link {
+        font-size: 1.4rem;
+        margin-top: 15px;
+        display: block;
+    }
+
+    // Buttons container
+    &--buttons {
+        margin-top: 50px;
+    }
+
+    // Button
+    &--btn {
+        margin-top: 10px;
+
+        // white background
+        &-company {
+            color: $color-black;
+            background-color: transparent;
+            border-color: $color-white-dark;
+            border-width: 2px;
+        }
+
+        .btn {
+            // Icon
+            &--icon {
+                margin-right: 10px;
+            }
+        }
     }
 }
 

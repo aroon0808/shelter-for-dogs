@@ -179,6 +179,27 @@ p {
   background-color: #3C5A99;
 }
 
+.btn--profile {
+  color: #647179;
+  background-color: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  min-width: 150px;
+  padding: 0 15px 0 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .navbar--brand {
   display: block;
   margin-right: 50px;
@@ -226,6 +247,12 @@ p {
   color: #111;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.navbar--profile {
+  background-color: #f2f7f9;
+  border-radius: 6px;
+  padding: 10px;
 }
 
 .navbar--nav {
@@ -641,36 +668,6 @@ p {
   margin: 50px auto;
 }
 
-.profile--link {
-  color: #647179;
-  background-color: #fff;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin-right: 15px;
-  min-width: 150px;
-  padding: 0 15px 0 15px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.profile--container {
-  background-color: #f2f7f9;
-}
-
-.profile--item {
-  margin: 10px;
-}
-
 .profile--icon {
   margin-left: 20px;
 }
@@ -731,7 +728,6 @@ p {
 .company--profile-text {
   color: #111;
   font-size: 1.4rem;
-  margin-top: 0;
 }
 
 .company--thumbnail {
@@ -1470,9 +1466,6 @@ p {
     transform: translateX(-30%);
     opacity: 1;
   }
-  .header .l-container-small {
-    max-width: 400px;
-  }
   .navbar--user .user--name {
     display: block;
   }
@@ -1496,6 +1489,9 @@ p {
   }
   .register--text {
     line-height: 25px;
+  }
+  .tabs--nav .nav--pItem:not(:last-child) {
+    margin-bottom: 10px;
   }
   .gallery--col {
     width: 50%;
@@ -1563,6 +1559,9 @@ p {
   .register--image {
     margin-left: 0;
   }
+  .tabs--nav .nav--pItem:not(:last-child) {
+    margin-bottom: 0px;
+  }
   .company--column {
     max-width: 220px;
   }
@@ -1593,6 +1592,12 @@ p {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+  }
+  .tabs--nav .nav--pItem {
+    display: block;
+  }
+  .tabs--nav .nav--pItem:not(:last-child) {
+    margin-right: 15px;
   }
   .tabs--nav .nav--item {
     -webkit-box-flex: 1;

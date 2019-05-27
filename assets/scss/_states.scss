@@ -175,13 +175,6 @@
             transform: translateX(-30%);
             opacity: 1;
         }
-        .l-container {
-
-            //Small container
-            &-small {
-            max-width: $l-desktop-small;
-            }
-        }
     }
 
     // Navigation
@@ -233,6 +226,22 @@
         // Text
         &--text {
             line-height: 25px;
+        }
+    }
+
+    // Tabs
+    .tabs {
+        // Navigation
+        &--nav {
+            // Profile Nav
+            .nav {
+                // Profile Item
+                &--pItem {
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
         }
     }
 
@@ -344,6 +353,22 @@
         }
     }
 
+    // Tabs
+    .tabs {
+    // Navigation
+    &--nav {
+        // Profile Nav
+        .nav {
+            // Profile Item
+            &--pItem {
+                &:not(:last-child) {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
     // Company profile
     .company {
         // Column
@@ -395,6 +420,14 @@
             display: flex;
 
             .nav {
+                &--pItem {
+                    display: block;
+
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+                }
+
                 &--item {
                     flex-grow: 1;
                     display: inline-block;

@@ -63,6 +63,20 @@
     &--fb {
         background-color: $color-fb;
     }
+
+      // Profile button
+      &--profile { 
+        color: $color-grey;
+        background-color: $color-white;
+        font-size: 1.4rem;
+        font-weight: 400;
+        min-width: 150px;
+        padding: 0 15px 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        }
 }
 
 // Navigation
@@ -104,6 +118,13 @@
         color: $color-black;
         letter-spacing: 1px;
         text-transform: uppercase;
+    }
+
+     //Navbar profile
+     &--profile {
+        background-color: $color-cyan-bright;
+        border-radius: 6px;
+        padding: 10px;
     }
 
     // Navigation
@@ -539,32 +560,6 @@
 //Profile
 .profile {
 
-    //Link
-    &--link { 
-        color: $color-grey;
-        background-color: $color-white;
-        font-size: 1.4rem;
-        font-weight: 400;
-        margin-right: 15px;
-        min-width: 150px;
-        padding: 0 15px 0 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-    }
-
-    //Color Header
-        &--container {
-            background-color: $color-cyan-bright;
-        }      
-    
-        //Item
-        &--item {
-        margin: 10px ;
-      
-}
-
         //Icon
         &--icon {  
             margin-left: 20px;
@@ -639,7 +634,6 @@
     &--profile-text {
         color: #111;
         font-size: 1.4rem;
-        margin-top: 0;
     }
 
     // Thumbnail
@@ -769,7 +763,7 @@
     // Navigation
     &--nav {
         margin-bottom: 40px;
-
+        //Nav
         .nav {
             // Item
             &--item {

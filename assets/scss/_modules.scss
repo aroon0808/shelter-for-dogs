@@ -59,10 +59,10 @@
         }
     }
 
-    // Facebook button
-    &--fb {
+        // Facebook button
+        &--fb {
         background-color: $color-fb;
-    }
+        }
 
       // Profile button
       &--profile { 
@@ -77,6 +77,19 @@
         align-items: center;
         
         }
+
+    // Verification button
+    &--veryfication {
+        background-color: $color-royal;
+        color: $color-white;
+        font: 500 1.4rem/30px "Work Sans",Arial,Verdana,sans-serif;
+        height: 30px;
+        border-radius: 6px;
+        border: 1px solid transparent;
+        z-index: 1;
+        padding: 0 20px;
+       }
+
 }
 
 // Navigation
@@ -565,12 +578,24 @@
             margin-left: 20px;
         }
 
+        //Link
+        &--link {
+            text-align: center;
+        }
+
         //Sign
         &--sign {
             color: $color-black;
             font-size: 1.4rem;
             margin-top: 0;
 
+        }
+        &--line {
+            width: 100%;
+            height: 1px;
+            background-color: $color-grey-bright;
+            display: block;
+            margin: 0 0 30px 0;
         }
 }
 
@@ -1048,6 +1073,16 @@
         display: block;
         margin-bottom: 40px;
     }
+
+    //Heading-2
+    &--heading-2 {
+        font: $font-weight-medium 1.6rem $font-primary;
+        color: $color-black;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+
 
     // Label
     &--label {

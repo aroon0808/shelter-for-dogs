@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/vendors.min.css">
     <link rel="stylesheet" href="./assets/css/theme.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Login</title>
+    <title>Profil psa</title>
 </head>
 <body>
 
@@ -50,36 +50,59 @@
     </nav>
     
     <div class="navbar--overlay"></div>    
-    <!-- Login section-->
-    <section class="l-container l-container-small">
-        <div class="section--container section--container-spacing">
-            <header class="section--header">
-                <h1 class="section--heading">Zaloguj się</h1>
-            </header>
+    <!-- Header -->
+    <header class="l-container section--container-spacing-top">
+        <div class="section--header">
+            <h1 class="section--heading">Hektor</h1>
+            <span class="section--subheading">
+                Ten pies czeka, aby ktoś go przygarnął
+            </span>
+        </div>
+    </header>
+    
+    <!-- Dog profile section -->
+    <section class="l-container">
+        <div class="section--container-narrow-mobile section--container-spacing-bottom">
+            <!-- Bar -->
+            <div class="section--bar">
+                <a href="#" class="btn bar--link">
+                    <span class="bar--icon fas fa-long-arrow-alt-left" aria-hidden="true"></span> Powrót do wyszukiwarki
+                </a>
+            </div>
             
-            <div class="section--container-narrow-mobile">
-                <!-- form -->
-                <form action="#" method="POST" class="form">
-                    <div class="form--group">
-                        <label for="login" class="form--label is-animated">Login</label>
-                        <input type="text" name="login" id="login" class="form--input" required>
+            <div class="section--columns">
+                <div class="section--column section--column-spacing">
+                    <h2 class="section--heading section--heading-small">Zdjęcie</h2>
+    
+                    <div class="dog">
+                        <div class="dog--image" style="background-image: url('https://placedog.net/360/250/?id=11')" role="img"></div>
                     </div>
+                </div>
     
-                    <div class="form--group">
-                        <label for="passwd" class="form--label is-animated">Hasło</label>
-                        <input type="password" name="passwd" id="passwd" class="form--input" required>
+                <div class="section--column">
+                    <h2 class="section--heading section--heading-small">Dane Psa</h2>
+    
+                    <ul class="dog--list">
+                        <li class="list--item">Rasa: <span class="list--value">Owczarek niemiecki</span></li>
+                        <li class="list--item">Płeć: <span class="list--value">Pies</span></li>
+                        <li class="list--item">Wiek: <span class="list--value">1-3 lata</span></li>
+                        <li class="list--item">Wielkość: <span class="list--value">Duży (26-39 kg)</span></li>
+                    </ul>
+    
+                    <p class="dog--desc">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Dolor error voluptas recusandae, tempore laudantium ab ad aperiam. Repudiandae, distinctio.
+                        Quibusdam qui magnam dolores optio repellendus voluptatum exercitationem consequatur omnis velit eius.
+                    </p>
+    
+                    <div class="dog--buttons">
+                        <a href="#" class="btn dog--btn">
+                            <span class="btn--icon fas fa-heart" aria-hidden="true"></span> Zaadoptuj Psa
+                        </a>
+    
+                        <a href="#" class="btn dog--btn dog--btn-company">Profil Schroniska</a>
                     </div>
-    
-                    <button type="submit" class="btn login--btn">Zaloguj się</button>
-    
-                    <a href="#" class="link login--link">Nie pamiętam hasła</a>
-    
-                    <span class="login--line"></span>
-    
-                    <button type="button" class="btn btn--fb form--log-btn login--btn">
-                        <span class="fab fa-facebook-f login--icon" aria-hidden="true"></span>Zaloguj się przez Facebook
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
     </section>

@@ -14,7 +14,9 @@
 <body>
 
     <nav class="l-navbar">
-        <img src="./assets/images/logo.png" class="navbar--brand" alt="Psytulimy">
+        <a href="index.html">
+            <img src="./assets/images/logo.png" class="navbar--brand" alt="Psytulimy">
+        </a>
     
         <div class="navbar--sidebar">
             <div class="navbar--header">
@@ -50,7 +52,7 @@
     <div class="navbar--overlay"></div>    
     <!-- Header -->
     <header class="l-container section--container-spacing-top">
-        <div class="section--header section--header-spacing">
+        <div class="section--header">
             <h1 class="section--heading">Dodaj Psa</h1>
             <span class="section--subheading">
                 Utwórz nowy profil psa na stronie.
@@ -61,11 +63,18 @@
     <!-- Add dog section -->
     <section class="l-container">
         <div class="section--container-narrow-mobile section--container-spacing-bottom">
+            <!-- Bar -->
+            <div class="section--bar">
+                <a href="#" class="btn bar--link">
+                    <span class="bar--icon fas fa-long-arrow-alt-left" aria-hidden="true"></span> Powrót do profilu
+                </a>
+            </div>
+                
             <!-- form -->
             <form action="#" method="POST" class="form" enctype="multipart/form-data">
                 <div class="section--columns">
                     <div class="section--column section--column-spacing">
-                        <h2 class="form--heading">Podstawowe dane</h2>
+                        <h2 class="section--heading section--heading-small">Podstawowe dane</h2>
     
                         <div class="form--group">
                             <label for="dog_name" class="form--label is-active">Imię psa</label>
@@ -129,7 +138,7 @@
                     </div>
     
                     <div class="section--column">
-                        <h2 class="form--heading">Opis psa / Zdjęcie</h2>
+                        <h2 class="section--heading section--heading-small">Opis psa / Zdjęcie</h2>
             
                         <div class="form--inline">
                             <div class="form--upload-preview is-empty"></div>
@@ -166,7 +175,9 @@
     </section>
     <footer class="l-footer footer">
         <div class="footer--wrapper">
-            <img src="./assets/images/logo.png" class="footer--brand" alt="Psytulimy">
+            <a href="index.html">
+                <img src="./assets/images/logo.png" class="footer--brand" alt="Psytulimy">
+            </a>
             
             <div class="footer--container">
                 <ul class="footer--nav">

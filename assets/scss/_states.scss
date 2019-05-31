@@ -244,6 +244,21 @@
             }
         }
     }
+    
+    // Dog profile
+    .dog {
+        // Buttons container
+        &--buttons {
+            display: flex;
+        }
+
+        // Button
+        &--btn {
+            &-company {
+                margin-left: 15px;
+            }
+        }
+    }
 
     // Gallery
     .gallery {

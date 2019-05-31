@@ -469,14 +469,15 @@ p {
   font: 700 1.5rem/50px "Work Sans", Arial, Verdana, sans-serif;
   width: 100%;
   height: 50px;
-  border: 2px solid #8cde4a;
   margin-top: 10px;
   display: inline-block;
+  border: 2px solid #8cde4a;
 }
 
 .header--btn-transparent {
   color: #111;
   background-color: transparent;
+  border-color: #eee;
 }
 
 .header--image {
@@ -574,6 +575,12 @@ p {
   position: relative;
 }
 
+.section--heading-small {
+  font: 500 1.6rem "Work Sans", Arial, Verdana, sans-serif;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
 .section--subheading {
   font-size: 1.6rem;
   color: #647179;
@@ -614,6 +621,26 @@ p {
   font-weight: 400;
   display: table;
   margin: 50px auto;
+}
+
+.section--bar {
+  background-color: #f2f7f9;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 70px;
+}
+
+.section--bar .bar--link {
+  line-height: 40px;
+  height: 40px;
+  display: table;
+  font-weight: 500;
+  color: #111;
+  background-color: #fff;
+}
+
+.section--bar .bar--icon {
+  margin-right: 15px;
 }
 
 .pagination {
@@ -797,7 +824,7 @@ p {
 }
 
 .company--btn .btn--icon {
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .company--list {
@@ -865,17 +892,46 @@ p {
 
 .dog--list .list--item {
   font-size: 1.4rem;
-  margin: 6px 0;
+  margin-bottom: 25px;
 }
 
 .dog--list .list--value {
-  font-weight: 500;
+  font-weight: 700;
   color: #111;
+  background-color: #f2f7f9;
+  padding: 6px 10px;
+  border-radius: 40px;
+  margin-left: 5px;
 }
 
 .dog--desc {
   font-size: 1.4rem;
-  line-height: 22px;
+  line-height: 24px;
+}
+
+.dog--link {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  display: block;
+}
+
+.dog--buttons {
+  margin-top: 50px;
+}
+
+.dog--btn {
+  margin-top: 10px;
+}
+
+.dog--btn-company {
+  color: #111;
+  background-color: transparent;
+  border-color: #eee;
+  border-width: 2px;
+}
+
+.dog--btn .btn--icon {
+  margin-right: 10px;
 }
 
 .tabs--nav {
@@ -1548,6 +1604,15 @@ p {
   }
   .tabs--nav .nav--pItem:not(:last-child) {
     margin-bottom: 10px;
+  }
+  .dog--buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .dog--btn-company {
+    margin-left: 15px;
   }
   .gallery--col {
     width: 50%;

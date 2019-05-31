@@ -62,26 +62,22 @@
         // Link
         .nav--link {
             &.is-active {
-                border-color: $color-green;
-    
                 // Icon
                 .nav--icon {
                     color: $color-green;
                 }
             }
-        }
 
-        // Company link
-        .nav--link-company {
-            &.is-active {
-                border-color: $color-blue;
-    
-                // Icon
-                .nav--icon {
-                    color: $color-blue;
+            &-company {
+                &.is-active {
+                    // Icon
+                    .nav--icon {
+                        color: $color-blue;
+                    }
                 }
             }
         }
+        
     }
 
     // Panel
@@ -228,22 +224,6 @@
             line-height: 25px;
         }
     }
-
-    // Tabs
-    .tabs {
-        // Navigation
-        &--nav {
-            // Profile Nav
-            .nav {
-                // Profile Item
-                &--pItem {
-                    &:not(:last-child) {
-                        margin-bottom: 10px;
-                    }
-                }
-            }
-        }
-    }
     
     // Dog profile
     .dog {
@@ -260,6 +240,26 @@
         }
     }
 
+    // User profile
+    .user {
+        &--tabs {
+            display: flex;
+
+            .user {
+                // Item
+                &--item {
+                    display: inline-flex;
+                    flex-grow: 0;
+
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    
     // Gallery
     .gallery {
         // Column
@@ -368,24 +368,8 @@
         }
     }
 
-    // Tabs
-    .tabs {
-    // Navigation
-    &--nav {
-        // Profile Nav
-        .nav {
-            // Profile Item
-            &--pItem {
-                &:not(:last-child) {
-                    margin-bottom: 0px;
-                }
-            }
-        }
-    }
-}
-
-    // Company profile
-    .company {
+    // Profile
+    .profile {
         // Column
         &--column {
             max-width: 220px;
@@ -393,11 +377,6 @@
 
         // Thumbnail
         &--thumbnail {
-            margin-left: 0;
-        }
-
-        // Button
-        &--btn {
             margin-left: 0;
         }
 
@@ -409,6 +388,11 @@
         // Subheading
         &--subheading {
             text-align: left;
+        }
+
+        // Button
+        &--btn {
+            margin-left: 0;
         }
 
         // Text
@@ -435,21 +419,26 @@
             display: flex;
 
             .nav {
-                &--pItem {
-                    display: block;
+                &--item {
+                    display: inline-flex;
+                    flex-grow: 1;
 
                     &:not(:last-child) {
-                        margin-right: 15px;
+                        margin-right: 10px;
+                        margin-bottom: 0;
                     }
                 }
+            }
+        }
+    }
 
+    // User profile
+    .user {
+        &--tabs {
+            .user {
+                // Item
                 &--item {
-                    flex-grow: 1;
-                    display: inline-block;
-
-                    &:not(:last-child) {
-                        margin-right: 15px;
-                    }
+                    flex-grow: 0;
                 }
             }
         }

@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         forms.forEach((form) => {
             const formGroups = form.querySelectorAll('.form--group');
             const formCheckBoxes = form.querySelectorAll('.form--checkbox');
-            const formSubmitBtn = form.querySelector('.form--submit');
+            const formSubmitBtn = form.querySelectorAll('.form--btn');
 
             // Labels
             formGroups.forEach((formGroup) => {
@@ -128,9 +128,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 // On click form submit button
-                formSubmitBtn.addEventListener('click', () => {
-                    toggleCheckboxClass();
-                });
+                // formSubmitBtn.addEventListener('click', () => {
+                //     toggleCheckboxClass();
+                // });
 
                 // Toggle checkbox class
                 function toggleCheckboxClass() {

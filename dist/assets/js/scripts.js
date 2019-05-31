@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     forms.forEach(function (form) {
       var formGroups = form.querySelectorAll('.form--group');
       var formCheckBoxes = form.querySelectorAll('.form--checkbox');
-      var formSubmitBtn = form.querySelector('.form--submit'); // Labels
+      var formSubmitBtn = form.querySelectorAll('.form--btn'); // Labels
 
       formGroups.forEach(function (formGroup) {
         var formLabel = formGroup.querySelector('.form--label.is-animated');
@@ -109,10 +109,10 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleCheckboxClass();
           }
         }); // On click form submit button
-
-        formSubmitBtn.addEventListener('click', function () {
-          toggleCheckboxClass();
-        }); // Toggle checkbox class
+        // formSubmitBtn.addEventListener('click', () => {
+        //     toggleCheckboxClass();
+        // });
+        // Toggle checkbox class
 
         function toggleCheckboxClass() {
           if (checkbox.checked) {

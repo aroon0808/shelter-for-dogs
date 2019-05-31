@@ -179,38 +179,6 @@ p {
   background-color: #3C5A99;
 }
 
-.btn--profile {
-  color: #647179;
-  background-color: #fff;
-  font-size: 1.4rem;
-  font-weight: 400;
-  min-width: 150px;
-  padding: 0 15px 0 15px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.btn--veryfication {
-  background-color: #FADA5E;
-  color: #fff;
-  font: 500 1.4rem/30px "Work Sans",Arial,Verdana,sans-serif;
-  height: 30px;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  z-index: 1;
-  padding: 0 20px;
-}
-
 .navbar--brand {
   display: block;
   margin-right: 50px;
@@ -679,10 +647,6 @@ p {
   margin: 50px auto;
 }
 
-.profile--icon {
-  margin-left: 20px;
-}
-
 .profile--link {
   text-align: center;
 }
@@ -699,6 +663,68 @@ p {
   background-color: #c7c7c7;
   display: block;
   margin: 0 0 30px 0;
+}
+
+.profile--image {
+  position: relative;
+}
+
+.profile--upload-label {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  color: #647179;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.profile--btn {
+  color: #647179;
+  background-color: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  min-width: 150px;
+  padding: 0 15px 0 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.profile--veryfication {
+  background-color: #FADA5E;
+  color: #fff;
+  font: 500 1.4rem/30px "Work Sans",Arial,Verdana,sans-serif;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  z-index: 1;
+  padding: 0 20px;
 }
 
 .login--btn {

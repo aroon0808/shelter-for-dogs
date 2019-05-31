@@ -8,8 +8,12 @@ title: Profil użytkownika
     <div class="section--container">
         <div class="section--columns">
             <div class="section--column company--column">
-                <figure class="company--thumbnail">
-                    <img src="https://via.placeholder.com/160x160" class="image" alt="">
+                <figure class="company--thumbnail profile--image">
+                    <label for="picture" class="profile--upload-label" tabindex="0">
+                        <span class="form--upload-icon far fa-edit" aria-hidden="true"></span>
+                    </label>
+                    <input type="file" name="picture" id="picture" class="form--file" tabindex="-1">
+                    <img src="https://via.placeholder.com/160x160" class="image profile--bIcon" alt="">
                 </figure>
             </div>
             <div class="section--column">
@@ -25,32 +29,38 @@ title: Profil użytkownika
 <section class="l-container">
     <!-- Setting section -->
     <div class="section--container-narrow-mobile section--container-spacing-bottom">
-        <ul class="tabs--nav navbar--profile" role="tablist">
-            <li class="nav--pItem">
-                <a href="#dogs" id="dogs-tab" class="btn btn--profile" role="tab" aria-controls="dogs">
-                    Psy <span class="fas fa-dog profile--icon" aria-hidden="true"></span>
-                </a>
-            </li>
-            <li class="nav--pItem">
-                <a href="#settings" id="dogs-tab" class="btn btn--profile" role="tab" aria-controls="settings">
-                    Ustawienia <span class="fas fa-cog profile--icon" aria-hidden="true"><span>
-                </a>
-            </li>
-        </ul>
+        <!-- Tabs content -->
+        <div class="tabs--content">
+            <div class="tabs--panel is-active" id="tablist" role="tablist" aria-labelledby="tablist">
+                <ul class="tabs--nav navbar--profile" role="tablist">
+                    <li class="nav--pItem">
+                        <a href="#dogs" id="dogs-tab" class="btn profile--btn" role="tab" aria-controls="dogs">
+                            Psy <span class="fas fa-dog profile--icon" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li class="nav--pItem">
+                        <a href="#settings" id="settings-tab" class="btn profile--btn" role="tab"
+                            aria-controls="settings">
+                            Ustawienia <span class="fas fa-cog profile--icon" aria-hidden="true"><span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="section--columns">
             <div class="section--column section--column-spacing">
                 <h2 class="form--heading-2">Dodane zwierzęta</h2>
                 <span class="profile--line"></span>
-                <a href="add-dog.html" class="btn nav--register--link profile--link">Dodaj zwierzaka
+                <a href="add-dog.html" class="btn nav--register--link profile--link">
                     <span class="nav--icon profile--icon fas fa-plus" aria-hidden="true"></span>
+                    Dodaj zwierzaka
                 </a>
                 {{> gallery}}
             </div>
             <div class="section--column">
                 <h2 class="form--heading-2">Chcesz zaadoptować</h2>
-                
                 <span class="profile--line"></span>
-                <span class="btn--profile btn--veryfication">W trakcie weryfikacji
+                <span class="profile--btn profile--veryfication">W trakcie weryfikacji
                     <a href="#" style="color: white">
                         <span class="nav--icon profile--icon fas fa-info-circle" aria-hidden="true"></span>
                     </a>
@@ -58,5 +68,5 @@ title: Profil użytkownika
                 {{> gallery}}
             </div>
         </div>
+    </div>
 </section>
-</div>

@@ -2,15 +2,17 @@
 // Table of Contents
 // 
 // Button
+// Tabs
 // Navigation
 // Header
 // Section
 // Registration
 // Login
-// Company profile
-// Adopt page
-// Tabs
+// Profile
+// User profile
+// Dog profile
 // Dropdown
+// Alerts
 // Gallery
 // Form
 // Footer
@@ -59,10 +61,102 @@
         }
     }
 
-        // Facebook button
-        &--fb {
+    // White button
+    &--white {
+        color: $color-black;
+        background-color: $color-white;
+        border-color: $color-white-dark;
+    }
+
+    // Facebook button
+    &--fb {
         background-color: $color-fb;
+    }
+}
+
+// Tabs 
+.tabs {
+    // Navigation
+    &--nav {
+        background-color: $color-cyan-bright;
+        border-radius: 6px;
+        padding: 6px;
+        margin-bottom: 40px;
+        
+        .nav {
+            // Item
+            &--item {
+                display: block;
+
+                &:not(:last-child) {
+                    margin-bottom: 6px;
+                }
+            }
+
+            // Link
+            &--link {
+                font: $font-weight-medium 1.4rem/24px $font-primary;
+                color: $color-black;
+                text-align: center;
+                width: 100%;
+                background-color: $color-white;
+                border-radius: 6px;
+                padding: 4px;
+                display: block;
+                transition: background-color .25s ease;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-cyan-bright-2;
+                }
+                
+                // Company button
+                &-company {
+                    &:hover,
+                    &:focus {
+                        // Icon
+                        .nav--icon {
+                            color: $color-blue;
+                        }
+                    }
+                }
+            }
+
+            // Description
+            &--desc {
+                font-weight: $font-weight-regular; 
+                font-size: 1rem;
+                color: $color-grey;
+                display: block;
+            }
+
+            // Icon
+            &--icon {
+                width: 22px;
+                text-align: left;
+                transition: color .25s ease;
+            }
         }
+    }
+
+    // Content container
+    &--content {
+        min-height: 300px;
+        position: relative;
+    }
+
+    // Panel
+    &--panel {
+        width: 100%;
+        background-color: $color-white;
+        position: absolute;
+        transition: transform .5s ease, opacity .5s ease, visibility .5s ease;
+        transform: translateX(150px);
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+    }
 }
 
 // Navigation
@@ -104,13 +198,6 @@
         color: $color-black;
         letter-spacing: 1px;
         text-transform: uppercase;
-    }
-
-     //Navbar profile
-     &--profile {
-        background-color: $color-cyan-bright;
-        border-radius: 6px;
-        padding: 10px;
     }
 
     // Navigation
@@ -232,11 +319,16 @@
     }
 
     // User area
-    &--user {
+    &--logged {
         display: flex;
         align-items: center;
 
-        .user {
+        .logged {
+            // Container 
+            &--container {
+                position: relative;
+            }
+
             // Image
             &--image {
                 border-radius: 50%;
@@ -258,8 +350,11 @@
                 flex-shrink: 0;
                 display: flex;
                 align-items: center;
-                cursor: pointer;
                 position: relative;
+                border: 0;
+                padding: 0;
+                background: none;
+                cursor: pointer;
 
                 &::before {
                     content: '';
@@ -340,14 +435,7 @@
         height: 50px;
         margin-top: 10px;
         display: inline-block;
-        border: 2px solid $color-green;
-
-        // Transparent button
-        &-transparent {
-            color: $color-black;
-            background-color: transparent;
-            border-color: $color-white-dark;
-        }
+        border: 1px solid $color-green;
     }
 
     // Image
@@ -523,12 +611,11 @@
         .bar {
             // Link
             &--link {
+                font-weight: $font-weight-medium;
                 line-height: 40px;
                 height: 40px;
                 display: table;
-                font-weight: $font-weight-medium;
-                color: $color-black;
-                background-color: $color-white;
+                border-color: transparent;
             }
 
             // Icon
@@ -576,79 +663,6 @@
     }
 }
 
-//Profile
-.profile {
-
-        // Link
-        &--link {
-            text-align: center;
-        }
-
-        // Sign
-        &--sign {
-            color: $color-black;
-            font-size: 1.4rem;
-            margin-top: 0;
-
-        }
-        // Line
-        &--line {
-            width: 100%;
-            height: 1px;
-            background-color: $color-grey-bright;
-            display: block;
-            margin: 0 0 30px 0;
-        }
-
-        // Profile Image
-        &--image {
-            position: relative;
-        }
-
-        // Upload label
-        &--upload-label {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin:  auto;
-            color: $color-grey;
-            cursor: pointer;
-            position: absolute;
-            z-index: 1;
-            bottom: 10px;
-            right: 10px;
-            border-radius: 50%;
-            background-color: $color-white;
-        }
-
-        // Profile button
-        &--btn { 
-        color: $color-grey;
-        background-color: $color-white;
-        font-size: 1.4rem;
-        font-weight: 400;
-        min-width: 150px;
-        padding: 0 15px 0 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        }
-
-        // Verification button
-        &--veryfication {
-        background-color: $color-royale;
-        color: $color-white;
-        font: 500 1.4rem/30px "Work Sans",Arial,Verdana,sans-serif;
-        height: 30px;
-        border-radius: 6px;
-        border: 1px solid transparent;
-        z-index: 1;
-        padding: 0 20px;
-       }
-}
-
 // Login
 .login {
     // Button
@@ -694,8 +708,8 @@
     }
 }
 
-// Company profile
-.company {
+// Profile
+.profile {
     // Subheading
     &--subheading {
         font-size: 1.8rem;
@@ -703,17 +717,17 @@
         text-align: center;
         margin: 10px 0;
         display: block;
-    }
 
-    //Your profile text
-    &--profile-text {
-        color: #111;
-        font-size: 1.4rem;
+        // Small
+        &-small {
+            font-size: 1.4rem;
+            color: $color-black;
+        }
     }
 
     // Thumbnail
     &--thumbnail {
-        margin: 0 auto 30px auto;
+        margin: 0 auto 20px auto;
         width: 160px;
         height: 160px;
         border-radius: 50%;
@@ -792,6 +806,111 @@
     }
 }
 
+// User profile
+.user {
+    // Heading
+    &--heading {
+        margin-top: 40px;
+    }
+
+    // Tabs
+    &--tabs {
+        .user {
+            // Link
+            &--link {
+                text-align: left;
+                padding: 10px 15px;
+                display: flex; 
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            // Icon
+            &--icon {
+                text-align: right;
+                margin-left: 50px;
+            }
+        }
+    }
+
+    // Button
+    &--btn {
+        line-height: 40px;
+        height: 40px;
+        display: inline-block;
+        margin-bottom: 30px;
+
+        .btn {
+            // Icon
+            &--icon {
+                width: 20px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    // Image
+    &--image {
+        width: 160px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    // Change avatar button
+    &--change-avatar {
+        color: $color-black;
+        width: 40px;
+        height: 40px;
+        background-color: $color-white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        &::before {
+            border-radius: 50%;
+        }
+    }
+
+    // List item
+    &--dog {
+        background-color: $color-cyan-bright;
+        border-radius: 6px;
+        margin-bottom: 30px;
+        padding: 30px;
+        position: relative;
+        transition: color .25s ease, border-color .25s ease, background-color .25s ease;
+
+        // Shadow
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba($color-grey-2, .25);
+            position: absolute;
+            transition: opacity .25s ease;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        
+        &:hover,
+        &:focus {
+            background-color: $color-white;
+
+            // Shadow
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
 // Dog profile
 .dog {
     max-width: 400px;
@@ -805,17 +924,43 @@
         height: 250px;
         border-radius: 6px;
         margin-bottom: 30px;
+
+        // Thumbnail
+        &-thumbnail {
+            height: 120px;
+            width: 120px;
+            margin-right: 30px;
+            flex-shrink: 0;
+        }
     }
 
     // List
     &--list {
-        margin-bottom: 30px;
+        width: 100%;
 
         .list {
+            // Heading
+            &--heading {
+                font-weight: $font-weight-bold;
+                font-size: 1.6rem;
+                color: $color-black;
+                margin: 0;
+            }
+
             // Item
             &--item {
                 font-size: 1.4rem;
-                margin-bottom: 25px;
+                margin-bottom: 22px;
+
+                // Small
+                &-small {
+                    font-size: 1.4rem;
+                    margin-bottom: 15px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
 
             // Value
@@ -826,6 +971,14 @@
                 padding: 6px 10px;
                 border-radius: 40px;
                 margin-left: 5px;
+
+                // Small
+                &-small {
+                    font-weight: $font-weight-medium;
+                    padding: 0;
+                    margin-left: 0;
+                    background: none;
+                }
             }
         }
     }
@@ -834,6 +987,7 @@
     &--desc {
         font-size: 1.4rem;
         line-height: 24px;
+        margin-top: 30px;
     }
 
     // Link
@@ -867,88 +1021,59 @@
             }
         }
     }
-}
 
-// Tabs 
-.tabs {
-    // Navigation
-    &--nav {
-        margin-bottom: 40px;
-        //Nav
-        .nav {
-            // Item
-            &--item {
+    // Dropdown button
+    &--dropdown {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        padding: 0;
+        background: none;
+        cursor: pointer;
+        padding: 5px;
+        transform: translateX(5px);
+        position: absolute;
+        top: 8px;
+        right: 8px;
+
+        .btn {
+            // Bars
+            &--bars {
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
                 display: block;
-            }
+                margin: 3px 0;
+                background-color: $color-black;
+                position: relative;
 
-            // Link
-            &--link {
-                font: $font-weight-medium 1.4rem/24px $font-primary;
-                color: $color-black;
-                text-align: center;
-                width: 100%;
-                background-color: $color-white;
-                border: 1px solid $color-white-dark;
-                border-radius: 6px;
-                padding: 4px;
-                display: block;
-                margin-bottom: 10px;
-                transition: border-color .25s ease;
-
-                &:hover,
-                &:focus {
-                    // Icon
-                    .nav--icon {
-                        color: $color-green;
-                    }
+                &::before,
+                &::after {
+                    content: '';
+                    width: 3px;
+                    height: 3px;
+                    border-radius: 50%;
+                    display: block;
+                    background-color: $color-black;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transition: transform .25s ease;
                 }
-                
-                // Company button
-                &-company {
-                    &:hover,
-                    &:focus {
-                        // Icon
-                        .nav--icon {
-                            color: $color-blue;
-                        }
-                    }
+
+                &::before {
+                    transform: translateY(7px);
                 }
-            }
 
-            // Description
-            &--desc {
-                font-weight: $font-weight-regular; 
-                font-size: 1rem;
-                color: $color-grey;
-                display: block;
-            }
-
-            // Icon
-            &--icon {
-                width: 22px;
-                text-align: left;
-                transition: color .25s ease;
+                &::after {
+                    transform: translateY(-7px);
+                }
             }
         }
-    }
-
-    // Content container
-    &--content {
-        min-height: 300px;
-        position: relative;
-    }
-
-    // Panel
-    &--panel {
-        width: 100%;
-        background-color: $color-white;
-        position: absolute;
-        transition: transform .5s ease, opacity .5s ease, visibility .5s ease;
-        transform: translateX(150px);
-        visibility: hidden;
-        opacity: 0;
-        top: 0;
-        left: 0;
     }
 }
 
@@ -1011,15 +1136,83 @@
         // Link
         &--link {
             font-size: 1.2rem;
+            line-height: 34px;
             color: $color-grey;
             display: block;
             transition: color .25s ease;
 
             &:hover,
             &:focus {
-                color: $color-green;
+                color: $color-black;
+            }
+
+            // Danger link
+            &-danger {
+                color: $color-red;
             }
         }
+    }
+}
+
+// Alerts
+.alert {
+    z-index: 3;
+    position: relative;
+
+    &:hover,
+    &:focus {
+        // Show tooltip
+        .alert--tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(20px);
+        }
+    }
+
+    // Small alert
+    &--small {
+        font-size: 1.2rem;
+        padding: 6px 10px;
+        border-radius: 50px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    // Warning alert
+    &--warning {
+        color: $color-black;
+        background-color: $color-royale;
+    }
+    
+    // Error alert
+    &--error {
+        color: $color-black;
+        background-color: $color-red;
+    }
+
+    // Icon
+    &--icon {
+        margin: 0 5px;
+
+        // Spinner icon
+        &-spinner {
+            animation: cubic-bezier(.79,.14,.15,.86) rotate 2s infinite; 
+        }
+    }
+
+    // Tooltip
+    &--tooltip {
+        padding: 6px 10px;
+        border-radius: 50px;
+        display: block;
+        white-space: nowrap;
+        position: absolute;
+        top: 0;
+        left: 14px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .15s ease-in-out, visibility .15s ease-in-out, transform .15s ease-in-out;
     }
 }
 
@@ -1159,16 +1352,6 @@
         display: block;
         margin-bottom: 40px;
     }
-
-    //Heading-2
-    &--heading-2 {
-        font: $font-weight-medium 1.6rem $font-primary;
-        color: $color-black;
-        display: block;
-        margin-bottom: 10px;
-    }
-
-
 
     // Label
     &--label {

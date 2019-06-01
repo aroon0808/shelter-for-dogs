@@ -3,69 +3,200 @@ layout: default
 title: Profil użytkownika
 ---
 
-<!-- Header section -->
+<!-- Header -->
 <header class="l-container section--container-spacing-top">
     <div class="section--container">
         <div class="section--columns">
-            <div class="section--column company--column">
-                <figure class="company--thumbnail profile--image">
-                    <label for="picture" class="profile--upload-label" tabindex="0">
+            <div class="section--column profile--column">
+                <div class="user--image">
+                    <figure class="profile--thumbnail">
+                        <img src="https://via.placeholder.com/160x160" class="image" alt="">
+                    </figure>
+
+                    <a href="#" class="btn user--change-avatar">
                         <span class="form--upload-icon far fa-edit" aria-hidden="true"></span>
-                    </label>
-                    <input type="file" name="picture" id="picture" class="form--file" tabindex="-1">
-                    <img src="https://via.placeholder.com/160x160" class="image profile--bIcon" alt="">
-                </figure>
+                        <div class="sr-only">Zmień avatar</div>
+                    </a>
+                </div>
             </div>
+
             <div class="section--column">
-                <span class="company--subheading company--profile-text">Twój profil</span>
-                <h1 class="section--heading company--heading">Michał Strumpf</h1>
-                <span class="company--subheading"> @michu2k
-                </span>
+                <span class="profile--subheading profile--subheading-small">Twój profil</span>
+                <h1 class="section--heading profile--heading">Michał Strumpf</h1>
+                <span class="profile--subheading">@michu2k</span>
             </div>
         </div>
     </div>
 </header>
+
 <!-- Section -->
 <section class="l-container">
-    <!-- Setting section -->
-    <div class="section--container-narrow-mobile section--container-spacing-bottom">
+    <div class="section--container-spacing-bottom">
+        <!-- Tabs nav -->
+        <ul class="tabs--nav user--tabs" role="tablist">
+            <li class="nav--item user--item">
+                <a href="#dogs" id="dogs-tab" class="nav--link user--link is-active" role="tab" aria-controls="dogs">
+                    Psy <span class="fas fa-dog nav--icon user--icon" aria-hidden="true"></span>
+                </a>
+            </li>
+
+            <li class="nav--item user--item">
+                <a href="#settings" id="settings-tab" class="nav--link user--link" role="tab" aria-controls="settings">
+                    Ustawienia <span class="fas fa-cog nav--icon user--icon" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+
         <!-- Tabs content -->
         <div class="tabs--content">
-            <div class="tabs--panel is-active" id="tablist" role="tablist" aria-labelledby="tablist">
-                <ul class="tabs--nav navbar--profile" role="tablist">
-                    <li class="nav--pItem">
-                        <a href="#dogs" id="dogs-tab" class="btn profile--btn" role="tab" aria-controls="dogs">
-                            Psy <span class="fas fa-dog profile--icon" aria-hidden="true"></span>
+            <!-- Dogs -->
+            <div class="tabs--panel is-active" id="dogs" role="tabpanel" aria-labelledby="dogs-tab">
+                <div class="section--columns">
+                    <div class="section--column section--column-spacing">
+                        <h2 class="section--heading section--heading-small">Twoje zwierzęta</h2>
+                        
+                        <a href="add-dog.html" class="btn user--btn">
+                            <span class="btn--icon fas fa-plus" aria-hidden="true"></span> Dodaj Nowego Psa
                         </a>
-                    </li>
-                    <li class="nav--pItem">
-                        <a href="#settings" id="settings-tab" class="btn profile--btn" role="tab"
-                            aria-controls="settings">
-                            Ustawienia <span class="fas fa-cog profile--icon" aria-hidden="true"><span>
+                            
+                        <ul class="user--dogs">
+                            <!-- Dog panel -->
+                            <li class="user--dog">
+                                <div class="dog--image dog--image-thumbnail" style="background-image: url('https://placedog.net/360/250/?id=11')" role="img"></div>
+        
+                                <ul class="dog--list user--list">
+                                    <li class="list--item"><span class="list--heading">Hektor</span></li>
+                                    <li class="list--item list--item-small">Rasa: <span class="list--value list--value-small">Owczarek niemiecki</span></li>
+                                    <li class="list--item list--item-small">Wiek: <span class="list--value list--value-small">1-3 lata</span></li>
+                                    <li class="list--item list--item-small">Płeć: <span class="list--value list--value-small">Pies</span></li>
+                                </ul>
+
+                                <div data-dropdown="container">
+                                    <button type="button" class="dog--dropdown" data-dropdown="button" aria-haspopup="true">
+                                        <span class="btn--bars"></span>
+                                        <span class="sr-only">[Menu]</span>
+                                    </button>
+
+                                    <!-- Dropdown -->
+                                    <ul class="dropdown" data-dropdown="dropdown-menu">
+                                        <li class="dropdown--item">
+                                            <a href="dog-profile.html" class="dropdown--link">
+                                                <span class="dropdown--icon fas fa-dog" aria-hidden="true"></span>Zobacz profil
+                                            </a>
+                                        </li>
+                            
+                                        <li class="dropdown--item">
+                                            <a href="#" class="dropdown--link">
+                                                <span class="dropdown--icon fas fa-pencil-alt" aria-hidden="true"></span>Edytuj
+                                            </a>
+                                        </li>
+                            
+                                        <li class="dropdown--item">
+                                            <a href="#" class="dropdown--link dropdown--link-danger">
+                                                <span class="dropdown--icon fas fa-trash" aria-hidden="true"></span>Usuń
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Dog panel -->
+                            <li class="user--dog">
+                                <div class="dog--image dog--image-thumbnail" style="background-image: url('https://placedog.net/360/250/?id=46')" role="img"></div>
+
+                                <ul class="dog--list user--list">
+                                    <li class="list--item"><span class="list--heading">Kasja</span></li>
+                                    <li class="list--item list--item-small">Rasa: <span class="list--value list--value-small">Border Collie</span></li>
+                                    <li class="list--item list--item-small">Wiek: <span class="list--value list--value-small">1-3 lata</span></li>
+                                    <li class="list--item list--item-small">Płeć: <span class="list--value list--value-small">Suczka</span></li>
+                                </ul>
+
+                                <div data-dropdown="container">
+                                    <button type="button" class="dog--dropdown" data-dropdown="button" aria-haspopup="true">
+                                        <span class="btn--bars"></span>
+                                        <span class="sr-only">[Menu]</span>
+                                    </button>
+
+                                    <!-- Dropdown -->
+                                    <ul class="dropdown" data-dropdown="dropdown-menu">
+                                        <li class="dropdown--item">
+                                            <a href="dog-profile.html" class="dropdown--link">
+                                                <span class="dropdown--icon fas fa-dog" aria-hidden="true"></span>Zobacz profil
+                                            </a>
+                                        </li>
+                            
+                                        <li class="dropdown--item">
+                                            <a href="#" class="dropdown--link">
+                                                <span class="dropdown--icon fas fa-pencil-alt" aria-hidden="true"></span>Edytuj
+                                            </a>
+                                        </li>
+                            
+                                        <li class="dropdown--item">
+                                            <a href="#" class="dropdown--link dropdown--link-danger">
+                                                <span class="dropdown--icon fas fa-trash" aria-hidden="true"></span>Usuń
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section--column">
+                        <h2 class="section--heading section--heading-small user--heading">Twoje adopcje</h2>
+                        
+                        <a href="search.html" class="btn btn--white user--btn">
+                            <span class="btn--icon fas fa-search" aria-hidden="true"></span> Wyszukaj Psy
                         </a>
-                    </li>
-                </ul>
+
+                        <ul class="user--dogs">
+                            <li class="user--dog">
+                                <div class="dog--image dog--image-thumbnail" style="background-image: url('https://placedog.net/360/250/?id=29')" role="img"></div>
+    
+                                <!-- Alert-->
+                                <span class="alert alert--warning alert--small" role="alert">
+                                    <span class="fas alert--icon fa-exclamation-triangle" aria-hidden="true"></span>
+                                    <span class="fas alert--icon alert--icon-spinner fa-spinner" aria-hidden="true"></span>
+                                    <span class="alert--tooltip alert--warning" role="tooltip">Zgłosznie w trakcie weryfikacji</span>
+                                </span>
+
+                                <ul class="dog--list user--list">
+                                    <li class="list--item"><span class="list--heading">Jaszczomb</span></li>
+                                    <li class="list--item list--item-small">Rasa: <span class="list--value list--value-small">Husky</span></li>
+                                    <li class="list--item list--item-small">Wiek: <span class="list--value list--value-small">1-3 lata</span></li>
+                                    <li class="list--item list--item-small">Płeć: <span class="list--value list--value-small">Pies</span></li>
+                                </ul>
+
+                                <div data-dropdown="container">
+                                    <button type="button" class="dog--dropdown" data-dropdown="button" aria-haspopup="true">
+                                        <span class="btn--bars"></span>
+                                        <span class="sr-only">[Menu]</span>
+                                    </button>
+
+                                    <!-- Dropdown -->
+                                    <ul class="dropdown" data-dropdown="dropdown-menu">
+                                        <li class="dropdown--item">
+                                            <a href="dog-profile.html" class="dropdown--link">
+                                                <span class="dropdown--icon fas fa-dog" aria-hidden="true"></span>Zobacz profil
+                                            </a>
+                                        </li>
+                            
+                                        <li class="dropdown--item">
+                                            <a href="#" class="dropdown--link">
+                                                <span class="dropdown--icon fas fa-ban" aria-hidden="true"></span>Anuluj adopcję
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="section--columns">
-            <div class="section--column section--column-spacing">
-                <h2 class="form--heading-2">Dodane zwierzęta</h2>
-                <span class="profile--line"></span>
-                <a href="add-dog.html" class="btn nav--register--link profile--link">
-                    <span class="nav--icon profile--icon fas fa-plus" aria-hidden="true"></span>
-                    Dodaj zwierzaka
-                </a>
-                {{> gallery}}
-            </div>
-            <div class="section--column">
-                <h2 class="form--heading-2">Chcesz zaadoptować</h2>
-                <span class="profile--line"></span>
-                <span class="profile--btn profile--veryfication">W trakcie weryfikacji
-                    <a href="#" style="color: white">
-                        <span class="nav--icon profile--icon fas fa-info-circle" aria-hidden="true"></span>
-                    </a>
-                </span>
-                {{> gallery}}
+
+            <!-- Settings -->
+            <div class="tabs--panel" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                Ustawienia TUTAJ
             </div>
         </div>
     </div>

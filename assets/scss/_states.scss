@@ -4,6 +4,7 @@
 // Hidden class
 // Navbar
 // Tabs
+// User profile
 // Dropdown
 // Form
 // Responsive: >= 480px
@@ -62,26 +63,24 @@
         // Link
         .nav--link {
             &.is-active {
-                border-color: $color-green;
-    
+                background-color: $color-cyan-bright-2;
+
                 // Icon
                 .nav--icon {
                     color: $color-green;
                 }
             }
-        }
 
-        // Company link
-        .nav--link-company {
-            &.is-active {
-                border-color: $color-blue;
-    
-                // Icon
-                .nav--icon {
-                    color: $color-blue;
+            &-company {
+                &.is-active {
+                    // Icon
+                    .nav--icon {
+                        color: $color-blue;
+                    }
                 }
             }
         }
+        
     }
 
     // Panel
@@ -90,6 +89,22 @@
             visibility: visible;
             transform: translateX(0);
             opacity: 1;
+        }
+    }
+}
+
+// User profile
+.user {
+    // Tabs
+    &--tabs {
+        // Link
+        .user--link {
+            &.is-active {
+                // Icon
+                .nav--icon {
+                    color: $color-black;
+                }
+            }
         }
     }
 }
@@ -139,6 +154,17 @@
     }
 }
 
+// Rotate animation
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 // Responsive: >= 480px
 @media (min-width: 480px) {
     // Header
@@ -180,8 +206,8 @@
     // Navigation
     .navbar {
         // User area
-        &--user {
-            .user {
+        &--logged {
+            .logged {
                 // Name
                 &--name {
                     display: block;
@@ -229,22 +255,32 @@
         }
     }
 
-    // Tabs
-    .tabs {
-        // Navigation
-        &--nav {
-            // Profile Nav
-            .nav {
-                // Profile Item
-                &--pItem {
+    // User profile
+    .user {
+        // Tabs
+        &--tabs {
+            .user {
+                // Item
+                &--item {
+                    display: inline-flex;
+                    flex-grow: 0;
+
                     &:not(:last-child) {
-                        margin-bottom: 10px;
+                        margin-right: 10px;
+                        margin-bottom: 0;
                     }
                 }
             }
         }
-    }
-    
+
+        // List item
+        &--dog {
+            display: flex;
+            align-items: center;
+            padding: 0 30px 0 0;
+        }
+    }  
+
     // Dog profile
     .dog {
         // Buttons container
@@ -258,8 +294,23 @@
                 margin-left: 15px;
             }
         }
-    }
 
+        // List
+        &--list {
+            margin: 20px 0;
+        }
+        
+        // Image
+        &--image {
+            // Thumbnail
+            &-thumbnail {
+                height: 160px;
+                width: 160px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    
     // Gallery
     .gallery {
         // Column
@@ -368,24 +419,8 @@
         }
     }
 
-    // Tabs
-    .tabs {
-    // Navigation
-    &--nav {
-        // Profile Nav
-        .nav {
-            // Profile Item
-            &--pItem {
-                &:not(:last-child) {
-                    margin-bottom: 0px;
-                }
-            }
-        }
-    }
-}
-
-    // Company profile
-    .company {
+    // Profile
+    .profile {
         // Column
         &--column {
             max-width: 220px;
@@ -393,11 +428,6 @@
 
         // Thumbnail
         &--thumbnail {
-            margin-left: 0;
-        }
-
-        // Button
-        &--btn {
             margin-left: 0;
         }
 
@@ -409,6 +439,11 @@
         // Subheading
         &--subheading {
             text-align: left;
+        }
+
+        // Button
+        &--btn {
+            margin-left: 0;
         }
 
         // Text
@@ -435,26 +470,42 @@
             display: flex;
 
             .nav {
-                &--pItem {
-                    display: block;
-
-                    &:not(:last-child) {
-                        margin-right: 15px;
-                    }
-                }
-
                 &--item {
+                    display: inline-flex;
                     flex-grow: 1;
-                    display: inline-block;
 
                     &:not(:last-child) {
-                        margin-right: 15px;
+                        margin-right: 10px;
+                        margin-bottom: 0;
                     }
                 }
             }
         }
     }
 
+    // User profile
+    .user {
+        // Heading
+        &--heading {
+            margin-top: 0;
+        }
+
+        // Tabs
+        &--tabs {
+            .user {
+                // Item
+                &--item {
+                    flex-grow: 0;
+                }
+            }
+        }
+
+        // Image
+        &--image {
+            margin-left: 0;
+        }
+    }
+    
     // Footer
     .footer {
         // Wrapper

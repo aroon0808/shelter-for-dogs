@@ -12,6 +12,7 @@
 // User profile
 // Dog profile
 // Dropdown
+// Alerts
 // Gallery
 // Form
 // Footer
@@ -1150,6 +1151,68 @@
                 color: $color-red;
             }
         }
+    }
+}
+
+// Alerts
+.alert {
+    z-index: 3;
+    position: relative;
+
+    &:hover,
+    &:focus {
+        // Show tooltip
+        .alert--tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(20px);
+        }
+    }
+
+    // Small alert
+    &--small {
+        font-size: 1.2rem;
+        padding: 6px 10px;
+        border-radius: 50px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    // Warning alert
+    &--warning {
+        color: $color-black;
+        background-color: $color-royale;
+    }
+    
+    // Error alert
+    &--error {
+        color: $color-black;
+        background-color: $color-red;
+    }
+
+    // Icon
+    &--icon {
+        margin: 0 5px;
+
+        // Spinner icon
+        &-spinner {
+            animation: cubic-bezier(.79,.14,.15,.86) rotate 2s infinite; 
+        }
+    }
+
+    // Tooltip
+    &--tooltip {
+        padding: 6px 10px;
+        border-radius: 50px;
+        display: block;
+        white-space: nowrap;
+        position: absolute;
+        top: 0;
+        left: 14px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .15s ease-in-out, visibility .15s ease-in-out, transform .15s ease-in-out;
     }
 }
 

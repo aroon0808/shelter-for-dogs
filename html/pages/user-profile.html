@@ -4,8 +4,8 @@ title: Profil użytkownika
 ---
 
 <!-- Header -->
-<header class="l-container">
-    <div class="section--container section--container-spacing">
+<header class="l-container section--container-spacing-top">
+    <div class="section--container">
         <div class="section--columns">
             <div class="section--column profile--column">
                 <div class="user--image">
@@ -54,19 +54,56 @@ title: Profil użytkownika
             <div class="tabs--panel is-active" id="dogs" role="tabpanel" aria-labelledby="dogs-tab">
                 <div class="section--columns">
                     <div class="section--column section--column-spacing">
-                        <h2 class="section--heading section--heading-small">Dodane zwierzęta</h2>
+                        <h2 class="section--heading section--heading-small">Twoje zwierzęta</h2>
                         
-                        <a href="add_dog.html" class="btn user--btn">
-                            <span class="fas fa-plus btn--icon" aria-hidden="true"></span> Dodaj Zwierzaka
+                        <a href="add-dog.html" class="btn user--btn">
+                            <span class="btn--icon fas fa-plus" aria-hidden="true"></span> Dodaj Nowego Psa
                         </a>
+                            
+                        <ul class="user--dogs">
+                            <li class="user--dog">
+                                <div class="dog--image dog--image-thumbnail" style="background-image: url('https://placedog.net/360/250/?id=11')" role="img"></div>
+        
+                                <ul class="dog--list">
+                                    <li class="list--item list--item-small">Imię psa: <span class="list--value list--value-small">Hektor</span></li>
+                                    <li class="list--item list--item-small">Rasa: <span class="list--value list--value-small">Owczarek niemiecki</span></li>
+                                    <li class="list--item list--item-small">Wiek: <span class="list--value list--value-small">1-3 lata</span></li>
+                                    <li class="list--item list--item-small">Płeć: <span class="list--value list--value-small">Pies</span></li>
+                                </ul>
+                            </li>
 
-                        ZWIERZAKI
+                            <li class="user--dog">
+                                <div class="dog--image dog--image-thumbnail" style="background-image: url('https://placedog.net/360/250/?id=46')" role="img"></div>
+        
+                                <ul class="dog--list">
+                                    <li class="list--item list--item-small">Imię psa: <span class="list--value list--value-small">Kasja</span></li>
+                                    <li class="list--item list--item-small">Rasa: <span class="list--value list--value-small">Border Collie</span></li>
+                                    <li class="list--item list--item-small">Wiek: <span class="list--value list--value-small">1-3 lata</span></li>
+                                    <li class="list--item list--item-small">Płeć: <span class="list--value list--value-small">Suczka</span></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="section--column">
-                        <h2 class="section--heading section--heading-small">Twoje adopcje</h2>
+                        <h2 class="section--heading section--heading-small user--heading">Twoje adopcje</h2>
                         
-                        ZWIERZAKI
+                        <a href="search.html" class="btn btn--white user--btn">
+                            <span class="btn--icon fas fa-search" aria-hidden="true"></span> Wyszukaj Psy
+                        </a>
+
+                        <ul class="user--dogs">
+                            <li class="user--dog">
+                                <div class="dog--image dog--image-thumbnail" style="background-image: url('https://placedog.net/360/250/?id=29')" role="img"></div>
+        
+                                <ul class="dog--list">
+                                    <li class="list--item list--item-small">Imię psa: <span class="list--value list--value-small">Jaszczomb</span></li>
+                                    <li class="list--item list--item-small">Rasa: <span class="list--value list--value-small">Husky</span></li>
+                                    <li class="list--item list--item-small">Wiek: <span class="list--value list--value-small">1-3 lata</span></li>
+                                    <li class="list--item list--item-small">Płeć: <span class="list--value list--value-small">Pies</span></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

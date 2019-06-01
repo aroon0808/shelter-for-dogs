@@ -176,8 +176,8 @@
     // Navigation
     .navbar {
         // User area
-        &--user {
-            .user {
+        &--logged {
+            .logged {
                 // Name
                 &--name {
                     display: block;
@@ -224,26 +224,11 @@
             line-height: 25px;
         }
     }
-    
-    // Dog profile
-    .dog {
-        // Buttons container
-        &--buttons {
-            display: flex;
-        }
-
-        // Button
-        &--btn {
-            &-company {
-                margin-left: 15px;
-            }
-        }
-    }
 
     // User profile
     .user {
+        // Tabs
         &--tabs {
-            display: flex;
 
             .user {
                 // Item
@@ -256,6 +241,21 @@
                         margin-bottom: 0;
                     }
                 }
+            }
+        }
+    }  
+
+    // Dog profile
+    .dog {
+        // Buttons container
+        &--buttons {
+            display: flex;
+        }
+
+        // Button
+        &--btn {
+            &-company {
+                margin-left: 15px;
             }
         }
     }
@@ -434,12 +434,35 @@
 
     // User profile
     .user {
+        // Heading
+        &--heading {
+            margin-top: 0;
+        }
+
+        // Tabs
         &--tabs {
             .user {
                 // Item
                 &--item {
                     flex-grow: 0;
                 }
+            }
+        }
+
+        // Image
+        &--image {
+            margin-left: 0;
+        }
+    }
+
+    // Dog profile
+    .dog {
+        // Image
+        &--image {
+            // Thumbnail
+            &-thumbnail {
+                width: 150px;
+                height: 150px;
             }
         }
     }

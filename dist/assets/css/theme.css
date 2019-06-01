@@ -209,12 +209,12 @@ p {
   border-radius: 6px;
   padding: 4px;
   display: block;
-  -webkit-transition: border-color .25s ease;
-  transition: border-color .25s ease;
+  -webkit-transition: background-color .25s ease;
+  transition: background-color .25s ease;
 }
 
-.tabs--nav .nav--link:hover .nav--icon, .tabs--nav .nav--link:focus .nav--icon {
-  color: #8cde4a;
+.tabs--nav .nav--link:hover, .tabs--nav .nav--link:focus {
+  background-color: #e4ebef;
 }
 
 .tabs--nav .nav--link-company:hover .nav--icon, .tabs--nav .nav--link-company:focus .nav--icon {
@@ -444,6 +444,10 @@ p {
   align-items: center;
 }
 
+.navbar--logged .logged--container {
+  position: relative;
+}
+
 .navbar--logged .logged--image {
   border-radius: 50%;
   display: inline-block;
@@ -470,8 +474,11 @@ p {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer;
   position: relative;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
 }
 
 .navbar--logged .logged--msg::before {
@@ -542,13 +549,7 @@ p {
   height: 50px;
   margin-top: 10px;
   display: inline-block;
-  border: 2px solid #8cde4a;
-}
-
-.header--btn-transparent {
-  color: #111;
-  background-color: transparent;
-  border-color: #eee;
+  border: 1px solid #8cde4a;
 }
 
 .header--image {
@@ -934,16 +935,10 @@ p {
 }
 
 .user--dog {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 30px;
+  background-color: #f2f7f9;
   border-radius: 6px;
+  margin-bottom: 30px;
+  padding: 30px;
   position: relative;
   -webkit-transition: color .25s ease, border-color .25s ease, background-color .25s ease;
   transition: color .25s ease, border-color .25s ease, background-color .25s ease;
@@ -962,6 +957,10 @@ p {
   top: 0;
   left: 0;
   opacity: 0;
+}
+
+.user--dog:hover, .user--dog:focus {
+  background-color: #fff;
 }
 
 .user--dog:hover::before, .user--dog:focus::before {
@@ -986,7 +985,6 @@ p {
   height: 120px;
   width: 120px;
   margin-right: 30px;
-  margin-bottom: 0;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -996,6 +994,13 @@ p {
   width: 100%;
 }
 
+.dog--list .list--heading {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #111;
+  margin: 0;
+}
+
 .dog--list .list--item {
   font-size: 1.4rem;
   margin-bottom: 22px;
@@ -1003,7 +1008,7 @@ p {
 
 .dog--list .list--item-small {
   font-size: 1.4rem;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .dog--list .list--item:last-child {
@@ -1020,7 +1025,9 @@ p {
 }
 
 .dog--list .list--value-small {
+  font-weight: 500;
   padding: 0;
+  margin-left: 0;
   background: none;
 }
 
@@ -1053,6 +1060,74 @@ p {
 
 .dog--btn .btn--icon {
   margin-right: 10px;
+}
+
+.dog--dropdown {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  padding: 5px;
+  -webkit-transform: translateX(5px);
+  transform: translateX(5px);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.dog--dropdown .btn--bars {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  display: block;
+  margin: 3px 0;
+  background-color: #111;
+  position: relative;
+}
+
+.dog--dropdown .btn--bars::before, .dog--dropdown .btn--bars::after {
+  content: '';
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  display: block;
+  background-color: #111;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: -webkit-transform .25s ease;
+  transition: -webkit-transform .25s ease;
+  transition: transform .25s ease;
+  transition: transform .25s ease, -webkit-transform .25s ease;
+}
+
+.dog--dropdown .btn--bars::before {
+  -webkit-transform: translateY(7px);
+  transform: translateY(7px);
+}
+
+.dog--dropdown .btn--bars::after {
+  -webkit-transform: translateY(-7px);
+  transform: translateY(-7px);
 }
 
 .dropdown {
@@ -1111,6 +1186,7 @@ p {
 
 .dropdown .dropdown--link {
   font-size: 1.2rem;
+  line-height: 34px;
   color: #647179;
   display: block;
   -webkit-transition: color .25s ease;
@@ -1118,7 +1194,11 @@ p {
 }
 
 .dropdown .dropdown--link:hover, .dropdown .dropdown--link:focus {
-  color: #8cde4a;
+  color: #111;
+}
+
+.dropdown .dropdown--link-danger {
+  color: #ff3636;
 }
 
 .gallery--container {
@@ -1548,6 +1628,10 @@ p {
   visibility: visible;
 }
 
+.tabs--nav .nav--link.is-active {
+  background-color: #e4ebef;
+}
+
 .tabs--nav .nav--link.is-active .nav--icon {
   color: #8cde4a;
 }
@@ -1561,6 +1645,10 @@ p {
   -webkit-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
+}
+
+.user--tabs .user--link.is-active .nav--icon {
+  color: #111;
 }
 
 .dropdown.is-active {
@@ -1656,6 +1744,17 @@ p {
     margin-right: 10px;
     margin-bottom: 0;
   }
+  .user--dog {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 30px 0 0;
+  }
   .dog--buttons {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1664,6 +1763,14 @@ p {
   }
   .dog--btn-company {
     margin-left: 15px;
+  }
+  .dog--list {
+    margin: 20px 0;
+  }
+  .dog--image-thumbnail {
+    height: 160px;
+    width: 160px;
+    margin-bottom: 0;
   }
   .gallery--col {
     width: 50%;
@@ -1787,10 +1894,6 @@ p {
   }
   .user--image {
     margin-left: 0;
-  }
-  .dog--image-thumbnail {
-    width: 150px;
-    height: 150px;
   }
   .footer--wrapper {
     -webkit-box-align: start;

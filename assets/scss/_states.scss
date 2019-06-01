@@ -4,6 +4,7 @@
 // Hidden class
 // Navbar
 // Tabs
+// User profile
 // Dropdown
 // Form
 // Responsive: >= 480px
@@ -62,6 +63,8 @@
         // Link
         .nav--link {
             &.is-active {
+                background-color: $color-cyan-bright-2;
+
                 // Icon
                 .nav--icon {
                     color: $color-green;
@@ -86,6 +89,22 @@
             visibility: visible;
             transform: translateX(0);
             opacity: 1;
+        }
+    }
+}
+
+// User profile
+.user {
+    // Tabs
+    &--tabs {
+        // Link
+        .user--link {
+            &.is-active {
+                // Icon
+                .nav--icon {
+                    color: $color-black;
+                }
+            }
         }
     }
 }
@@ -229,7 +248,6 @@
     .user {
         // Tabs
         &--tabs {
-
             .user {
                 // Item
                 &--item {
@@ -242,6 +260,13 @@
                     }
                 }
             }
+        }
+
+        // List item
+        &--dog {
+            display: flex;
+            align-items: center;
+            padding: 0 30px 0 0;
         }
     }  
 
@@ -256,6 +281,21 @@
         &--btn {
             &-company {
                 margin-left: 15px;
+            }
+        }
+
+        // List
+        &--list {
+            margin: 20px 0;
+        }
+        
+        // Image
+        &--image {
+            // Thumbnail
+            &-thumbnail {
+                height: 160px;
+                width: 160px;
+                margin-bottom: 0;
             }
         }
     }
@@ -454,19 +494,7 @@
             margin-left: 0;
         }
     }
-
-    // Dog profile
-    .dog {
-        // Image
-        &--image {
-            // Thumbnail
-            &-thumbnail {
-                width: 150px;
-                height: 150px;
-            }
-        }
-    }
-
+    
     // Footer
     .footer {
         // Wrapper

@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const navSidebarBtn = document.getElementById('sidebar-btn');
 
     // Navbar button
-    navBtn.addEventListener('click', function() {
+    navBtn.addEventListener('click', () => {
         navSidebar.classList.add('is-active');
         navOverlay.classList.add('is-active');
     });
 
     // Sidebar button
-    navSidebarBtn.addEventListener('click', function() {
+    navSidebarBtn.addEventListener('click', () => {
         navSidebar.classList.remove('is-active');
         navOverlay.classList.remove('is-active');
     });
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set container height
         tabsContainer.style.height = tabsPanels[0].offsetHeight + 'px';
 
-        tabsNavElements.forEach((navEl) => {
+        tabsNavElements.forEach(navEl => {
             navEl.addEventListener('click', function(e) {
                 e.preventDefault();
 
@@ -53,12 +53,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 tabsContainer.style.height = activePanel.offsetHeight + 'px';
 
                 // Remove active class from links
-                tabsNavElements.forEach((el)=> {
+                tabsNavElements.forEach(el => {
                     el.classList.remove('is-active');
                 });
 
                 // Remove active class from panels
-                tabsPanels.forEach((el)=> {
+                tabsPanels.forEach(el => {
                     el.classList.remove('is-active');
                 });
 
@@ -66,6 +66,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.classList.add('is-active');
                 activePanel.classList.add('is-active');
             });
+        });
+
+        // Set container height when changing the window size
+        window.addEventListener('resize', function() {
+            const activePanel = tabsContainer.querySelector('.tabs--panel.is-active');
+            tabsContainer.style.height = activePanel.offsetHeight + 'px';
         });
     }
 
@@ -75,13 +81,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const forms = document.querySelectorAll('.form');
 
     if (forms) {
-        forms.forEach((form) => {
+        forms.forEach(form => {
             const formGroups = form.querySelectorAll('.form--group');
             const formCheckBoxes = form.querySelectorAll('.form--checkbox');
             const formSubmitBtn = form.querySelectorAll('.form--btn');
 
             // Labels
-            formGroups.forEach((formGroup) => {
+            formGroups.forEach(formGroup => {
                 const formLabel = formGroup.querySelector('.form--label.is-animated');
                 const formInput = formGroup.querySelector('.form--input');
 
@@ -106,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             // Checkboxes
-            formCheckBoxes.forEach((checkbox) => {
+            formCheckBoxes.forEach(checkbox => {
                 const checkboxLabel = checkbox.parentElement.querySelector('.form--checkbox-label');
 
                 // On toggle checkbox
@@ -115,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 // On keypress on the checkbox label
-                checkboxLabel.addEventListener('keypress', (e) => {
+                checkboxLabel.addEventListener('keypress', e => {
                     if (e.keyCode == '13') {
                         if (checkbox.checked) {
                             checkbox.checked = false;
@@ -143,13 +149,55 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    
+    /*
+     * Dropdowns
+     */
+    const dropdowns = document.querySelectorAll('[data-dropdown="container"]');
+
+    if (dropdowns) {
+        dropdowns.forEach(dropdown => {
+            const dropdownBtn = dropdown.querySelector('[data-dropdown="button"]');
+            const dropdownMenu = dropdown.querySelector('[data-dropdown="dropdown-menu"]');
+    
+            dropdownBtn.addEventListener('click', () => {
+                const dropdownMenus = document.querySelectorAll('.is-active[data-dropdown="dropdown-menu"]');
+
+                // Toggle dropdown class
+                dropdownMenu.classList.toggle('is-active');
+
+                // Hide all visible dropdowns
+                dropdownMenus.forEach(dropdown => {
+                    dropdown.classList.remove('is-active');
+                });
+            });
+        });
+            
+        window.addEventListener('click', e => {
+            // If clicked element is a button or its parent has a button data then return
+            if (e.target.dataset.dropdown == 'button' || e.target.parentElement.dataset.dropdown == 'button') {
+                return;
+            }
+
+            dropdowns.forEach(dropdown => {
+                // If clicked element is not part of the menu, hide it
+                if (!dropdown.contains(e.target)) {
+                    const dropdownMenu = dropdown.querySelector('[data-dropdown="dropdown-menu"]');
+                    dropdownMenu.classList.remove('is-active');
+                }
+            });
+        });
+
+
+
+    }
 
     /**
      * Back to top
      */
     const footerBtn = document.getElementById('footer-btn');
 
-    footerBtn.addEventListener('click', function(e) {
+    footerBtn.addEventListener('click', e => {
         e.preventDefault();
 
         // Scroll to the element
@@ -158,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let start = null;
 
         // Scroll animation - easeInOutQuad
-        const animate = (t) => t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        const animate = t => t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 
         window.requestAnimationFrame(function step(timestamp) {
             if (!start) {

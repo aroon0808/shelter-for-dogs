@@ -55,6 +55,11 @@ document.addEventListener('DOMContentLoaded', function () {
         this.classList.add('is-active');
         activePanel.classList.add('is-active');
       });
+    }); // Set container height when changing the window size
+
+    window.addEventListener('resize', function () {
+      var activePanel = tabsContainer.querySelector('.tabs--panel.is-active');
+      tabsContainer.style.height = activePanel.offsetHeight + 'px';
     });
   }
   /*
@@ -120,6 +125,42 @@ document.addEventListener('DOMContentLoaded', function () {
           } else {
             checkboxLabel.classList.add('is-required');
           }
+        }
+      });
+    });
+  }
+  /*
+   * Dropdowns
+   */
+
+
+  var dropdowns = document.querySelectorAll('[data-dropdown="container"]');
+
+  if (dropdowns) {
+    dropdowns.forEach(function (dropdown) {
+      var dropdownBtn = dropdown.querySelector('[data-dropdown="button"]');
+      var dropdownMenu = dropdown.querySelector('[data-dropdown="dropdown-menu"]');
+      dropdownBtn.addEventListener('click', function () {
+        var dropdownMenus = document.querySelectorAll('.is-active[data-dropdown="dropdown-menu"]'); // Toggle dropdown class
+
+        dropdownMenu.classList.toggle('is-active'); // Hide all visible dropdowns
+
+        dropdownMenus.forEach(function (dropdown) {
+          dropdown.classList.remove('is-active');
+        });
+      });
+    });
+    window.addEventListener('click', function (e) {
+      // If clicked element is a button or its parent has a button data then return
+      if (e.target.dataset.dropdown == 'button' || e.target.parentElement.dataset.dropdown == 'button') {
+        return;
+      }
+
+      dropdowns.forEach(function (dropdown) {
+        // If clicked element is not part of the menu, hide it
+        if (!dropdown.contains(e.target)) {
+          var dropdownMenu = dropdown.querySelector('[data-dropdown="dropdown-menu"]');
+          dropdownMenu.classList.remove('is-active');
         }
       });
     });
